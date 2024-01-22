@@ -1,22 +1,17 @@
-# main links links
+# main links
 main:
-  - title: "Publications"
-    url: /publications/
 
-  - title: "Projects & Talks"
-    url: /talks/    
+  - title: "Current Projects"
+    url: /projects/    
 
+  - title: "Scholarship"
+    url: "https://scholar.google.com/citations?hl=en&view_op=list_works&authuser=1&gmla=AH70aAVP_KHVnoU3f3-RbiCp_MAu9S2Mb_xDPLQvOQQu56jSIMYopKE0RbO2QjEJhaGgTCENFKdvv0HIWf_msg&user=C7XXFqMAAAAJ"
+    
   - title: "Teaching"
     url: /teaching/    
     
-  # - title: "Portfolio"
-  #   url: /portfolio/
-        
-  # - title: "Blog Posts"
-  #   url: /year-archive/
-    
   - title: "CV"
-    url: /cv/
-    
-  # - title: "Guide"
-  #   url: /markdown/
+    url: "https://claws.rit.edu/photos/getphotoid.php?Client=MarketingCV&UN=disvks&HASH=a3ee3d7aad8d4286911317ec8f794a1bc30a8e36&T=1705955551"
+
+  - title: "Miscellaneous"
+    url: /miscellaneous/
