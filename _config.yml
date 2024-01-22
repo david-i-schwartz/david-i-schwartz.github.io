@@ -62,8 +62,8 @@ analytics:
 author:
   name             : "David I. Schwartz"
   avatar           : "dis-bio.jpg"
-  bio              : "Director and Associate Professor, School of Interactive Games and Media | RIT"
-  location         : "https://maps.rit.edu/?details=Golisano+Hall"
+  bio              : "Director and Associate Professor< \br>, School of Interactive Games and Media | RIT"
+  location         : <a href="https://maps.rit.edu/?details=Golisano+Hall">RIT</a>
   googlescholar    : "https://scholar.google.com/citations?user=C7XXFqMAAAAJ&hl=en"
   email            : "david.i.schwartz@rit.edu"
   github           : "david-i-schwartz"
