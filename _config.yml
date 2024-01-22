@@ -63,7 +63,7 @@ author:
   name             : "David I. Schwartz"
   avatar           : "dis-bio.jpg"
   bio              : "Director and Associate Professor, School of Interactive Games and Media | RIT"
-  location         : [RIT](https://www.google.com/maps/place/Golisano+College+of+Computing+and+Information+Sciences/@43.0844323,-77.6800076,17z/data=!3m1!4b1!4m6!3m5!1s0x89d14c5f0e79fc29:0x7d07467604d60318!8m2!3d43.0844323!4d-77.6800076!16zL20vMDdfd2Iy?entry=ttu)
+  location         : "https://www.google.com/maps/place/Golisano+College+of+Computing+and+Information+Sciences/@43.0844323,-77.6800076,17z/data=!3m1!4b1!4m6!3m5!1s0x89d14c5f0e79fc29:0x7d07467604d60318!8m2!3d43.0844323!4d-77.6800076!16zL20vMDdfd2Iy?entry=ttu"
   googlescholar    : "https://scholar.google.com/citations?user=C7XXFqMAAAAJ&hl=en"
   email            : "david.i.schwartz@rit.edu"
   github           : "david-i-schwartz"
