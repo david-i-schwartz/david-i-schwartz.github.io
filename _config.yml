@@ -62,10 +62,11 @@ analytics:
 author:
   name             : "David I. Schwartz"
   avatar           : "dis-bio.jpg"
-  bio              : Director and Associate Professor | School of Interactive Games and Media RIT
+  bio              : Director and Associate Professor | School of Interactive Games and Media | RIT
   googlescholar    : "https://scholar.google.com/citations?user=C7XXFqMAAAAJ&hl=en"
   email            : "david.i.schwartz@rit.edu"
   github           : "david-i-schwartz"
+  rit              : "test"
   google_plus      :
   keybase          :
   instagram        :
