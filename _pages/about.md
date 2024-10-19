@@ -12,7 +12,6 @@ David I. Schwartz, Ph.D. (he/him/his) has worked in the academic field of game d
 
 # Highlights
 
-[MORS Talk](JV-MORS-global.pptx)
-
-Recent "https://www.rit.edu/directory/disvks-david-schwartz/news"
+- [MORS Talk](JV-MORS-global.pptx)
+- [Recent News](https://www.rit.edu/directory/disvks-david-schwartz/news)
 
