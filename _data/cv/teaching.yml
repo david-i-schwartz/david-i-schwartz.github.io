@@ -1,0 +1,533 @@
+terminology_notes:
+- 'Semesters: Calendar Year, F (Fall), and S (Spring) e.g., Spring 2015 and Fall 2016 S15 and F16'
+- 'Quarters: Academic Year, 1 (Fall), 2 (Winter), 3 (Spring) e.g., 2007 Fall, Spring, Winter 071, 072, 073'
+terminology:
+- code: IGME
+  meaning: School of Interactive Games and Media (semester system, includes BS and MS)
+  institution: Rochester Institute of Technology
+- code: '4080'
+  meaning: Game Design and Development (BS) (quarter system)
+  institution: Rochester Institute of Technology
+- code: '4085'
+  meaning: Game Design and Development (MS) (quarter system)
+  institution: Rochester Institute of Technology
+- code: '4002'
+  meaning: Information Technology (quarter system)
+  institution: Rochester Institute of Technology
+- code: '4003'
+  meaning: Computer Science (quarter system)
+  institution: Rochester Institute of Technology
+- code: CS
+  meaning: Computer Science (semester system)
+  institution: Cornell University
+- code: CIS
+  meaning: Computing and Information Science (semester system)
+  institution: Cornell University
+- code: INFO
+  meaning: Information Science (semester system)
+  institution: Cornell University
+- code: ENGRG
+  meaning: Engineering (semester system)
+  institution: First-year Engineering, Cornell University
+- code: EAS
+  meaning: Engineering and Applied Science (semester system)
+  institution: First-year Engineering, State University of New York at Buffalo
+course_development:
+- institution: Rochester Institute of Technology
+  course: IGME 689 (arcades)
+  years: 2026–present
+  description: 'Arcade Game design and development: many “game students” just don’t seem to choose game-adjacent course offerings. So, I’m leveraging my professional experience to run something that will help students transition away from their notions of games with something immediately adjacent.'
+- institution: Rochester Institute of Technology
+  course: IGME 309 (revisited)
+  years: 2024–present
+  description: In Fall 2024, I rewrote the course to remove OpenGL, which had been outdated for a long time, and replace it with OpenFrameworks. I submitted a new course proposal, which RIT approved in Spring 2025.
+- institution: Rochester Institute of Technology
+  course: IGME 599/799 (3D real-time workflow)
+  years: '2024'
+  description: In 2024, I plan to expand my game physics course and IGME 309 development into a 3D workflow via NVIDIA Omniverse. This work will extend ATLAS (bit.ly/programgames) and the 2023 project with MITRE and RIT Innovation Fellows.
+- institution: Rochester Institute of Technology
+  course: IGME 750
+  years: '2024'
+  description: Took over Graduate Game Engines when a faculty member was on medical leave. Working with two industry experts, we restructured the course to include more examples, new assignments, and weekly lecture topics.
+- institution: Rochester Institute of Technology
+  course: IGME 206
+  years: '2022–2023'
+  description: Defined a relatively new bridge course for graduate and transfer students. The course material combines classic CS1 and CS2 material in the context of game design and development.
+- institution: Rochester Institute of Technology
+  course: IGME 099 IGME 299
+  years: '2014–2020'
+  description: Developed and refined a co-op/career skills course for sophomores. The course involved collaborating with Career Services to explain how to create job-search materials. IGME-299 merged into IGME-099, which became the template for all GCCIS co-op prep classes and has helped thousands of students.
+- institution: Rochester Institute of Technology
+  course: IGME 590 IGME 790
+  years: '2014–2019'
+  description: “Game Physics/Physically based Animation” and related game development examples. See also bit.ly/programgames.
+- institution: Rochester Institute of Technology
+  course: IGME 695
+  years: '2025'
+  description: Rebuilt the course to include student engagement with guest speakers. IGM had not reviewed 695 since 2013.
+- institution: Rochester Institute of Technology
+  course: IGME 797 (graduate bridge)
+  years: '2014–2018'
+  description: Developed a new course to help incoming MS-GDD students develop C, C++, graphics, architecture, and game physics.
+- institution: Rochester Institute of Technology
+  course: Various courses
+  years: '2010–2016'
+  description: 'Semester conversion for undergraduate and graduate IGM courses: I played a crucial role in conversion planning (and eventually “fixing” as undergraduate program coordinator) for several IGM courses.'
+- institution: Rochester Institute of Technology
+  course: IGME 209 IGME 309
+  years: '2011–2013 2024'
+  description: 'Rewrote the entire “DSA” sequence: updated fixed-function material to the programmable pipeline via shaders, modern OpenGL, and C++. In 2024, I plan to redevelop 309 with OpenFrameworks to provide an “on ramp” to facilitate student success.'
+- institution: Rochester Institute of Technology
+  course: '4080-221 4080-222 4080-223'
+  years: '2011–2012'
+  description: Updated the entire introductory programming sequence (final year of the quarter system). Highlights include formalizing an “advanced” course for students with high CS-AP scores (which I handed off to other faculty after I joined administration) and rewriting all course projects, which created multiple portfolio items for my cohort of students.
+- institution: Rochester Institute of Technology
+  course: '4085-787 4085-788'
+  years: '2010–2012'
+  description: Updated and formalized the MS-GDD capstone policies, documents, and procedures. See Section 11 for a comprehensive list of supported graduate projects/theses.
+- institution: Rochester Institute of Technology
+  course: N/A
+  years: '2009–2012'
+  description: Developed courses on the ethics of sustainability using educational games based on economic game theory, funded by a Provost-awarded $22K grant. This work involved a multidisciplinary group of faculty and students from Sustainability, Philosophy, and IGM.
+- institution: Rochester Institute of Technology
+  course: N/A
+  years: '2009–2010'
+  description: Collaborated with the faculty of IGM and RIT’s Electrical Engineering Technology department to write a CCLI proposal for Physical Computing 2, a follow-up to IGM’s Physical Computing course.
+- institution: Rochester Institute of Technology
+  course: '4080-221 4080-222 4080-223'
+  years: '2009–2010'
+  description: Developed a compiler design project and introductory software engineering materials for this project-based development course. In Fall 2006, I also created a second game development project for the Game Boy Advance.
+- institution: Rochester Institute of Technology
+  course: '4002-590 4002-790'
+  years: '2008–2009'
+  description: Developed a course on alternative game interfaces in which students make custom game controllers.
+- institution: Rochester Institute of Technology
+  course: '4080-330'
+  years: '2007–2008'
+  description: Redesigned course; used by additional instructors.
+- institution: Rochester Institute of Technology
+  course: '4002-217 4002-218'
+  years: '2007–2008'
+  description: Revamped the course material, leveraging my Cornell introductory programming experience.
+- institution: Cornell University
+  course: CIS 300 CIS 400
+  years: '2001–2007'
+  description: My team and I developed two game design courses, CIS300 and CIS400, which comprise the core of Cornell’s Minor in Game Design. The minor is the first-ever undergraduate Ivy League program in game design. gdiac.cis.cornell.edu.
+- institution: Cornell University
+  course: CS 212
+  years: '2002–2007'
+  description: Developed a compiler design project and introductory software engineering materials for this project development course. In the Fall of 2006, I created a second game development project for the Game Boy Advance.
+- institution: Cornell University
+  course: CS 214 CS 215
+  years: '2003–2007'
+  description: Created two courses, Advanced UNIX (214) and Introduction to C# (215), and trained graduate students to administer them.
+- institution: Cornell University
+  course: CS 100M
+  years: '2000–2004'
+  description: Developed the Academic Excellence Workshop program for CS100M in collaboration with Cornell’s College of Engineering.
+- institution: Cornell University
+  course: CS 100M
+  years: '2000'
+  description: Developed course material for the first offering of CS100M, an introductory programming course that teaches programming with MATLAB and Java using scientific computing examples.
+- institution: State University of New York at Buffalo
+  course: EAS 140
+  years: '1997–1998'
+  description: Developed Unix and Maple laboratory modules for EAS 140, an introductory engineering course. These modules formed the basis for the two textbooks I published during graduate school, ultimately helping me make my “break” into Cornell.
+courses_taught:
+- institution: Rochester Institute of Technology
+  course: IGME 099
+  title: Co-op Preparation Workshop
+  terms: S15–S21
+- institution: Rochester Institute of Technology
+  course: IGME 206
+  title: Game Development for Programmers
+  terms: F22
+- institution: Rochester Institute of Technology
+  course: IGME 299
+  title: Co-op Preparation Workshop
+  terms: S15
+- institution: Rochester Institute of Technology
+  course: IGME 309
+  title: Data Structures & Algs for Games and Sim. II
+  terms: F13, F18, F24
+- institution: Rochester Institute of Technology
+  course: IGME 695
+  title: Colloquium in Game Design and Development
+  terms: F25
+- institution: Rochester Institute of Technology
+  course: IGME 750
+  title: Game Engine Design and Development
+  terms: S23
+- institution: Rochester Institute of Technology
+  course: IGME 590
+  title: Game Physics Seminar
+  terms: S14, S15, S17, F19
+- institution: Rochester Institute of Technology
+  course: IGME 599
+  title: Independent Studies
+  terms: S14-S22, S23, F24
+- institution: Rochester Institute of Technology
+  course: IGME 695
+  title: Colloquium in Game Design and Development
+  terms: F25
+- institution: Rochester Institute of Technology
+  course: IGME 790
+  title: Game Physics Seminar
+  terms: S14, S15, S17, F19
+- institution: Rochester Institute of Technology
+  course: IGME 797
+  title: Advanced Topics in Game Development
+  terms: F14, F16, S17
+- institution: Rochester Institute of Technology
+  course: IGME 799
+  title: Independent Studies
+  terms: S14–S22, F23–F24
+- institution: Rochester Institute of Technology
+  course: '4080-201'
+  title: Freshman Seminar (GDD)
+  terms: '101, 111'
+- institution: Rochester Institute of Technology
+  course: '4080-221'
+  title: Game Software Development I
+  terms: '091, 121'
+- institution: Rochester Institute of Technology
+  course: '4080-222'
+  title: Game Software Development II
+  terms: '111, 112, 121'
+- institution: Rochester Institute of Technology
+  course: '4080-223'
+  title: Game Software Development III
+  terms: '091, 113'
+- institution: Rochester Institute of Technology
+  course: '4080-380'
+  title: Game Design & Development I
+  terms: '091, 102, 111–112'
+- institution: Rochester Institute of Technology
+  course: '4080-387'
+  title: Data Structures & Algorithms for Games I
+  terms: '092, 093,112–113, 123'
+- institution: Rochester Institute of Technology
+  course: '4080-417'
+  title: Visual C++ for Programmers
+  terms: '092, 103, 111, 121'
+- institution: Rochester Institute of Technology
+  course: '4080-487'
+  title: Data Structures & Algorithms for Games II
+  terms: '093, 103, 122'
+- institution: Rochester Institute of Technology
+  course: '4080-599'
+  title: Augmented Reality Golf (independent study)
+  terms: '092–103'
+- institution: Rochester Institute of Technology
+  course: '4080-599'
+  title: GameBoy Development (independent study)
+  terms: '112'
+- institution: Rochester Institute of Technology
+  course: '4080-599'
+  title: Independent Studies (other students/projects)
+  terms: '093–103, 112–122'
+- institution: Rochester Institute of Technology
+  course: '4080-834'
+  title: 2D Graphics Programming
+  terms: '122'
+- institution: Rochester Institute of Technology
+  course: '4080-887'
+  title: Capstone Design (MS-GDD)
+  terms: '102, 112, 122'
+- institution: Rochester Institute of Technology
+  course: '4080-888'
+  title: Capstone Development (MS-GDD)
+  terms: '103, 113, 123'
+- institution: Rochester Institute of Technology
+  course: '4080-899'
+  title: Independent Studies (graduate capstone support)
+  terms: '112–113'
+- institution: Rochester Institute of Technology
+  course: '4002-217'
+  title: Programming for Information Technology I
+  terms: '071'
+- institution: Rochester Institute of Technology
+  course: '4002-218'
+  title: Programming for Information Technology II
+  terms: '072, 073'
+- institution: Rochester Institute of Technology
+  course: '4002-330'
+  title: Interactive Digital Media
+  terms: '072, 073, 081'
+- institution: Rochester Institute of Technology
+  course: '4002-590'
+  title: Alternative Game Interface Seminar
+  terms: '082'
+- institution: Rochester Institute of Technology
+  course: '4002-790'
+  title: Emerging Themes in Entertainment Technology
+  terms: '073'
+- institution: Rochester Institute of Technology
+  course: '4003-231'
+  title: Computer Science 1/“RAPT” 1
+  terms: '082'
+- institution: Rochester Institute of Technology
+  course: '4003-232'
+  title: Computer Science 3/“RAPT” 2
+  terms: '083'
+- institution: Rochester Institute of Technology
+  course: '4003-233'
+  title: Computer Science 3/“RAPT” 3
+  terms: '081, 083'
+- institution: Cornell University
+  course: CS 99
+  title: Fundamentals of Computer Programming
+  terms: F00, F01, F02
+- institution: Cornell University
+  course: CS 100A
+  title: Introduction to Computer Programming
+  terms: S00
+- institution: Cornell University
+  course: CS 100B
+  title: Introduction to Computer Programming
+  terms: F99
+- institution: Cornell University
+  course: CS 100J
+  title: Introduction to Computer Programming
+  terms: S01, F01
+- institution: Cornell University
+  course: CS 100M
+  title: Introduction to Computer Programming
+  terms: F00, F02, S04
+- institution: Cornell University
+  course: CS 114
+  title: Introduction to UNIX
+  terms: F99, S00
+- institution: Cornell University
+  course: ENGRG 150
+  title: Engineering Seminar
+  terms: F00, F02, F04, F05, F06
+- institution: Cornell University
+  course: CS 211
+  title: Computers & Programming
+  terms: S02–F03, F04–S07
+- institution: Cornell University
+  course: CS 212
+  title: Java Practicum
+  terms: S02–F03, F04–S07
+- institution: Cornell University
+  course: CIS 300
+  title: Digital Game Design
+  terms: F04–F05
+- institution: Cornell University
+  course: CIS 400
+  title: Advanced Projects in Game Design
+  terms: F06–S07
+- institution: Cornell University
+  course: CS 490 CIS 490 CS 790
+  title: Game Design Projects
+  terms: F01–F05
+- institution: Cornell University
+  course: CS 490 CIS 490 INFO 490 CS 790 CIS 790
+  title: Advanced Game Design Projects
+  terms: F02–S06
+courses_by_term:
+- institution: Rochester Institute of Technology
+  term: S27
+  courses: IGME 689
+- institution: Rochester Institute of Technology
+  term: F26
+  courses: Service work and curriculum development for game-adjacent courses
+- institution: Rochester Institute of Technology
+  term: S26
+  courses: Administrative work
+- institution: Rochester Institute of Technology
+  term: F25
+  courses: IGME 695
+- institution: Rochester Institute of Technology
+  term: S25
+  courses: Administrative work
+- institution: Rochester Institute of Technology
+  term: F24
+  courses: IGME 309, IGME 599, IGME 799
+- institution: Rochester Institute of Technology
+  term: S24
+  courses: IGME 750, IGME 799
+- institution: Rochester Institute of Technology
+  term: F23
+  courses: IGME 799
+- institution: Rochester Institute of Technology
+  term: S23
+  courses: IGME 599
+- institution: Rochester Institute of Technology
+  term: F22
+  courses: IGME 206
+- institution: Rochester Institute of Technology
+  term: S22
+  courses: IGME 599, IGME 799
+- institution: Rochester Institute of Technology
+  term: F21
+  courses: IGME 599, IGME 799
+- institution: Rochester Institute of Technology
+  term: S21
+  courses: IGME 099, IGME 599
+- institution: Rochester Institute of Technology
+  term: F20
+  courses: IGME 099, IGME 599
+- institution: Rochester Institute of Technology
+  term: S20
+  courses: IGME 099, IGME 599
+- institution: Rochester Institute of Technology
+  term: F19
+  courses: IGME 099, IGME 590, IGME 790, IGME 599
+- institution: Rochester Institute of Technology
+  term: S19
+  courses: IGME 099, IGME 599
+- institution: Rochester Institute of Technology
+  term: F18
+  courses: IGME 099, IGME 309, IGME 599
+- institution: Rochester Institute of Technology
+  term: S18
+  courses: IGME 099, IGME 599
+- institution: Rochester Institute of Technology
+  term: F17
+  courses: IGME 099, IGME 599
+- institution: Rochester Institute of Technology
+  term: S17
+  courses: IGME 099, IGME 590, IGME 790, IGME 599
+- institution: Rochester Institute of Technology
+  term: F16
+  courses: IGME 099, IGME 797
+- institution: Rochester Institute of Technology
+  term: S16
+  courses: IGME 099
+- institution: Rochester Institute of Technology
+  term: F15
+  courses: IGME 099
+- institution: Rochester Institute of Technology
+  term: S15
+  courses: IGME 099, IGME 590, IGME 790, IGME 599
+- institution: Rochester Institute of Technology
+  term: F14
+  courses: IGME 797, IGME 599, IGME 790, IGME 299
+- institution: Rochester Institute of Technology
+  term: S14
+  courses: IGME 590, IGME 599
+- institution: Rochester Institute of Technology
+  term: F13
+  courses: IGME 309 (2 sections)
+- institution: Rochester Institute of Technology
+  term: '123'
+  courses: '4080-387, 4080-888, 4080-599, 4080-899'
+- institution: Rochester Institute of Technology
+  term: '122'
+  courses: '4080-487, 4080-834, 4080-887, 4080-599'
+- institution: Rochester Institute of Technology
+  term: '121'
+  courses: '4080-221, 4080-222, 4080-417'
+- institution: Rochester Institute of Technology
+  term: '113'
+  courses: '4080-381, 4080-387, 4080-888, 4080-599, 4080-899'
+- institution: Rochester Institute of Technology
+  term: '112'
+  courses: '4080-222, 4080-387, 4080-887, 4080-599, 4080-899'
+- institution: Rochester Institute of Technology
+  term: '111'
+  courses: '4080-201, 4080-222'
+- institution: Rochester Institute of Technology
+  term: '103'
+  courses: '4080-417, 4080-487, 4080-888, 4080-599, 4080-899'
+- institution: Rochester Institute of Technology
+  term: '102'
+  courses: 4080-380 (2 sections), 4080-887, 4080-599, 4080-899
+- institution: Rochester Institute of Technology
+  term: '101'
+  courses: 4080-201 (2 sections), 4080-417, 4080-599
+- institution: Rochester Institute of Technology
+  term: '093'
+  courses: '4080-387, 4080-487, 4080-599'
+- institution: Rochester Institute of Technology
+  term: '092'
+  courses: '4080-387, 4080-417, 4080-599'
+- institution: Rochester Institute of Technology
+  term: '091'
+  courses: '4080-221, 4080-380'
+- institution: Rochester Institute of Technology
+  term: '083'
+  courses: '4003-232, 4003-233'
+- institution: Rochester Institute of Technology
+  term: '082'
+  courses: '4003-231, 4002-590'
+- institution: Rochester Institute of Technology
+  term: '081'
+  courses: '4003-233, 4002-330'
+- institution: Rochester Institute of Technology
+  term: '073'
+  courses: '4002-218, 4002-330, 4002-790'
+- institution: Rochester Institute of Technology
+  term: '072'
+  courses: '4002-218, 4002-330'
+- institution: Rochester Institute of Technology
+  term: '071'
+  courses: '4002-217'
+- institution: Cornell University
+  term: S07
+  courses: CS 211, CS 212, CIS 400
+- institution: Cornell University
+  term: F07
+  courses: CS 211, CS 212, CIS 400, CS 490, CIS 490
+- institution: Cornell University
+  term: S06
+  courses: CS 211, CS 212, CIS 400, CS 490, CS 490, CIS 490, CS 490, CIS 490, INFO 490, CS 790, CIS 790
+- institution: Cornell University
+  term: F06
+  courses: CS 211, CS 212, ENGRG 150, CIS 400, CS 490, CIS 490, CS 490, CIS 490, INFO 490, CS 790, CIS 790
+- institution: Cornell University
+  term: S05
+  courses: CS 211, CS 212, CIS 300, CS 490, CIS 490, CS 490, CIS490, INFO 490, CS790, CIS 790
+- institution: Cornell University
+  term: F05
+  courses: CS 211, CS 212, ENGRG 150, CIS 300, CS 490, CIS 490, CS 490, CIS490, INFO 490, CS 790, CIS 790
+- institution: Cornell University
+  term: S04
+  courses: CS 100M, CIS 300, CS 490, CIS 490, CS 490, CIS 490, INFO 490, CS 790, CIS 790
+- institution: Cornell University
+  term: F04
+  courses: CS 211, CS 212, ENGRG 150, CIS 300, CS 490, CIS 490, INFO 490, CS 790, CS 790, CS 790, CIS 790
+- institution: Cornell University
+  term: F03
+  courses: CS 211, CS 212, CS 490, CS 490, CIS 490, INFO 490, CS 790, CIS 790
+- institution: Cornell University
+  term: S03
+  courses: CS 211, CS 212, CS 490, CS 490, CIS 490, INFO 490, CS 790, CIS 790
+- institution: Cornell University
+  term: F02
+  courses: ENGRG 150, CS 99, CS 100M, CS 490, CIS 490, INFO 490, CS 790, CIS 790
+- institution: Cornell University
+  term: S02
+  courses: CS 211, CS 212, CS 490
+- institution: Cornell University
+  term: F01
+  courses: CS 99, CS 100J, CS 490
+- institution: Cornell University
+  term: S01
+  courses: CS 100J, CS 490
+- institution: Cornell University
+  term: F00
+  courses: ENGRG 150, CS 99, CS 100M
+- institution: Cornell University
+  term: S00
+  courses: CS 100A, CS 114
+- institution: Cornell University
+  term: F99
+  courses: CS 100B, CS 144
+- institution: State University of New York at Buffalo
+  term: F98
+  courses: 'EAS 140: Introduction to Engineering'
+- institution: State University of New York at Buffalo
+  term: S97
+  courses: 'EAS 140: Introduction to Engineering'
+- institution: State University of New York at Buffalo
+  term: F97
+  courses: 'EAS 140: Introduction to Engineering'
+- institution: State University of New York at Buffalo
+  term: S91
+  courses: 'EAS 106: Engineering Mechanics II (teaching assistant)'
+- institution: State University of New York at Buffalo
+  term: F90
+  courses: 'EAS 105: Engineering Mechanics I (teaching assistant)'

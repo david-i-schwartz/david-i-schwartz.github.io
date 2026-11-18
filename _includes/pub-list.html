@@ -1,0 +1,13 @@
+{%- comment -%}
+  Prints one publication type as a heading + list.
+  include.type = type key, include.label = heading, include.id = anchor id
+{%- endcomment -%}
+{%- assign pubs = site.data.cv.publications | where: "type", include.type | sort: "year" | reverse -%}
+{%- if pubs.size > 0 %}
+<h2 id="{{ include.id }}">{{ include.label }} <span class="count">{{ pubs.size }}</span></h2>
+<ol class="pubs" reversed>
+  {%- for p in pubs %}
+  <li><span class="pubs__year">{{ p.year | escape }}</span> <span class="pubs__cite">{{ p.citation | escape }}</span>{% include safe-url.html url=p.link %}{% if safe_url != "" %} <a class="pubs__link" href="{{ safe_url | escape }}">Link</a>{% endif %}</li>
+  {%- endfor %}
+</ol>
+{%- endif %}

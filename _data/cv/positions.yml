@@ -1,0 +1,90 @@
+- group: Faculty
+  years: 2025–present
+  title: Professor
+  unit: School of Interactive Games and Media
+  organization: Rochester Institute of Technology, Golisano College of Computing and Information Sciences
+  location: Rochester, New York
+- group: Faculty
+  years: '2011–2025'
+  title: Associate Professor
+  unit: School of Interactive Games and Media
+  organization: Rochester Institute of Technology, Golisano College of Computing and Information Sciences
+  location: Rochester, New York
+- group: Faculty
+  years: '2009–2011'
+  title: Assistant Professor
+  unit: Department of Interactive Games and Media
+  organization: Rochester Institute of Technology, Golisano College of Computing and Information Sciences
+  location: Rochester, New York
+- group: Faculty
+  years: '2007–2009'
+  title: Assistant Professor
+  unit: Information Technology Department
+  organization: Rochester Institute of Technology, Golisano College of Computing and Information Sciences
+  location: Rochester, New York
+- group: Faculty
+  years: '1999–2007'
+  title: Lecturer
+  unit: Department of Computer Science
+  organization: Cornell University
+  location: Ithaca, New York
+- group: Faculty
+  years: '1997–1998'
+  title: Instructor
+  unit: School of Engineering and Applied Science
+  organization: University at Buffalo
+  location: Amherst, New York
+- group: Administration
+  years: 2025–present
+  title: Co-Director
+  unit: Collaboratory for Resiliency and Recovery
+  organization: Rochester Institute of Technology
+  location: ''
+- group: Administration
+  years: 2025–present
+  title: Coordinator
+  unit: RIT Digital Twins
+  organization: Rochester Institute of Technology
+  location: ''
+- group: Administration
+  years: '2015–2026'
+  title: Director
+  unit: School of Interactive Games and Media
+  organization: Rochester Institute of Technology, Golisano College of Computing and Information Sciences
+  location: Rochester, New York
+- group: Administration
+  years: '2013–2016'
+  title: Undergraduate Program Coordinator
+  unit: School of Interactive Games and Media
+  organization: Rochester Institute of Technology, Golisano College of Computing and Information Sciences
+  location: Rochester, New York
+- group: Administration
+  years: '2003–2007'
+  title: Director
+  unit: Game Design Initiative at Cornell University
+  organization: Cornell University
+  location: Ithaca, New York
+- group: Government
+  years: 06–09, 2008; 05–08, 2007; 06–12, 2006
+  title: Visiting Research Professor
+  unit: ''
+  organization: Air Force Research Laboratory
+  location: Rome, New York
+- group: Industry
+  years: 2026–present
+  title: Director and Co-owner
+  unit: ''
+  organization: Arc Angel Initiative Corporation
+  location: Rochester, New York
+- group: Industry
+  years: 2025–present
+  title: Advisory Board
+  unit: ''
+  organization: AI for Teens
+  location: Chicago, Illinois
+- group: Industry
+  years: '2022–2025'
+  title: Advisory Board
+  unit: ''
+  organization: IntrepidVX
+  location: Rochester, New York

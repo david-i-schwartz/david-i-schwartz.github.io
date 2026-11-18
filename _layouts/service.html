@@ -1,0 +1,51 @@
+---
+layout: default
+---
+{%- assign admin = site.data.cv.administration -%}
+{%- assign svc = site.data.cv.service -%}
+{%- assign lead_projects = site.projects | where: "area", "leadership" | sort: "order" -%}
+{%- assign scopes = "RIT – Institute|RIT – College|RIT – Unit|RIT – Student Organizations|RIT – Hosted Colloquia|Regional and Local Community|Field – Professional Organizations|Field – Professional Reviews|Field – External Organizations, Conferences, and Events|Cornell – Leadership|Cornell – Student Organizations|Cornell – Computing Committees|Cornell – Admissions" | split: "|" -%}
+<section class="wrap page">
+  <header class="page__head">
+    <h1>{{ page.title | escape }}</h1>
+    {%- assign intro_len = page.intro | append: "" | size -%}
+    {%- if intro_len > 0 %}<p class="lede">{{ page.intro | escape }}</p>{% endif %}
+    <nav class="jump" aria-label="On this page"><a href="#roles">Leadership roles</a><a href="#rit">RIT</a><a href="#community">Community</a><a href="#field">The field</a><a href="#cornell">Cornell</a></nav>
+  </header>
+  <div class="prose">{{ content }}</div>
+
+  {%- if lead_projects.size > 0 %}
+  <h2>Leadership projects</h2>
+  <ul class="cards cards--tight">{% for p in lead_projects %}{% include project-card.html project=p %}{% endfor %}</ul>
+  {%- endif %}
+
+  <h2 id="roles">Leadership roles and what came of them</h2>
+  {%- for a in admin %}
+  <h3>{{ a.role | remove_first: "As " | escape }} <span class="soft">{{ a.years | escape }}</span></h3>
+  <ul class="bullets">
+    {%- for h in a.highlights %}<li>{{ h | escape }}</li>{% endfor %}
+  </ul>
+  {%- endfor %}
+
+  {%- assign summary = svc | where: "scope", "RIT – Leadership Summary" -%}
+  {%- if summary.size > 0 %}
+  <h2 id="rit">RIT leadership summary</h2>
+  <ul class="list">
+    {%- for r in summary %}<li><span class="list__year">{{ r.years | escape }}</span> {{ r.role | escape }}{% assign ol = r.organization | append: "" | size %}{% if ol > 0 %}, {{ r.organization | escape }}{% endif %}</li>{% endfor %}
+  </ul>
+  {%- endif %}
+
+  {%- for sc in scopes -%}
+    {%- assign rows = svc | where: "scope", sc -%}
+    {%- if rows.size > 0 -%}
+      {%- assign anchor = "" -%}
+      {%- if sc == "Regional and Local Community" %}{% assign anchor = "community" %}{% elsif sc == "Field – Professional Organizations" %}{% assign anchor = "field" %}{% elsif sc == "Cornell – Leadership" %}{% assign anchor = "cornell" %}{% endif %}
+  <h2{% if anchor != "" %} id="{{ anchor }}"{% endif %}>{{ sc | replace: " – ", ": " }}</h2>
+  <ul class="list">
+    {%- for r in rows %}
+    <li><span class="list__year">{{ r.years | escape }}</span> {{ r.role | escape }}{% assign ol = r.organization | append: "" | size %}{% if ol > 0 %}, {{ r.organization | escape }}{% endif %}{% assign nl = r.notes | append: "" | size %}{% if nl > 0 %} <span class="soft">· {{ r.notes | escape }}</span>{% endif %}</li>
+    {%- endfor %}
+  </ul>
+    {%- endif -%}
+  {%- endfor %}
+</section>

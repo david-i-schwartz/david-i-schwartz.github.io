@@ -1,0 +1,28 @@
+{%- assign s = site.data.settings -%}
+{%- assign menu_pages = site.pages | where: "menu", true | sort: "menu_order" -%}
+{%- comment -%} Which menu item is "current": the page itself, or the section a project belongs to. {%- endcomment -%}
+{%- assign current_layout = "" -%}
+{%- if page.collection == "projects" -%}
+  {%- case page.area -%}
+    {%- when "interests" -%}{%- assign current_layout = "interests" -%}
+    {%- when "teaching" -%}{%- assign current_layout = "teaching" -%}
+    {%- when "leadership" -%}{%- assign current_layout = "service" -%}
+    {%- else -%}{%- assign current_layout = "projects" -%}
+  {%- endcase -%}
+{%- endif -%}
+<header class="top">
+  <div class="wrap top__inner">
+    <a class="brand" href="{{ '/' | relative_url }}">{{ s.short_name | default: site.title | escape }}</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" class="nav" aria-label="Main">
+      <ul>
+        {%- for p in menu_pages -%}
+          {%- assign is_current = false -%}
+          {%- if page.url == p.url -%}{%- assign is_current = true -%}{%- endif -%}
+          {%- if current_layout != "" and p.layout == current_layout -%}{%- assign is_current = true -%}{%- endif %}
+        <li><a href="{{ p.url | relative_url }}"{% if is_current %} aria-current="page"{% endif %}>{{ p.title | escape }}</a></li>
+        {%- endfor %}
+      </ul>
+    </nav>
+  </div>
+</header>

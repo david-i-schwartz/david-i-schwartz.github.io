@@ -1,0 +1,27 @@
+name: David I. Schwartz, Ph.D.
+short_name: Dave Schwartz
+title_line: Professor, School of Interactive Games and Media · Rochester Institute of Technology
+tagline: Games, digital twins, resilience, and the things I make.
+pronouns: he/him
+photo: /photos/site/dave.jpg
+email: David.I.Schwartz@rit.edu
+office: GOL 2519, Rochester, New York 14623
+phone: 585.475.5521
+cv_pdf: /files/schwartz-cv.pdf
+links:
+  - label: RIT directory
+    url: https://www.rit.edu/directory/disvks-david-schwartz
+  - label: Google Scholar
+    url: https://scholar.google.com/citations?user=C7XXFqMAAAAJ&hl=en
+  - label: ORCID
+    url: https://orcid.org/0000-0002-1675-9535
+  - label: LinkedIn
+    url: https://www.linkedin.com/in/davidiraschwartz
+  - label: GitHub
+    url: https://github.com/david-i-schwartz
+  - label: RIT Digital Twins
+    url: https://www.rit.edu/digitaltwins
+  - label: Collaboratory for Resiliency and Recovery
+    url: https://www.rit.edu/resiliencyandrecovery/
+  - label: RIT Games
+    url: https://games.rit.edu

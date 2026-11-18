@@ -1,0 +1,134 @@
+---
+layout: default
+---
+{%- assign s = site.data.settings -%}
+{%- assign cv = site.data.cv -%}
+{%- assign groups = "Faculty|Administration|Government|Industry" | split: "|" -%}
+{%- assign periods = "RIT post-tenure|RIT pre-tenure|Cornell" | split: "|" -%}
+{%- include safe-url.html url=s.cv_pdf -%}
+{%- assign pdf = s.cv_pdf | append: "" -%}
+{%- assign pdf_1 = pdf | slice: 0, 1 -%}
+<section class="wrap page cv">
+  <header class="page__head">
+    <h1>Curriculum Vitae</h1>
+    <p class="lede">{{ s.name | escape }} · {{ s.title_line | escape }}</p>
+    <p class="cv__actions">
+      {%- if pdf_1 == "/" %}<a class="btn" href="{{ pdf | relative_url | escape }}">Download PDF</a>{% elsif safe_url != "" %}<a class="btn" href="{{ safe_url | escape }}">Download PDF</a>{% endif %}
+      <button class="btn btn--ghost js-print" type="button" hidden>Print this page</button>
+    </p>
+    <nav class="jump" aria-label="On this page">
+      <a href="#career">Career</a><a href="#education">Education</a><a href="#admin">Administration</a><a href="#funding">Funding</a><a href="#scholarship">Scholarship</a><a href="#teaching">Teaching</a><a href="#theses">Students</a><a href="#service">Service</a><a href="#awards">Awards</a>
+    </nav>
+  </header>
+  <div class="prose">{{ content }}</div>
+
+  <h2 id="career">1. Career history</h2>
+  {%- for g in groups -%}
+    {%- assign rows = cv.positions | where: "group", g -%}
+    {%- if rows.size > 0 %}
+  <h3>{{ g }}</h3>
+  <table class="tbl tbl--cv">
+    <tbody>
+      {%- for r in rows %}
+      <tr><td class="nowrap">{{ r.years | escape }}</td><td><strong>{{ r.title | escape }}</strong>{% assign ul = r.unit | append: "" | size %}{% if ul > 0 %}, {{ r.unit | escape }}{% endif %}</td><td>{{ r.organization | escape }}{% assign ll = r.location | append: "" | size %}{% if ll > 0 %}<br><span class="soft">{{ r.location | escape }}</span>{% endif %}</td></tr>
+      {%- endfor %}
+    </tbody>
+  </table>
+    {%- endif -%}
+  {%- endfor %}
+
+  <h2 id="education">2. Education</h2>
+  <table class="tbl tbl--cv">
+    <tbody>
+      {%- for e in cv.education %}
+      <tr><td class="nowrap">{{ e.year | escape }}</td><td><strong>{{ e.degree | escape }}</strong>, {{ e.field | escape }}{% assign fl = e.focus | append: "" | size %}{% if fl > 0 %} <span class="soft">({{ e.focus | escape }})</span>{% endif %}</td><td>{{ e.institution | escape }}<br><span class="soft">{{ e.location | escape }}</span></td></tr>
+      {%- endfor %}
+    </tbody>
+  </table>
+
+  <h2 id="admin">3. Administrative accomplishments</h2>
+  {%- for a in cv.administration %}
+  <h3>{{ a.role | escape }} <span class="soft">({{ a.years | escape }})</span></h3>
+  <ul class="bullets">{% for h in a.highlights %}<li>{{ h | escape }}</li>{% endfor %}</ul>
+  {%- endfor %}
+
+  <h2 id="funding">4. Funding</h2>
+  <table class="tbl tbl--cv tbl--narrow">
+    <thead><tr><th>Location</th><th>Funding ($K)</th><th>Career total ($K)</th></tr></thead>
+    <tbody>{% for r in cv.funding.summary %}<tr><td>{{ r.location | escape }}</td><td>{{ r.funding_k | escape }}</td><td>{{ r.career_total_k | escape }}</td></tr>{% endfor %}</tbody>
+  </table>
+  <p class="soft">{{ cv.funding.legend | escape }}</p>
+  {%- for per in periods -%}
+    {%- assign rows = cv.funding.grants | where: "period", per -%}
+    {%- if rows.size > 0 %}
+  <h3>{{ per | capitalize | replace: "Rit", "RIT" }}</h3>
+  <table class="tbl tbl--cv">
+    <thead><tr><th>Years</th><th>Project</th><th>Sponsor</th><th>Role</th><th>$K</th></tr></thead>
+    <tbody>
+      {%- for g in rows %}
+      <tr><td class="nowrap">{{ g.years | escape }}</td><td>{{ g.title | default: g.notes | escape }}</td><td>{{ g.sponsor | escape }}</td><td>{{ g.role | escape }}</td><td class="nowrap">{{ g.amount_k | escape }}</td></tr>
+      {%- endfor %}
+    </tbody>
+  </table>
+    {%- endif -%}
+  {%- endfor %}
+
+  <h2 id="scholarship">5. Published scholarship and dissemination</h2>
+  <p>Full lists with anchors are on the <a href="{{ '/publications/' | relative_url }}">Publications</a> page.</p>
+  {% include pub-list.html type="book_or_chapter" label="5.1 Peer-reviewed books and chapters" id="cv-books" %}
+  {% include pub-list.html type="journal" label="5.2 Peer-reviewed journal papers" id="cv-journals" %}
+  {% include pub-list.html type="game_or_simulation" label="5.3 Shipped and published games and simulations" id="cv-games" %}
+  {% include pub-list.html type="creative_work" label="5.4 Additional creative works" id="cv-creative" %}
+  {% include pub-list.html type="conference_paper" label="5.5 Peer-reviewed conference papers and extended abstracts" id="cv-conf" %}
+  {% include pub-list.html type="peer_reviewed_abstract_or_talk" label="5.6 Peer-reviewed abstracts, talks, panels, posters, and workshops" id="cv-abstracts" %}
+  {% include pub-list.html type="invited_talk" label="5.7 Invited abstracts, talks, panels, posters, and workshops" id="cv-invited" %}
+  {% include pub-list.html type="sponsor_reviewed_report" label="5.8 Sponsor-reviewed articles and technical reports" id="cv-reports" %}
+  {%- assign press = cv.press | sort: "year" | reverse -%}
+  <h2 id="cv-press">5.9 Popular press, news, and press releases <span class="count">{{ press.size }}</span></h2>
+  <ul class="list">
+    {%- for n in press -%}
+      {%- include safe-url.html url=n.url %}
+    <li><span class="list__year">{{ n.year | escape }}</span> {% if safe_url != "" %}<a href="{{ safe_url | escape }}">{{ n.title_or_citation | escape }}</a>{% else %}{{ n.title_or_citation | escape }}{% endif %}{% assign out_len = n.outlet | append: "" | size %}{% if out_len > 0 %} <span class="soft">· {{ n.outlet | escape }}</span>{% endif %}</li>
+    {%- endfor %}
+  </ul>
+
+  <h2 id="teaching">6. Teaching and course development</h2>
+  <p>Course descriptions, term-by-term history, and abbreviations are on the <a href="{{ '/teaching/' | relative_url }}">Teaching</a> page.</p>
+  {%- assign institutions = "Rochester Institute of Technology|Cornell University|State University of New York at Buffalo" | split: "|" -%}
+  {%- for inst in institutions -%}
+    {%- assign rows = cv.teaching.courses_taught | where: "institution", inst -%}
+    {%- if rows.size > 0 %}
+  <h3>{{ inst }}</h3>
+  <table class="tbl tbl--cv">
+    <tbody>{% for r in rows %}<tr><td class="nowrap">{{ r.course | escape }}</td><td>{{ r.title | escape }}</td><td class="nowrap">{{ r.terms | escape }}</td></tr>{% endfor %}</tbody>
+  </table>
+    {%- endif -%}
+  {%- endfor %}
+
+  <h2 id="theses">7. Graduate theses, capstones, and dissertations</h2>
+  <table class="tbl tbl--cv">
+    <tbody>
+      {%- for th in cv.theses %}
+      <tr><td class="nowrap">{{ th.year | default: th.years | escape }}</td><td>{{ th.student | escape }}</td><td>{{ th.title | escape }}</td><td>{{ th.type | escape }}, {{ th.role | escape }}</td></tr>
+      {%- endfor %}
+    </tbody>
+  </table>
+
+  <h2 id="service">8. Service and administration</h2>
+  {%- assign scopes = "RIT – Leadership Summary|RIT – Institute|RIT – College|RIT – Unit|RIT – Student Organizations|RIT – Hosted Colloquia|Regional and Local Community|Field – Professional Organizations|Field – Professional Reviews|Field – External Organizations, Conferences, and Events|Cornell – Leadership|Cornell – Student Organizations|Cornell – Computing Committees|Cornell – Admissions" | split: "|" -%}
+  {%- for sc in scopes -%}
+    {%- assign rows = cv.service | where: "scope", sc -%}
+    {%- if rows.size > 0 %}
+  <h3>{{ sc | replace: " – ", ": " }}</h3>
+  <ul class="list list--tight">
+    {%- for r in rows %}<li><span class="list__year">{{ r.years | escape }}</span> {{ r.role | escape }}{% assign ol = r.organization | append: "" | size %}{% if ol > 0 %}, {{ r.organization | escape }}{% endif %}{% assign nl = r.notes | append: "" | size %}{% if nl > 0 %} <span class="soft">· {{ r.notes | escape }}</span>{% endif %}</li>{% endfor %}
+  </ul>
+    {%- endif -%}
+  {%- endfor %}
+
+  <h2 id="awards">9. Awards and honors</h2>
+  {%- assign awards = cv.awards | sort: "year" | reverse -%}
+  <ul class="list">
+    {%- for a in awards %}<li><span class="list__year">{{ a.year | escape }}</span> {{ a.title | escape }}{% assign nl = a.notes | append: "" | size %}{% if nl > 0 %} <span class="soft">· {{ a.notes | escape }}</span>{% endif %}</li>{% endfor %}
+  </ul>
+</section>

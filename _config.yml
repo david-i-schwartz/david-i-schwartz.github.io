@@ -1,0 +1,46 @@
+# ------------------------------------------------------------------
+#  Site wiring. Edit content through Pages CMS (app.pagescms.org)
+#  instead of touching this file. See README.md.
+# ------------------------------------------------------------------
+
+title: David I. Schwartz
+description: Professor, School of Interactive Games and Media, Rochester Institute of Technology. Games, digital twins, resilience, and the things I make.
+url: https://david-i-schwartz.github.io
+baseurl: ""
+timezone: America/New_York
+
+plugins:
+  - jekyll-sitemap   # builds /sitemap.xml for search engines
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+defaults:
+  - scope:
+      path: "pages"
+    values:
+      layout: page
+      permalink: /:basename/
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: project
+      status: current
+      area: research
+
+exclude:
+  - README.md
+  - LICENSE
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - _tools
+  - node_modules

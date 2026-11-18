@@ -1,0 +1,85 @@
+---
+layout: default
+---
+{%- assign t = site.data.cv.teaching -%}
+{%- assign institutions = "Rochester Institute of Technology|Cornell University|State University of New York at Buffalo" | split: "|" -%}
+{%- assign theses = site.data.cv.theses -%}
+{%- assign teach_videos = site.data.howtos | where: "topic", "teaching" | sort: "date" | reverse -%}
+{%- assign teach_projects = site.projects | where: "area", "teaching" | where: "status", "current" | sort: "order" -%}
+<section class="wrap page">
+  <header class="page__head">
+    <h1>{{ page.title | escape }}</h1>
+    {%- assign intro_len = page.intro | append: "" | size -%}
+    {%- if intro_len > 0 %}<p class="lede">{{ page.intro | escape }}</p>{% endif %}
+    <nav class="jump" aria-label="On this page"><a href="#development">Course development</a><a href="#courses">Courses taught</a><a href="#theses">Graduate students</a><a href="#resources">Resources</a></nav>
+  </header>
+  <div class="prose">{{ content }}</div>
+
+  {%- if teach_projects.size > 0 %}
+  <h2>Teaching projects</h2>
+  <ul class="cards cards--tight">{% for p in teach_projects %}{% include project-card.html project=p %}{% endfor %}</ul>
+  {%- endif %}
+
+  <h2 id="development">Course development</h2>
+  {%- for inst in institutions -%}
+    {%- assign rows = t.course_development | where: "institution", inst -%}
+    {%- if rows.size > 0 %}
+  <h3>{{ inst }}</h3>
+  <dl class="dev">
+    {%- for r in rows %}
+    <div class="dev__row"><dt>{{ r.course | escape }} <span class="soft">{{ r.years | escape }}</span></dt><dd>{{ r.description | escape }}</dd></div>
+    {%- endfor %}
+  </dl>
+    {%- endif -%}
+  {%- endfor %}
+
+  <h2 id="courses">Courses taught</h2>
+  <p class="soft">{% for n in t.terminology_notes %}{{ n | escape }}{% unless forloop.last %} · {% endunless %}{% endfor %}</p>
+  {%- for inst in institutions -%}
+    {%- assign rows = t.courses_taught | where: "institution", inst -%}
+    {%- if rows.size > 0 %}
+  <h3>{{ inst }}</h3>
+  <table class="tbl">
+    <thead><tr><th>Course</th><th>Title</th><th>Terms</th></tr></thead>
+    <tbody>
+      {%- for r in rows %}
+      <tr><td>{{ r.course | escape }}</td><td>{{ r.title | escape }}</td><td>{{ r.terms | escape }}</td></tr>
+      {%- endfor %}
+    </tbody>
+  </table>
+    {%- endif -%}
+  {%- endfor %}
+  <details class="fold">
+    <summary>Term-by-term list</summary>
+    {%- for inst in institutions -%}
+      {%- assign rows = t.courses_by_term | where: "institution", inst -%}
+      {%- if rows.size > 0 %}
+    <h3>{{ inst }}</h3>
+    <ul class="list list--tight">
+      {%- for r in rows %}<li><span class="list__year">{{ r.term | escape }}</span> {{ r.courses | escape }}</li>{% endfor %}
+    </ul>
+      {%- endif -%}
+    {%- endfor %}
+    <h3>Abbreviations</h3>
+    <ul class="list list--tight">
+      {%- for r in t.terminology %}<li><span class="list__year">{{ r.code | escape }}</span> {{ r.meaning | escape }} <span class="soft">· {{ r.institution | escape }}</span></li>{% endfor %}
+    </ul>
+  </details>
+
+  <h2 id="theses">Graduate theses, capstones, and dissertations</h2>
+  <table class="tbl">
+    <thead><tr><th>Years</th><th>Student</th><th>Title</th><th>Type</th><th>Role</th></tr></thead>
+    <tbody>
+      {%- for th in theses %}
+      <tr><td>{{ th.year | default: th.years | escape }}</td><td>{{ th.student | escape }}</td><td>{{ th.title | escape }}{% assign nl = th.notes | append: "" | size %}{% if nl > 0 %} <span class="soft">({{ th.notes | escape }})</span>{% endif %}</td><td>{{ th.type | escape }}</td><td>{{ th.role | escape }}</td></tr>
+      {%- endfor %}
+    </tbody>
+  </table>
+
+  <h2 id="resources">Resources and how-to videos</h2>
+  {%- if teach_videos.size > 0 %}
+  <div class="videos">{% for v in teach_videos %}{% include video.html url=v.link title=v.title date=v.date %}{% endfor %}</div>
+  {%- else %}
+  <p class="soft">Videos and downloadable resources will appear here as they are added.</p>
+  {%- endif %}
+</section>

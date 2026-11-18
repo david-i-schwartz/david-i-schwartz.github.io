@@ -1,0 +1,24 @@
+---
+layout: default
+---
+{%- assign work = site.projects | where_exp: "p", "p.area != 'interests'" -%}
+{%- assign current = work | where: "status", "current" | sort: "order" -%}
+{%- assign archived = work | where: "status", "archived" | sort: "years" | reverse -%}
+<section class="wrap page">
+  <header class="page__head">
+    <h1>{{ page.title | escape }}</h1>
+    {%- assign intro_len = page.intro | append: "" | size -%}
+    {%- if intro_len > 0 %}<p class="lede">{{ page.intro | escape }}</p>{% endif %}
+    <nav class="jump" aria-label="On this page"><a href="#current">Current</a><a href="#archived">Archived</a></nav>
+  </header>
+
+  <h2 id="current">Current</h2>
+  {%- if current.size > 0 %}
+  <ul class="cards">{% for p in current %}{% include project-card.html project=p %}{% endfor %}</ul>
+  {%- else %}<p class="soft">Nothing listed yet.</p>{% endif %}
+
+  <h2 id="archived">Archived</h2>
+  {%- if archived.size > 0 %}
+  <ul class="cards cards--tight">{% for p in archived %}{% include project-card.html project=p %}{% endfor %}</ul>
+  {%- else %}<p class="soft">Nothing archived yet.</p>{% endif %}
+</section>

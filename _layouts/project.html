@@ -1,0 +1,74 @@
+---
+layout: default
+---
+{%- include safe-img.html path=page.photo -%}
+{%- assign hero = safe_img -%}
+{%- if page.area == "interests" -%}
+  {%- assign back_url = "/interests/" -%}{%- assign back_label = "Making & Interests" -%}
+{%- else -%}
+  {%- assign back_url = "/projects/" -%}{%- assign back_label = "Projects" -%}
+{%- endif -%}
+<article class="wrap page project">
+  <p class="crumb"><a href="{{ back_url | relative_url }}">← {{ back_label }}</a></p>
+  <header class="page__head">
+    <h1>{{ page.title | escape }}</h1>
+    <p class="project__meta">
+      {%- assign yrs_len = page.years | append: "" | size -%}
+      {%- if yrs_len > 0 %}<span>{{ page.years | escape }}</span>{% endif %}
+      <span class="tag tag--{{ page.status | default: 'current' }}">{{ page.status | default: "current" | capitalize }}</span>
+      {%- assign area_len = page.area | append: "" | size -%}
+      {%- if area_len > 0 and page.area != "interests" %}<span class="tag">{{ page.area | capitalize | escape }}</span>{% endif %}
+      {%- for t in page.tags %}<span class="tag tag--soft">{{ t | escape }}</span>{% endfor %}
+    </p>
+    {%- assign sum_len = page.summary | append: "" | size -%}
+    {%- if sum_len > 0 %}<p class="lede">{{ page.summary | escape }}</p>{% endif %}
+  </header>
+
+  {%- if hero != "" %}
+  <img class="project__hero" src="{{ hero | relative_url | escape }}" alt="">
+  {%- endif %}
+
+  <div class="project__grid">
+    <div class="prose">
+      {{ content }}
+    </div>
+    <aside class="project__side">
+      {%- assign n_links = page.links | size -%}
+      {%- if n_links > 0 %}
+      <h2>Links</h2>
+      <ul class="side-links">
+        {%- for l in page.links -%}
+          {%- include safe-url.html url=l.url -%}
+          {%- if safe_url != "" %}<li><a href="{{ safe_url | escape }}">{{ l.label | default: l.url | escape }}</a></li>{% endif -%}
+        {%- endfor %}
+      </ul>
+      {%- endif %}
+      {%- assign n_people = page.people | append: "" | size -%}
+      {%- if n_people > 0 %}
+      <h2>With</h2>
+      <p>{{ page.people | escape }}</p>
+      {%- endif %}
+    </aside>
+  </div>
+
+  {%- assign n_videos = page.videos | size -%}
+  {%- if n_videos > 0 %}
+  <h2>Videos</h2>
+  <div class="videos">
+    {%- for v in page.videos %}{% include video.html url=v.link title=v.title date=v.date %}{% endfor %}
+  </div>
+  {%- endif %}
+
+  {%- assign n_photos = page.photos | size -%}
+  {%- if n_photos > 0 %}
+  <h2>Photos</h2>
+  <ul class="gallery">
+    {%- for ph in page.photos -%}
+      {%- include safe-img.html path=ph -%}
+      {%- if safe_img != "" %}
+    <li><a href="{{ safe_img | relative_url | escape }}"><img src="{{ safe_img | relative_url | escape }}" alt="" loading="lazy"></a></li>
+      {%- endif -%}
+    {%- endfor %}
+  </ul>
+  {%- endif %}
+</article>

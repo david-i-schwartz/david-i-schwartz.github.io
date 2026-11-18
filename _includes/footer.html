@@ -1,0 +1,20 @@
+{%- assign s = site.data.settings -%}
+<footer class="foot">
+  <div class="wrap foot__inner">
+    <div>
+      <strong>{{ s.name | escape }}</strong><br>
+      {{ s.title_line | escape }}<br>
+      {%- include safe-email.html email=s.email -%}
+      {%- if safe_email != "" %}<a href="mailto:{{ safe_email | escape }}">{{ safe_email | escape }}</a>{% endif %}
+    </div>
+    <ul class="foot__links">
+      {%- for l in s.links -%}
+        {%- include safe-url.html url=l.url -%}
+        {%- if safe_url != "" %}
+      <li><a href="{{ safe_url | escape }}" rel="me">{{ l.label | escape }}</a></li>
+        {%- endif -%}
+      {%- endfor %}
+    </ul>
+    <p class="foot__small">© {{ site.time | date: "%Y" }} David I. Schwartz · Built with Jekyll on GitHub Pages · <a href="{{ '/sitemap.xml' | relative_url }}">Sitemap</a></p>
+  </div>
+</footer>

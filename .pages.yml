@@ -1,0 +1,452 @@
+# ------------------------------------------------------------------
+#  Pages CMS setup: this file builds the edit forms at app.pagescms.org.
+#  Docs: https://pagescms.org/docs
+#  Everyday editing happens there; this file only changes when a new
+#  kind of content is added to the site.
+# ------------------------------------------------------------------
+
+settings:
+  commit:
+    identity: user
+
+media:
+  - name: photos
+    label: Photos
+    input: photos
+    output: /photos
+    extensions: [jpg, jpeg, png, gif, webp, svg]
+  - name: files
+    label: Files (PDFs, downloads)
+    input: files
+    output: /files
+
+content:
+
+  # ---------------- Projects (work + interests) ----------------
+  - name: projects
+    label: Projects & Interests
+    description: One entry per project, course, leadership role, or hobby. "Area" decides which page it shows on.
+    type: collection
+    path: _projects
+    filename: "{primary}.md"
+    view:
+      fields: [title, area, status, years]
+      primary: title
+      sort: [area, order, title]
+      default:
+        sort: area
+        order: asc
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: area
+        label: Where it shows
+        type: select
+        required: true
+        default: research
+        options:
+          values:
+            - { value: research, label: "Projects page (research & scholarship)" }
+            - { value: teaching, label: "Teaching & Resources page" }
+            - { value: leadership, label: "Service & Leadership page" }
+            - { value: interests, label: "Making & Interests page" }
+      - name: status
+        label: Status
+        type: select
+        required: true
+        default: current
+        options:
+          values:
+            - { value: current, label: Current }
+            - { value: archived, label: Archived }
+      - name: years
+        label: "Years (for example 2021–present, or 2015–2026)"
+        type: string
+      - name: order
+        label: Order on the page (1 = first; lower numbers come first)
+        type: number
+        default: 50
+      - name: summary
+        label: One-sentence summary (shows on the card and at the top of the page)
+        type: string
+      - name: photo
+        label: Main photo
+        type: image
+        options:
+          media: photos
+          path: photos/projects
+      - name: photos
+        label: More photos (pick several at once; drag to change the order)
+        type: image
+        options:
+          media: photos
+          path: photos/projects
+          multiple: true
+      - name: tags
+        label: Tags (one per box)
+        type: string
+        list: true
+      - name: people
+        label: Collaborators (plain text, optional)
+        type: string
+      - name: links
+        label: Links
+        type: object
+        list: true
+        fields:
+          - { name: label, label: "Link text", type: string }
+          - { name: url, label: "Web address (https://…)", type: string }
+      - name: videos
+        label: Videos
+        type: object
+        list: true
+        fields:
+          - { name: title, label: Title, type: string }
+          - { name: link, label: "YouTube link (Share, then Copy)", type: string }
+          - { name: date, label: Date, type: date }
+      - name: body
+        label: Write-up
+        type: rich-text
+        options:
+          format: markdown
+          media: photos
+
+  # ---------------- How-to videos ----------------
+  - name: howtos
+    label: How-to videos
+    description: Standalone videos. Topic decides whether a video shows under Teaching & Resources or Making & Interests.
+    type: file
+    path: _data/howtos.yml
+    format: yaml
+    list: true
+    fields:
+      - { name: title, label: Title, type: string, required: true }
+      - { name: link, label: "YouTube link (Share, then Copy)", type: string, required: true }
+      - name: topic
+        label: Where it shows
+        type: select
+        default: interests
+        options:
+          values:
+            - { value: teaching, label: "Teaching & Resources" }
+            - { value: interests, label: "Making & Interests" }
+      - { name: date, label: Date (newest first), type: date }
+
+  # ---------------- Pages ----------------
+  - name: home
+    label: Home page text
+    type: file
+    path: index.md
+    fields:
+      - { name: layout, type: string, hidden: true, default: home }
+      - { name: title, type: string, hidden: true, default: Home }
+      - name: body
+        label: Bio (shows under your photo on the home page)
+        type: rich-text
+        options:
+          format: markdown
+          media: photos
+
+  - name: pages
+    label: Section pages
+    description: The intro line at the top of each section page. The lists below the intro are built from the data.
+    type: collection
+    path: pages
+    filename: "{primary}.md"
+    operations:
+      delete: false
+      rename: false
+    view:
+      fields: [title, menu_order]
+      primary: title
+      sort: [menu_order]
+      default:
+        sort: menu_order
+        order: asc
+    fields:
+      - { name: title, label: Page title, type: string, required: true }
+      - { name: layout, type: string, hidden: true }
+      - { name: menu, label: Show in the menu, type: boolean, default: true }
+      - { name: menu_order, label: Place in the menu (10, 20, 30…), type: number }
+      - { name: intro, label: Intro line, type: string }
+      - name: body
+        label: Extra text (optional, shows under the intro)
+        type: rich-text
+        options:
+          format: markdown
+          media: photos
+
+  # ---------------- Settings ----------------
+  - name: settings
+    label: Settings (name, photo, links, CV PDF)
+    type: file
+    path: _data/settings.yml
+    format: yaml
+    fields:
+      - { name: name, label: Full name as shown, type: string }
+      - { name: short_name, label: Short name (top-left of every page), type: string }
+      - { name: title_line, label: Title line (job title and institution), type: string }
+      - { name: tagline, label: Tagline, type: string }
+      - { name: pronouns, label: Pronouns, type: string }
+      - name: photo
+        label: Your photo (home page)
+        type: image
+        options:
+          media: photos
+          path: photos/site
+      - { name: email, label: Email, type: string }
+      - { name: office, label: Office, type: string }
+      - { name: phone, label: Phone, type: string }
+      - name: cv_pdf
+        label: CV as a PDF (upload the newest one here; the Download button points at it)
+        type: file
+        options:
+          media: files
+      - name: links
+        label: Links (home page shows the first five; footer shows all)
+        type: object
+        list: true
+        fields:
+          - { name: label, label: "Link text", type: string }
+          - { name: url, label: "Web address (https://…)", type: string }
+
+  # ---------------- CV data ----------------
+  - name: cv_positions
+    label: "CV · 1. Career history"
+    type: file
+    path: _data/cv/positions.yml
+    format: yaml
+    list: true
+    fields:
+      - name: group
+        label: Group
+        type: select
+        options:
+          values: [Faculty, Administration, Government, Industry]
+      - { name: years, label: Years, type: string }
+      - { name: title, label: Title, type: string }
+      - { name: unit, label: Unit / department, type: string }
+      - { name: organization, label: Organization, type: string }
+      - { name: location, label: Location, type: string }
+
+  - name: cv_education
+    label: "CV · 2. Education"
+    type: file
+    path: _data/cv/education.yml
+    format: yaml
+    list: true
+    fields:
+      - { name: year, label: Year, type: string }
+      - { name: degree, label: Degree, type: string }
+      - { name: field, label: Field, type: string }
+      - { name: focus, label: Focus / thesis type, type: string }
+      - { name: institution, label: Institution, type: string }
+      - { name: location, label: Location, type: string }
+
+  - name: cv_administration
+    label: "CV · 3. Administrative accomplishments"
+    type: file
+    path: _data/cv/administration.yml
+    format: yaml
+    list: true
+    fields:
+      - { name: role, label: Role, type: string }
+      - { name: years, label: Years, type: string }
+      - { name: highlights, label: Highlights (one per box), type: text, list: true }
+
+  - name: cv_funding
+    label: "CV · 4. Funding"
+    type: file
+    path: _data/cv/funding.yml
+    format: yaml
+    fields:
+      - { name: legend, label: Legend line, type: string }
+      - name: summary
+        label: Summary table
+        type: object
+        list: true
+        fields:
+          - { name: location, label: Location, type: string }
+          - { name: funding_k, label: "Funding ($K)", type: number }
+          - { name: career_total_k, label: "Career total ($K)", type: number }
+      - name: grants
+        label: Grants
+        type: object
+        list: true
+        fields:
+          - name: period
+            label: Period
+            type: select
+            options:
+              values: ["RIT post-tenure", "RIT pre-tenure", "Cornell"]
+          - { name: years, label: Years, type: string }
+          - { name: title, label: Project, type: string }
+          - { name: sponsor, label: Sponsor, type: string }
+          - { name: role, label: Role (PI, Co-PI, KP), type: string }
+          - { name: amount_k, label: "Amount ($K)", type: string }
+          - { name: notes, label: Notes, type: string }
+
+  - name: cv_publications
+    label: "CV · 5. Publications"
+    description: Add a new paper, talk, or game here. Pick the type, year, and paste the citation.
+    type: file
+    path: _data/cv/publications.yml
+    format: yaml
+    list: true
+    fields:
+      - name: type
+        label: Type
+        type: select
+        required: true
+        options:
+          values:
+            - { value: book_or_chapter, label: "Book or chapter" }
+            - { value: journal, label: "Journal paper" }
+            - { value: game_or_simulation, label: "Shipped / published game or simulation" }
+            - { value: creative_work, label: "Other creative work" }
+            - { value: conference_paper, label: "Conference paper or extended abstract" }
+            - { value: peer_reviewed_abstract_or_talk, label: "Peer-reviewed abstract, talk, panel, poster, or workshop" }
+            - { value: invited_talk, label: "Invited abstract, talk, panel, poster, or workshop" }
+            - { value: sponsor_reviewed_report, label: "Sponsor-reviewed article or technical report" }
+      - { name: number, label: Number within its type (highest = newest), type: number }
+      - { name: year, label: Year, type: string, required: true }
+      - { name: citation, label: Full citation, type: text, required: true }
+      - { name: link, label: "Link (https://…, optional)", type: string }
+
+  - name: cv_press
+    label: "CV · 5. Press & news"
+    type: file
+    path: _data/cv/press.yml
+    format: yaml
+    list: true
+    fields:
+      - name: kind
+        label: Kind
+        type: select
+        options:
+          values:
+            - { value: news, label: "News or press release" }
+            - { value: popular_press, label: "Popular press (something I wrote)" }
+      - { name: year, label: Year, type: string }
+      - { name: title_or_citation, label: Headline or citation, type: string, required: true }
+      - { name: outlet, label: Outlet, type: string }
+      - { name: author, label: Author (for news written about you), type: string }
+      - { name: url, label: "Link (https://…)", type: string }
+      - { name: notes, label: Notes, type: string }
+
+  - name: cv_teaching
+    label: "CV · 6. Teaching"
+    type: file
+    path: _data/cv/teaching.yml
+    format: yaml
+    fields:
+      - { name: terminology_notes, label: Notes on term abbreviations, type: string, list: true }
+      - name: terminology
+        label: Course-code abbreviations
+        type: object
+        list: true
+        fields:
+          - { name: code, label: Code, type: string }
+          - { name: meaning, label: Meaning, type: string }
+          - { name: institution, label: Institution, type: string }
+      - name: course_development
+        label: Course development
+        type: object
+        list: true
+        fields:
+          - name: institution
+            label: Institution
+            type: select
+            options:
+              values: ["Rochester Institute of Technology", "Cornell University", "State University of New York at Buffalo"]
+          - { name: course, label: Course, type: string }
+          - { name: years, label: Years, type: string }
+          - { name: description, label: What you did, type: text }
+      - name: courses_taught
+        label: Courses taught (by course)
+        type: object
+        list: true
+        fields:
+          - name: institution
+            label: Institution
+            type: select
+            options:
+              values: ["Rochester Institute of Technology", "Cornell University", "State University of New York at Buffalo"]
+          - { name: course, label: Course code, type: string }
+          - { name: title, label: Course title, type: string }
+          - { name: terms, label: Terms, type: string }
+      - name: courses_by_term
+        label: Courses taught (by term)
+        type: object
+        list: true
+        fields:
+          - name: institution
+            label: Institution
+            type: select
+            options:
+              values: ["Rochester Institute of Technology", "Cornell University", "State University of New York at Buffalo"]
+          - { name: term, label: Term, type: string }
+          - { name: courses, label: Courses, type: string }
+
+  - name: cv_theses
+    label: "CV · 7. Graduate students"
+    type: file
+    path: _data/cv/theses.yml
+    format: yaml
+    list: true
+    fields:
+      - { name: years, label: Academic years, type: string }
+      - { name: year, label: Year finished (if known), type: string }
+      - { name: student, label: Student, type: string }
+      - { name: title, label: Title, type: string }
+      - { name: type, label: Type (Ph.D. dissertation, MS thesis, capstone…), type: string }
+      - { name: role, label: Your role, type: string }
+      - { name: unit, label: Unit, type: string }
+      - { name: institution, label: Institution, type: string }
+      - { name: notes, label: Notes, type: string }
+
+  - name: cv_service
+    label: "CV · 8. Service"
+    type: file
+    path: _data/cv/service.yml
+    format: yaml
+    list: true
+    fields:
+      - name: scope
+        label: Where
+        type: select
+        required: true
+        options:
+          values:
+            - "RIT – Leadership Summary"
+            - "RIT – Institute"
+            - "RIT – College"
+            - "RIT – Unit"
+            - "RIT – Student Organizations"
+            - "RIT – Hosted Colloquia"
+            - "Regional and Local Community"
+            - "Field – Professional Organizations"
+            - "Field – Professional Reviews"
+            - "Field – External Organizations, Conferences, and Events"
+            - "Cornell – Leadership"
+            - "Cornell – Student Organizations"
+            - "Cornell – Computing Committees"
+            - "Cornell – Admissions"
+      - { name: years, label: Years, type: string }
+      - { name: role, label: Role, type: string }
+      - { name: organization, label: Committee / organization, type: string }
+      - { name: notes, label: Notes, type: string }
+
+  - name: cv_awards
+    label: "CV · 9. Awards & honors"
+    type: file
+    path: _data/cv/awards.yml
+    format: yaml
+    list: true
+    fields:
+      - { name: year, label: Year, type: string }
+      - { name: title, label: Award, type: text }
+      - { name: organization, label: Given by, type: string }
+      - { name: notes, label: Notes, type: string }

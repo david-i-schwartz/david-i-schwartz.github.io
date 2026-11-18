@@ -1,0 +1,78 @@
+---
+layout: default
+---
+{%- assign s = site.data.settings -%}
+{%- include safe-img.html path=s.photo -%}
+{%- assign work_now = site.projects | where_exp: "p", "p.area != 'interests'" | where: "status", "current" | sort: "order" -%}
+{%- assign fun_now = site.projects | where: "area", "interests" | where: "status", "current" | sort: "order" -%}
+{%- assign news = site.data.cv.press | where: "kind", "news" | sort: "year" | reverse -%}
+{%- assign awards = site.data.cv.awards | sort: "year" | reverse -%}
+
+<section class="hero">
+  <div class="wrap hero__inner">
+    {%- if safe_img != "" %}
+    <img class="hero__photo" src="{{ safe_img | relative_url | escape }}" alt="{{ s.name | escape }}" width="220" height="220">
+    {%- endif %}
+    <div class="hero__text">
+      <p class="hero__kicker">{{ s.title_line | escape }}</p>
+      <h1>{{ s.name | escape }}</h1>
+      <p class="lede">{{ s.tagline | escape }}</p>
+      <ul class="chips">
+        {%- for l in s.links limit: 5 -%}
+          {%- include safe-url.html url=l.url -%}
+          {%- if safe_url != "" %}<li><a class="chip" href="{{ safe_url | escape }}">{{ l.label | escape }}</a></li>{% endif -%}
+        {%- endfor %}
+        <li><a class="chip chip--solid" href="{{ '/cv/' | relative_url }}">CV</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="wrap home__bio prose">
+  {{ content }}
+</section>
+
+{%- if work_now.size > 0 %}
+<section class="wrap home__block">
+  <div class="block__head">
+    <h2>Current projects</h2>
+    <a class="more" href="{{ '/projects/' | relative_url }}">All projects</a>
+  </div>
+  <ul class="cards">
+    {%- for p in work_now limit: 6 %}{% include project-card.html project=p %}{% endfor %}
+  </ul>
+</section>
+{%- endif %}
+
+{%- if fun_now.size > 0 %}
+<section class="wrap home__block">
+  <div class="block__head">
+    <h2>Making &amp; interests</h2>
+    <a class="more" href="{{ '/interests/' | relative_url }}">See everything</a>
+  </div>
+  <ul class="cards cards--tight">
+    {%- for p in fun_now limit: 4 %}{% include project-card.html project=p %}{% endfor %}
+  </ul>
+</section>
+{%- endif %}
+
+<section class="wrap home__block home__two">
+  <div>
+    <h2>In the news</h2>
+    <ul class="list">
+      {%- for n in news limit: 6 -%}
+        {%- include safe-url.html url=n.url %}
+      <li><span class="list__year">{{ n.year | escape }}</span> {% if safe_url != "" %}<a href="{{ safe_url | escape }}">{{ n.title_or_citation | escape }}</a>{% else %}{{ n.title_or_citation | escape }}{% endif %}{% assign out_len = n.outlet | append: "" | size %}{% if out_len > 0 %} <span class="soft">· {{ n.outlet | escape }}</span>{% endif %}</li>
+      {%- endfor %}
+    </ul>
+  </div>
+  <div>
+    <h2>Awards &amp; honors</h2>
+    <ul class="list">
+      {%- for a in awards limit: 6 %}
+      <li><span class="list__year">{{ a.year | escape }}</span> {{ a.title | escape }}</li>
+      {%- endfor %}
+    </ul>
+    <p><a class="more" href="{{ '/cv/#awards' | relative_url }}">All awards</a></p>
+  </div>
+</section>

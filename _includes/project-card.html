@@ -1,0 +1,20 @@
+{%- comment -%} include.project = a document from the projects collection {%- endcomment -%}
+{%- assign pc = include.project -%}
+{%- include safe-img.html path=pc.photo -%}
+<li class="card{% if pc.status == 'archived' %} card--archived{% endif %}">
+  <a class="card__link" href="{{ pc.url | relative_url }}">
+    {%- if safe_img != "" %}
+    <img class="card__img" src="{{ safe_img | relative_url | escape }}" alt="" loading="lazy">
+    {%- else %}
+    <div class="card__img card__img--blank" aria-hidden="true"><span>{{ pc.title | slice: 0, 1 | escape }}</span></div>
+    {%- endif %}
+    <div class="card__body">
+      <h3 class="card__title">{{ pc.title | escape }}</h3>
+      {%- assign yrs = pc.years | append: "" -%}
+      {%- assign yrs_len = yrs | size -%}
+      <p class="card__meta">{% if yrs_len > 0 %}{{ yrs | escape }} · {% endif %}{{ pc.status | default: "current" | capitalize | escape }}</p>
+      {%- assign sum_len = pc.summary | append: "" | size -%}
+      {%- if sum_len > 0 %}<p class="card__sum">{{ pc.summary | escape }}</p>{% endif %}
+    </div>
+  </a>
+</li>

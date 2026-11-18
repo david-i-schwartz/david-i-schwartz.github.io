@@ -1,0 +1,229 @@
+legend: PI=Principal Investigator | Co-PI=Co-Principal Investigator | KP=Key/Senior Personnel
+summary:
+- location: RIT Post-Tenure
+  funding_k: 3940
+  career_total_k: 4693
+- location: RIT Pre-Tenure
+  funding_k: 178
+  career_total_k: 4693
+- location: Cornell University
+  funding_k: 575
+  career_total_k: 4693
+grants:
+- period: RIT post-tenure
+  years: '2026'
+  title: 'In development: gamification of nursing education prototype (start date in Fall, 2026)'
+  sponsor: UPitt Nursing
+  role: PI
+  amount_k: 300
+  notes: 'Total since tenure ($K): TBD'
+- period: RIT post-tenure
+  years: '2026'
+  title: Funding provided by Expression (expr.ai) to cover one full-time co-op and two part-time positions for continuing the XRP racing game development
+  sponsor: Expression
+  role: PI
+  amount_k: 15
+  notes: 'Total since tenure ($K): 3640'
+- period: RIT post-tenure
+  years: '2025'
+  title: 'No-Cost Extension: Resilience Game Design Research'
+  sponsor: US Military Academy Army Cyber Institute
+  role: PI
+  amount_k: 0
+  notes: 'Total since tenure ($K): 3625'
+- period: RIT post-tenure
+  years: '2025'
+  title: Funding provided by Expression (expr.ai) to cover three full-time co-ops for the XRP Project (racing game development)
+  sponsor: Expression
+  role: PI
+  amount_k: 30
+  notes: 'Total since tenure ($K): 3625'
+- period: RIT post-tenure
+  years: '2025'
+  title: MORS 10-year membership, MORS ’94 Symposium travel, cybergaming certificate course
+  sponsor: RIT FEAD
+  role: PI
+  amount_k: 6.4
+  notes: 'Total since tenure ($K): 3595'
+- period: RIT post-tenure
+  years: '2024'
+  title: 'Collaborative Research: ReDDDoT Phase 2: VARUNA: A User-Centered All-in-One Media Forensics Platform'
+  sponsor: NSF
+  role: Co-PI
+  amount_k: 1125
+  notes: 'Total since tenure ($K): 3589'
+- period: RIT post-tenure
+  years: '2023'
+  title: 'CAREER: Towards Reliable and Quantum-resistant Connected Vehicle Security'
+  sponsor: NSF
+  role: KP
+  amount_k: 600
+  notes: 'Total since tenure ($K): 2434'
+- period: RIT post-tenure
+  years: '2023'
+  title: A game to introduce cybersecurity careers to low-income community members
+  sponsor: NSA/University of South Florida
+  role: Co-PI
+  amount_k: 30
+  notes: 'Total since tenure ($K): 1834'
+- period: RIT post-tenure
+  years: '2023'
+  title: Integrating Gamification and IDEIs to Enable Crew Health and Performance on Mars
+  sponsor: NASA
+  role: Co-PI
+  amount_k: 30
+  notes: 'Total since tenure ($K): 1804'
+- period: RIT post-tenure
+  years: '2023'
+  title: RIT Innovation Fellows
+  sponsor: MITRE
+  role: KP
+  amount_k: 50
+  notes: 'Total since tenure ($K): 1774'
+- period: RIT post-tenure
+  years: '2022'
+  title: Resilience Game Design Research
+  sponsor: Army & RIT AEOP Design of
+  role: PI
+  amount_k: 30
+  notes: 'Total since tenure ($K): 1724'
+- period: RIT post-tenure
+  years: '2022'
+  title: Resilience Game Design Research
+  sponsor: US Military Academy Army Cyber Institute
+  role: PI
+  amount_k: 616
+  notes: 'Total since tenure ($K): 1694; Year cell is blank in the source table; 2022 inferred from table position and running total.'
+- period: RIT post-tenure
+  years: '2022'
+  title: Blockchain and Decentraland
+  sponsor: Foundry (MAGIC Project)
+  role: Co-PI
+  amount_k: ~200
+  notes: 'Total since tenure ($K): 1078; Year cell is blank in the source table; 2022 inferred from table position and running total.'
+- period: RIT post-tenure
+  years: '2021'
+  title: Gamification and Performance-Based Monitoring of Sensorimotor Training Activities
+  sponsor: NASA
+  role: Co-PI
+  amount_k: 50
+  notes: 'Total since tenure ($K): 878'
+- period: RIT post-tenure
+  years: '2020'
+  title: Flow Blockchain
+  sponsor: Dapper Labs (MAGIC Project)
+  role: Co-PI
+  amount_k: 100
+  notes: 'Total since tenure ($K): 728'
+- period: RIT post-tenure
+  years: '2017'
+  title: 'REU Site: Serious Geographic Information Systems (GIS) Games for Disaster Resilience Spatial Thinking'
+  sponsor: NSF
+  role: Co-PI
+  amount_k: 146
+  notes: 'Total since tenure ($K): 603'
+- period: RIT post-tenure
+  years: '2015'
+  title: ATLAS open-source development for game physics and graphics
+  sponsor: RIT GCCIS
+  role: PI
+  amount_k: ~135
+  notes: 'Total since tenure ($K): 582'
+- period: RIT post-tenure
+  years: '2015'
+  title: 'SIMAD (Simulated Anaerobic Digester): An Educational STEM Game'
+  sponsor: BioDrill Technical Solutions
+  role: KP
+  amount_k: 12
+  notes: 'Total since tenure ($K): 447'
+- period: RIT post-tenure
+  years: '2014'
+  title: 'SIMAD (Simulated Anaerobic Digester): An Educational STEM Game'
+  sponsor: NSF/BioDrill Technical Solutions
+  role: KP
+  amount_k: 94
+  notes: 'Total since tenure ($K): 435'
+- period: RIT post-tenure
+  years: '2014'
+  title: “Gamified” Digital Forensics Course Modules for Undergraduates
+  sponsor: NSF
+  role: KP
+  amount_k: 241
+  notes: 'Total since tenure ($K): 341'
+- period: RIT post-tenure
+  years: '2011–2012'
+  title: 'StoreWorld (project initial funding pre-tenure): This project was funded in 2011 and 2012, spanning both pre- and post-tenure. Given the split in dates, I divided it between these phases.'
+  sponsor: RIT Trustee Gift
+  role: PI
+  amount_k: ~100
+  notes: 'Total since tenure ($K): 100'
+- period: RIT pre-tenure
+  years: '2011–2012'
+  title: 'StoreWorld (project initial funding pre-tenure): This project was funded in 2011 and 2012, spanning both pre- and post-tenure. Given the split in dates, I divided it between these phases.'
+  sponsor: RIT Trustee Gift
+  role: PI
+  amount_k: ~100
+  notes: 'Running pre-tenure total ($K): 178'
+- period: RIT pre-tenure
+  years: '2010'
+  title: 'Refocused Tangible Experience Design: includes approximately $1K of equipment donation from ActionXL'
+  sponsor: PLIG
+  role: PI
+  amount_k: 9
+  notes: 'Running pre-tenure total ($K): 78'
+- period: RIT pre-tenure
+  years: '2010'
+  title: 'AR Golf: a mix of donations, GCCIS Student Summer Fellowships, approximately $2K Vuzix equipment donations'
+  sponsor: Donation ($5K), GCCIS ($10K)
+  role: PI
+  amount_k: 17
+  notes: 'Running pre-tenure total ($K): 59'
+- period: RIT pre-tenure
+  years: '2009'
+  title: Sustainability project (Thomas Seager, Evan Sellinger)
+  sponsor: Provost grant
+  role: Co-PI
+  amount_k: 22
+  notes: 'Running pre-tenure total ($K): 42'
+- period: RIT pre-tenure
+  years: '2008'
+  title: AFRL extension grant (wargame design)
+  sponsor: AFRL
+  role: PI
+  amount_k: 10
+  notes: 'Running pre-tenure total ($K): 20'
+- period: RIT pre-tenure
+  years: '2007'
+  title: AFRL extension grant (wargame design)
+  sponsor: AFRL
+  role: PI
+  amount_k: 10
+  notes: 'Running pre-tenure total ($K): 10'
+- period: Cornell
+  years: '2007'
+  title: ''
+  sponsor: Microsoft
+  role: PI
+  amount_k: 150
+  notes: Just as I left Cornell in the summer of 2007, Microsoft donated funds for outreach and diversity. To my knowledge, Cornell transferred the grant to my replacement, Walker White.
+- period: Cornell
+  years: '2003–2007'
+  title: ''
+  sponsor: NSF
+  role: KP
+  amount_k: 90
+  notes: Outreach with games
+- period: Cornell
+  years: '2003–2006'
+  title: ''
+  sponsor: Microsoft, Electronic Arts, The G. E. Fund, Intelligent Information Systems Institute (Cornell), Trustee gift
+  role: PI
+  amount_k: 115
+  notes: 'Multiple donations and sources for GDIAC: The Game Design Initiative at Cornell'
+- period: Cornell
+  years: '2001–2007'
+  title: ''
+  sponsor: Donation to Cornell Libraries ($200K) and Faculty Innovation Grant ($20K)
+  role: PI
+  amount_k: 220
+  notes: 'CL3: Cornell Library Collaborative Learning Computer Laboratory'

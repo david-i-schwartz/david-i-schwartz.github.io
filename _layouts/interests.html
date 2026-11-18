@@ -1,0 +1,30 @@
+---
+layout: default
+---
+{%- assign fun = site.projects | where: "area", "interests" -%}
+{%- assign current = fun | where: "status", "current" | sort: "order" -%}
+{%- assign archived = fun | where: "status", "archived" | sort: "years" | reverse -%}
+<section class="wrap page">
+  <header class="page__head">
+    <h1>{{ page.title | escape }}</h1>
+    {%- assign intro_len = page.intro | append: "" | size -%}
+    {%- if intro_len > 0 %}<p class="lede">{{ page.intro | escape }}</p>{% endif %}
+  </header>
+
+  {%- if current.size > 0 %}
+  <ul class="cards">{% for p in current %}{% include project-card.html project=p %}{% endfor %}</ul>
+  {%- else %}<p class="soft">Nothing listed yet.</p>{% endif %}
+
+  {%- if archived.size > 0 %}
+  <h2>Earlier</h2>
+  <ul class="cards cards--tight">{% for p in archived %}{% include project-card.html project=p %}{% endfor %}</ul>
+  {%- endif %}
+
+  {%- assign fun_videos = site.data.howtos | where_exp: "v", "v.topic != 'teaching'" | sort: "date" | reverse -%}
+  {%- if fun_videos.size > 0 %}
+  <h2 id="videos">How-to videos</h2>
+  <div class="videos">
+    {%- for v in fun_videos %}{% include video.html url=v.link title=v.title date=v.date %}{% endfor %}
+  </div>
+  {%- endif %}
+</section>
