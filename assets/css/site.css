@@ -191,6 +191,20 @@ p { margin: 0 0 1em; }
 .btn--ghost { background: transparent; color: var(--accent); margin-left: 8px; }
 .cv__actions { margin: 0.4rem 0 0; }
 
+/* ---------- Blog ---------- */
+.posts { list-style: none; margin: 0; padding: 0; }
+.posts__item { border-bottom: 1px solid var(--line); }
+.posts__link { display: grid; gap: 16px; padding: 18px 0; color: inherit; text-decoration: none; }
+.posts__link:hover .posts__title { color: var(--accent); }
+.posts__img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 8px; }
+@media (min-width: 700px) { .posts__link { grid-template-columns: 220px 1fr; align-items: start; } .posts__link:not(:has(img)) { grid-template-columns: 1fr; } }
+.posts__date { margin: 0 0 4px; font-size: 0.85rem; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; }
+.posts__title { font-size: 1.4rem; margin: 0 0 6px; }
+.posts__sum { margin: 0; color: var(--ink-soft); }
+.post .prose { font-family: var(--f-serif); font-size: 1.12rem; line-height: 1.7; }
+.post__also { margin-top: 1.6rem; }
+.post__nav { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--line); font-weight: 600; }
+
 /* ---------- Footer ---------- */
 .foot { margin-top: 40px; border-top: 1px solid var(--line); background: var(--panel); color: var(--ink-soft); font-size: 0.95rem; }
 .foot__inner { padding: 28px 20px 32px; display: grid; gap: 18px; }

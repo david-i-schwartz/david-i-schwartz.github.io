@@ -11,6 +11,11 @@ timezone: America/New_York
 
 plugins:
   - jekyll-sitemap   # builds /sitemap.xml for search engines
+  - jekyll-feed      # builds /feed.xml so people can follow the blog
+
+permalink: /blog/:year/:month/:title/
+feed:
+  path: feed.xml
 
 markdown: kramdown
 kramdown:
@@ -28,6 +33,11 @@ defaults:
     values:
       layout: page
       permalink: /:basename/
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
   - scope:
       path: ""
       type: projects

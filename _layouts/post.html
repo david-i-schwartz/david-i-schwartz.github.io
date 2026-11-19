@@ -1,0 +1,37 @@
+---
+layout: default
+---
+{%- include safe-img.html path=page.cover -%}
+{%- assign cover = safe_img -%}
+<article class="wrap page post">
+  <p class="crumb"><a href="{{ '/blog/' | relative_url }}">← Blog</a></p>
+  <header class="page__head">
+    <p class="posts__date">{{ page.date | date: "%B %-d, %Y" }}</p>
+    <h1>{{ page.title | escape }}</h1>
+    {%- assign sum_len = page.summary | append: "" | size -%}
+    {%- if sum_len > 0 %}<p class="lede">{{ page.summary | escape }}</p>{% endif %}
+    {%- assign n_tags = page.tags | size -%}
+    {%- if n_tags > 0 %}<p class="project__meta">{% for t in page.tags %}<span class="tag tag--soft">{{ t | escape }}</span>{% endfor %}</p>{% endif %}
+  </header>
+
+  {%- if cover != "" %}<img class="project__hero" src="{{ cover | relative_url | escape }}" alt="">{% endif %}
+
+  <div class="prose">
+    {{ content }}
+  </div>
+
+  {%- assign n_videos = page.videos | size -%}
+  {%- if n_videos > 0 %}
+  <div class="videos">{% for v in page.videos %}{% include video.html url=v.link title=v.title date=v.date %}{% endfor %}</div>
+  {%- endif %}
+
+  {%- include safe-url.html url=page.also_on -%}
+  {%- if safe_url != "" %}
+  <p class="soft post__also">Also published at <a href="{{ safe_url | escape }}">{{ page.also_on_label | default: "Medium" | escape }}</a>.</p>
+  {%- endif %}
+
+  <nav class="post__nav" aria-label="More posts">
+    {%- if page.previous %}<a href="{{ page.previous.url | relative_url }}">← {{ page.previous.title | escape }}</a>{% else %}<span></span>{% endif %}
+    {%- if page.next %}<a href="{{ page.next.url | relative_url }}">{{ page.next.title | escape }} →</a>{% endif %}
+  </nav>
+</article>

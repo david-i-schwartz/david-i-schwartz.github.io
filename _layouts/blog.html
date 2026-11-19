@@ -1,0 +1,37 @@
+---
+layout: default
+---
+<section class="wrap page">
+  <header class="page__head">
+    <h1>{{ page.title | escape }}</h1>
+    {%- assign intro_len = page.intro | append: "" | size -%}
+    {%- if intro_len > 0 %}<p class="lede">{{ page.intro | escape }}</p>{% endif %}
+    <p class="soft"><a href="{{ '/feed.xml' | relative_url }}">Follow by RSS</a></p>
+  </header>
+  <div class="prose">{{ content }}</div>
+
+  {%- if site.posts.size > 0 %}
+  <ul class="posts">
+    {%- for post in site.posts -%}
+      {%- include safe-img.html path=post.cover %}
+    <li class="posts__item">
+      <a class="posts__link" href="{{ post.url | relative_url }}">
+        {%- if safe_img != "" %}<img class="posts__img" src="{{ safe_img | relative_url | escape }}" alt="" loading="lazy">{% endif %}
+        <div>
+          <p class="posts__date">{{ post.date | date: "%B %-d, %Y" }}</p>
+          <h2 class="posts__title">{{ post.title | escape }}</h2>
+          {%- assign sum_len = post.summary | append: "" | size -%}
+          {%- if sum_len > 0 %}
+          <p class="posts__sum">{{ post.summary | escape }}</p>
+          {%- else %}
+          <p class="posts__sum">{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
+          {%- endif %}
+        </div>
+      </a>
+    </li>
+    {%- endfor %}
+  </ul>
+  {%- else %}
+  <p class="soft">The first post is on its way.</p>
+  {%- endif %}
+</section>

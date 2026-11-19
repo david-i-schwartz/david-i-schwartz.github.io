@@ -22,6 +22,47 @@ media:
 
 content:
 
+  # ---------------- Blog ----------------
+  - name: posts
+    label: Blog posts
+    description: Write a post here. Title, date, and the text are all you need.
+    type: collection
+    path: _posts
+    filename: "{fields.date}-{primary}.md"
+    view:
+      fields: [title, date]
+      primary: title
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - { name: title, label: Title, type: string, required: true }
+      - { name: date, label: Date, type: date, required: true }
+      - { name: summary, label: "One-line summary (optional; shows in the blog list)", type: string }
+      - name: cover
+        label: Cover photo (optional)
+        type: image
+        options:
+          media: photos
+          path: photos/blog
+      - { name: tags, label: Tags (one per box), type: string, list: true }
+      - name: videos
+        label: Videos (optional, shown under the post)
+        type: object
+        list: true
+        fields:
+          - { name: title, label: Title, type: string }
+          - { name: link, label: "YouTube link (Share, then Copy)", type: string }
+      - { name: also_on, label: "Also published at (optional link, e.g. the Medium or LinkedIn copy)", type: string }
+      - { name: also_on_label, label: "Name of that site (default: Medium)", type: string }
+      - name: body
+        label: Post
+        type: rich-text
+        options:
+          format: markdown
+          media: photos
+
   # ---------------- Projects (work + interests) ----------------
   - name: projects
     label: Projects & Interests

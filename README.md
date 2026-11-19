@@ -15,6 +15,7 @@ Everyday editing happens in a web form, not in files. Same setup as the Saints &
 
 | I want to… | Go to | Then |
 |---|---|---|
+| Write a blog post | **Blog posts** | Add an entry: title, date, then write. Photos go in through the toolbar's image button; a cover photo is optional. Save, and it appears on the Blog page, the home page, and the RSS feed. |
 | Add a project, course, role, or hobby | **Projects & Interests** | Add an entry. Title, *Where it shows*, and *Status* are the ones that matter; everything else is optional. The write-up box takes normal typing (bold, links, and pictures via the toolbar). |
 | Archive a project | **Projects & Interests** | Open it, set *Status* to Archived, Save. It moves to the Archived list on its own. |
 | Add a how-to video | **How-to videos** | Add an item: title, YouTube link (Share, then Copy), pick Teaching or Interests. Or add it inside a project's *Videos* list so it shows on that project's page. |
@@ -39,6 +40,7 @@ Tips:
 
 | What | Where |
 |---|---|
+| Blog posts | `_posts/YYYY-MM-DD-title.md`; RSS at `/feed.xml` (jekyll-feed) |
 | Projects, courses, roles, hobbies | `_projects/*.md`. `area` picks the page (research → Projects, teaching → Teaching, leadership → Service, interests → Making & Interests); `status` is current or archived. |
 | CV data | `_data/cv/*.yml` — positions, education, administration, funding, publications, press, teaching, theses, service, awards. The CV page, Publications, Teaching, and Service pages all read from here. |
 | How-to videos | `_data/howtos.yml` |

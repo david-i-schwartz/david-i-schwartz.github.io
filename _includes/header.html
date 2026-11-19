@@ -2,6 +2,7 @@
 {%- assign menu_pages = site.pages | where: "menu", true | sort: "menu_order" -%}
 {%- comment -%} Which menu item is "current": the page itself, or the section a project belongs to. {%- endcomment -%}
 {%- assign current_layout = "" -%}
+{%- if page.collection == "posts" -%}{%- assign current_layout = "blog" -%}{%- endif -%}
 {%- if page.collection == "projects" -%}
   {%- case page.area -%}
     {%- when "interests" -%}{%- assign current_layout = "interests" -%}
