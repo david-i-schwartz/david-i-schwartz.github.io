@@ -30,8 +30,8 @@ layout: default
   {%- assign summary = svc | where: "scope", "RIT – Leadership Summary" -%}
   {%- if summary.size > 0 %}
   <h2 id="rit">RIT leadership summary</h2>
-  <ul class="list">
-    {%- for r in summary %}<li><span class="list__year">{{ r.years | escape }}</span> {{ r.role | escape }}{% assign ol = r.organization | append: "" | size %}{% if ol > 0 %}, {{ r.organization | escape }}{% endif %}</li>{% endfor %}
+  <ul class="list list--dated">
+    {%- for r in summary %}{% include service-item.html r=r %}{% endfor %}
   </ul>
   {%- endif %}
 
@@ -41,9 +41,9 @@ layout: default
       {%- assign anchor = "" -%}
       {%- if sc == "Regional and Local Community" %}{% assign anchor = "community" %}{% elsif sc == "Field – Professional Organizations" %}{% assign anchor = "field" %}{% elsif sc == "Cornell – Leadership" %}{% assign anchor = "cornell" %}{% endif %}
   <h2{% if anchor != "" %} id="{{ anchor }}"{% endif %}>{{ sc | replace: " – ", ": " }}</h2>
-  <ul class="list">
+  <ul class="list list--dated">
     {%- for r in rows %}
-    <li><span class="list__year">{{ r.years | escape }}</span> {{ r.role | escape }}{% assign ol = r.organization | append: "" | size %}{% if ol > 0 %}, {{ r.organization | escape }}{% endif %}{% assign nl = r.notes | append: "" | size %}{% if nl > 0 %} <span class="soft">· {{ r.notes | escape }}</span>{% endif %}</li>
+    {% include service-item.html r=r %}
     {%- endfor %}
   </ul>
     {%- endif -%}

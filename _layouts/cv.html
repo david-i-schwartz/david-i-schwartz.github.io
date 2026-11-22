@@ -114,8 +114,8 @@ layout: default
     {%- assign rows = cv.service | where: "scope", sc -%}
     {%- if rows.size > 0 %}
   <h3>{{ sc | replace: " – ", ": " }}</h3>
-  <ul class="list list--tight">
-    {%- for r in rows %}<li><span class="list__year">{{ r.years | escape }}</span> {{ r.role | escape }}{% assign ol = r.organization | append: "" | size %}{% if ol > 0 %}, {{ r.organization | escape }}{% endif %}{% assign nl = r.notes | append: "" | size %}{% if nl > 0 %} <span class="soft">· {{ r.notes | escape }}</span>{% endif %}</li>{% endfor %}
+  <ul class="list list--tight list--dated">
+    {%- for r in rows %}{% include service-item.html r=r %}{% endfor %}
   </ul>
     {%- endif -%}
   {%- endfor %}

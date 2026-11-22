@@ -1,0 +1,10 @@
+{%- comment -%}
+  One service row: [years] [role, organization] [· notes].
+  The comma only appears when there is both a role and an organization.
+  Use: {% include service-item.html r=row %}
+{%- endcomment -%}
+{%- assign r = include.r -%}
+{%- assign rl = r.role | append: "" | strip | size -%}
+{%- assign ol = r.organization | append: "" | strip | size -%}
+{%- assign nl = r.notes | append: "" | strip | size -%}
+<li><span class="list__year">{{ r.years | escape }}</span>{% if rl > 0 %}{{ r.role | strip | escape }}{% if ol > 0 %}, {% endif %}{% endif %}{% if ol > 0 %}{{ r.organization | strip | escape }}{% endif %}{% if nl > 0 %} <span class="soft">· {{ r.notes | strip | escape }}</span>{% endif %}</li>
