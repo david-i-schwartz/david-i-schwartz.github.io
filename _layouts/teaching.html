@@ -35,34 +35,37 @@ layout: default
 
   <h2 id="courses">Courses taught</h2>
   <p class="soft">{% for n in t.terminology_notes %}{{ n | escape }}{% unless forloop.last %} · {% endunless %}{% endfor %}</p>
-  {%- for inst in institutions -%}
-    {%- assign rows = t.courses_taught | where: "institution", inst -%}
-    {%- if rows.size > 0 %}
-  <h3>{{ inst }}</h3>
-  <table class="tbl">
-    <thead><tr><th>Course</th><th>Title</th><th>Terms</th></tr></thead>
-    <tbody>
-      {%- for r in rows %}
-      <tr><td>{{ r.course | escape }}</td><td>{{ r.title | escape }}</td><td>{{ r.terms | escape }}</td></tr>
-      {%- endfor %}
-    </tbody>
-  </table>
-    {%- endif -%}
-  {%- endfor %}
   <details class="fold">
-    <summary>Term-by-term list</summary>
+    <summary>Courses taught by title <span class="count">{{ t.courses_taught.size }}</span></summary>
+    {%- for inst in institutions -%}
+      {%- assign rows = t.courses_taught | where: "institution", inst -%}
+      {%- if rows.size > 0 %}
+    <h3>{{ inst }}</h3>
+    <table class="tbl">
+      <thead><tr><th>Course</th><th>Title</th><th>Terms</th></tr></thead>
+      <tbody>
+        {%- for r in rows %}
+        <tr><td>{{ r.course | escape }}</td><td>{{ r.title | escape }}</td><td>{{ r.terms | escape }}</td></tr>
+        {%- endfor %}
+      </tbody>
+    </table>
+      {%- endif -%}
+    {%- endfor %}
+  </details>
+  <details class="fold">
+    <summary>Term-by-term list <span class="count">{{ t.courses_by_term.size }}</span></summary>
     {%- for inst in institutions -%}
       {%- assign rows = t.courses_by_term | where: "institution", inst -%}
       {%- if rows.size > 0 %}
     <h3>{{ inst }}</h3>
-    <ul class="list list--tight">
-      {%- for r in rows %}<li><span class="list__year">{{ r.term | escape }}</span> {{ r.courses | escape }}</li>{% endfor %}
+    <ul class="list list--tight list--dated">
+      {%- for r in rows %}<li><span class="list__year">{{ r.term | escape }} </span><span class="list__text">{{ r.courses | escape }}</span></li>{% endfor %}
     </ul>
       {%- endif -%}
     {%- endfor %}
     <h3>Abbreviations</h3>
-    <ul class="list list--tight">
-      {%- for r in t.terminology %}<li><span class="list__year">{{ r.code | escape }}</span> {{ r.meaning | escape }} <span class="soft">· {{ r.institution | escape }}</span></li>{% endfor %}
+    <ul class="list list--tight list--dated">
+      {%- for r in t.terminology %}<li><span class="list__year">{{ r.code | escape }} </span><span class="list__text">{{ r.meaning | escape }} <span class="soft">· {{ r.institution | escape }}</span></span></li>{% endfor %}
     </ul>
   </details>
 
