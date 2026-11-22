@@ -224,8 +224,16 @@ p { margin: 0 0 1em; }
 .foot__small { margin: 0; color: var(--muted); font-size: 0.85rem; }
 @media (min-width: 820px) { .foot__inner { grid-template-columns: 1fr 1fr; } .foot__small { grid-column: 1 / -1; } }
 
+/* ---------- Long lists: first few shown, the rest behind "Show all" (site.js) ---------- */
+@media screen { .is-folded { display: none !important; } }
+.more-btn { display: inline-block; margin: -0.5rem 0 1.6rem; padding: 6px 14px; border: 1px solid var(--line); border-radius: 999px; background: var(--panel); color: var(--accent); font: 600 0.9rem var(--f-sans); cursor: pointer; }
+.more-btn:hover, .more-btn:focus-visible { border-color: var(--accent); }
+.cv__actions .btn--ghost:first-child { margin-left: 0; }
+.page h4 { font: 600 0.95rem var(--f-sans); color: var(--muted); margin: 1.2rem 0 0.4rem; text-transform: uppercase; letter-spacing: 0.04em; }
+
 /* ---------- Print (CV page) ---------- */
 @media print {
+  .more-btn, .js-expand-all { display: none !important; }
   .top, .foot, .jump, .cv__actions, .skip, .crumb { display: none !important; }
   body { background: #fff; color: #000; font-size: 10.5pt; }
   .page { padding: 0; }

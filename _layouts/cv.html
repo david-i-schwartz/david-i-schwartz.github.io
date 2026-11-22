@@ -23,6 +23,7 @@ layout: default
     <p class="cv__actions">
       {%- if pdf_1 == "/" %}<a class="btn" href="{{ pdf | relative_url | escape }}">Download PDF</a>{% elsif safe_url != "" %}<a class="btn" href="{{ safe_url | escape }}">Download PDF</a>{% endif %}
       <button class="btn btn--ghost js-print" type="button" hidden>Print this page</button>
+      <button class="btn btn--ghost js-expand-all" type="button" hidden>Expand all</button>
     </p>
     <nav class="jump" aria-label="On this page">
       <a href="#career">Career</a><a href="#education">Education</a><a href="#admin">Administration</a><a href="#funding">Funding</a><a href="#scholarship">Scholarship</a><a href="#teaching">Teaching</a><a href="#theses">Students</a><a href="#service">Service</a><a href="#awards">Awards</a>
@@ -72,7 +73,7 @@ layout: default
   <h3>{{ per | capitalize | replace: "Rit", "RIT" }}</h3>
   <table class="tbl tbl--cv">
     <thead><tr><th>Years</th><th>Project</th><th>Sponsor</th><th>Role</th><th>$K</th></tr></thead>
-    <tbody>
+    <tbody data-preview="5">
       {%- for g in rows %}
       <tr><td class="nowrap">{{ g.years | escape }}</td><td>{{ g.title | default: g.notes | escape }}</td><td>{{ g.sponsor | escape }}</td><td>{{ g.role | escape }}</td><td class="nowrap">{{ g.amount_k | escape }}</td></tr>
       {%- endfor %}
@@ -102,14 +103,14 @@ layout: default
     {%- if rows.size > 0 %}
   <h3>{{ inst }}</h3>
   <table class="tbl tbl--cv">
-    <tbody>{% for r in rows %}<tr><td class="nowrap">{{ r.course | escape }}</td><td>{{ r.title | escape }}</td><td class="nowrap">{{ r.terms | escape }}</td></tr>{% endfor %}</tbody>
+    <tbody data-preview="5">{% for r in rows %}<tr><td class="nowrap">{{ r.course | escape }}</td><td>{{ r.title | escape }}</td><td class="nowrap">{{ r.terms | escape }}</td></tr>{% endfor %}</tbody>
   </table>
     {%- endif -%}
   {%- endfor %}
 
   <h2 id="theses">7. Graduate theses, capstones, and dissertations</h2>
   <table class="tbl tbl--cv">
-    <tbody>
+    <tbody data-preview="5">
       {%- for th in cv.theses %}
       <tr><td class="nowrap">{{ th.year | default: th.years | escape }}</td><td>{{ th.student | escape }}</td><td>{{ th.title | escape }}</td><td>{{ th.type | escape }}, {{ th.role | escape }}</td></tr>
       {%- endfor %}
@@ -122,7 +123,7 @@ layout: default
     {%- assign rows = cv.service | where: "scope", sc -%}
     {%- if rows.size > 0 %}
   <h3>{{ sc | replace: " – ", ": " }}</h3>
-  <ul class="list list--tight list--dated">
+  <ul class="list list--tight list--dated" data-preview="5">
     {%- for r in rows %}{% include service-item.html r=r %}{% endfor %}
   </ul>
     {%- endif -%}
@@ -130,7 +131,7 @@ layout: default
 
   <h2 id="awards">9. Awards and honors</h2>
   {%- assign awards = cv.awards | sort: "year" | reverse -%}
-  <ul class="list">
+  <ul class="list" data-preview="5">
     {%- for a in awards %}<li><span class="list__year">{{ a.year | escape }}</span> {{ a.title | escape }}{% assign nl = a.notes | append: "" | size %}{% if nl > 0 %} <span class="soft">· {{ a.notes | escape }}</span>{% endif %}</li>{% endfor %}
   </ul>
 </section>

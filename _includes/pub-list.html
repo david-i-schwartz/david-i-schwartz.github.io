@@ -8,7 +8,7 @@
 {%- assign pubs = site.data.cv.publications | where: "type", include.type | sort: "number", "last" | reverse -%}
 {%- if pubs.size > 0 %}
 <h2 id="{{ include.id }}">{{ include.label }} <span class="count">{{ pubs.size }}</span></h2>
-<ol class="pubs" reversed>
+<ol class="pubs" reversed data-preview="5">
   {%- for p in pubs %}
   {%- assign num_len = p.number | append: "" | size %}
   {%- assign pub_url = p.link | append: "" | strip %}
