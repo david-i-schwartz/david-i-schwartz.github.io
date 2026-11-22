@@ -23,6 +23,14 @@
 {% if share_len > 0 %}<meta property="og:image" content="{{ share_img | absolute_url | escape }}">{% endif %}
 <link rel="alternate" type="application/atom+xml" title="{{ site.title | escape }} blog" href="{{ '/feed.xml' | relative_url }}">
 <link rel="canonical" href="{{ page.url | absolute_url }}">
+{%- if page.url == "/" %}
+{%- assign profile_labels = "RIT directory|Google Scholar|ORCID|LinkedIn|GitHub" | split: "|" -%}
+{%- capture same_as_str %}{% for l in s.links %}{% if profile_labels contains l.label %}{{ l.url }}|{% endif %}{% endfor %}{% endcapture -%}
+{%- assign same_as = same_as_str | split: "|" %}
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "Person", "name": {{ site.title | jsonify }}, "honorificSuffix": "Ph.D.", "jobTitle": "Professor", "description": {{ s.title_line | jsonify }}, "worksFor": {"@type": "CollegeOrUniversity", "name": "Rochester Institute of Technology", "url": "https://www.rit.edu"}, "url": {{ site.url | append: "/" | jsonify }}, "image": {{ s.photo | absolute_url | jsonify }}, "email": {{ s.email | prepend: "mailto:" | jsonify }}, "sameAs": {{ same_as | jsonify }}}
+</script>
+{%- endif %}
 <link rel="icon" href="{{ '/assets/favicon.svg' | relative_url }}" type="image/svg+xml">
 <meta name="theme-color" content="#FBF8F1">
 <link rel="preconnect" href="https://fonts.googleapis.com">

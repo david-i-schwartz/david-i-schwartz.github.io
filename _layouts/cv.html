@@ -28,6 +28,7 @@ layout: default
     {%- if rows.size > 0 %}
   <h3>{{ g }}</h3>
   <table class="tbl tbl--cv">
+    <thead><tr><th scope="col">Years</th><th scope="col">Position</th><th scope="col">Organization</th></tr></thead>
     <tbody>
       {%- for r in rows %}
       <tr><td class="nowrap">{{ r.years | escape }}</td><td><strong>{{ r.title | escape }}</strong>{% assign ul = r.unit | append: "" | size %}{% if ul > 0 %}, {{ r.unit | escape }}{% endif %}</td><td>{{ r.organization | escape }}{% assign ll = r.location | append: "" | size %}{% if ll > 0 %}<br><span class="soft">{{ r.location | escape }}</span>{% endif %}</td></tr>
@@ -39,6 +40,7 @@ layout: default
 
   <h2 id="education">2. Education</h2>
   <table class="tbl tbl--cv">
+    <thead><tr><th scope="col">Year</th><th scope="col">Degree</th><th scope="col">Institution</th></tr></thead>
     <tbody>
       {%- for e in cv.education %}
       <tr><td class="nowrap">{{ e.year | escape }}</td><td><strong>{{ e.degree | escape }}</strong>, {{ e.field | escape }}{% assign fl = e.focus | append: "" | size %}{% if fl > 0 %} <span class="soft">({{ e.focus | escape }})</span>{% endif %}</td><td>{{ e.institution | escape }}<br><span class="soft">{{ e.location | escape }}</span></td></tr>
@@ -54,7 +56,7 @@ layout: default
 
   <h2 id="funding">4. Funding</h2>
   <table class="tbl tbl--cv tbl--narrow">
-    <thead><tr><th>Location</th><th>Funding ($K)</th><th>Career total ($K)</th></tr></thead>
+    <thead><tr><th scope="col">Location</th><th scope="col">Funding ($K)</th><th scope="col">Career total ($K)</th></tr></thead>
     <tbody>{% for r in cv.funding.summary %}<tr><td>{{ r.location | escape }}</td><td>{{ r.funding_k | escape }}</td><td>{{ r.career_total_k | escape }}</td></tr>{% endfor %}</tbody>
   </table>
   <p class="soft">{{ cv.funding.legend | escape }}</p>
@@ -63,7 +65,7 @@ layout: default
     {%- if rows.size > 0 %}
   <h3>{{ per | capitalize | replace: "Rit", "RIT" }}</h3>
   <table class="tbl tbl--cv">
-    <thead><tr><th>Years</th><th>Project</th><th>Sponsor</th><th>Role</th><th>$K</th></tr></thead>
+    <thead><tr><th scope="col">Years</th><th scope="col">Project</th><th scope="col">Sponsor</th><th scope="col">Role</th><th scope="col">$K</th></tr></thead>
     <tbody>
       {%- for g in rows %}
       <tr><td class="nowrap">{{ g.years | escape }}</td><td>{{ g.title | default: g.notes | escape }}</td><td>{{ g.sponsor | escape }}</td><td>{{ g.role | escape }}</td><td class="nowrap">{{ g.amount_k | escape }}</td></tr>
@@ -94,7 +96,7 @@ layout: default
     {%- if rows.size > 0 %}
   <h3>{{ inst }}</h3>
   <table class="tbl tbl--cv">
-    <thead><tr><th>Course</th><th>Title</th><th>Terms</th></tr></thead>
+    <thead><tr><th scope="col">Course</th><th scope="col">Title</th><th scope="col">Terms</th></tr></thead>
     <tbody>{% for r in rows %}<tr><td class="nowrap">{{ r.course | escape }}</td><td>{{ r.title | escape }}</td><td class="nowrap">{{ r.terms | escape }}</td></tr>{% endfor %}</tbody>
   </table>
     {%- endif -%}
@@ -102,7 +104,7 @@ layout: default
 
   <h2 id="theses">7. Graduate theses, capstones, and dissertations</h2>
   <table class="tbl tbl--cv">
-    <thead><tr><th>Years</th><th>Student</th><th>Title</th><th>Type and role</th></tr></thead>
+    <thead><tr><th scope="col">Years</th><th scope="col">Student</th><th scope="col">Title</th><th scope="col">Type and role</th></tr></thead>
     <tbody>
       {%- for th in cv.theses %}
       <tr><td class="nowrap">{{ th.year | default: th.years | escape }}</td><td>{{ th.student | escape }}</td><td>{{ th.title | escape }}</td><td>{{ th.type | escape }}, {{ th.role | escape }}</td></tr>

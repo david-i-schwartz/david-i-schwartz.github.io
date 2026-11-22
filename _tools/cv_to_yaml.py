@@ -1,7 +1,12 @@
 #!/usr/bin/env python3
 """Convert the extracted-CV markdown (HTML tables + bullets) into Jekyll _data/cv/*.yml files.
 
-Usage: python3 cv_to_yaml.py [input.md] [output_dir]
+Usage: python3 cv_to_yaml.py INPUT.md OUTPUT_DIR [--force]
+
+One-time import tool. The site's _data/cv/*.yml files are now edited in
+Pages CMS (and by the publications pipeline), so running this into the live
+_data/cv folder would overwrite those edits. Write to an empty scratch folder
+and compare; it refuses to overwrite existing files unless --force is given.
 """
 import re
 import sys
@@ -10,8 +15,11 @@ from pathlib import Path
 import yaml
 from bs4 import BeautifulSoup
 
-SRC = Path(sys.argv[1]) if len(sys.argv) > 1 else Path("/home/claude/cv/schwartz-cv-2026-09-03.md")
-OUT = Path(sys.argv[2]) if len(sys.argv) > 2 else Path("/home/claude/site/_data/cv")
+ARGS = [a for a in sys.argv[1:] if a != "--force"]
+FORCE = "--force" in sys.argv[1:]
+if len(ARGS) != 2:
+    sys.exit(__doc__)
+SRC, OUT = Path(ARGS[0]), Path(ARGS[1])
 OUT.mkdir(parents=True, exist_ok=True)
 
 TEXT = SRC.read_text(encoding="utf-8")
@@ -145,6 +153,8 @@ def quote_numeric_like(obj):
 
 def dump(name, data):
     path = OUT / name
+    if path.exists() and not FORCE:
+        sys.exit(f"{path} already exists; not overwriting it (use --force).")
     with path.open("w", encoding="utf-8") as f:
         yaml.safe_dump(quote_numeric_like(data), f, allow_unicode=True, sort_keys=False, width=1000)
     n = len(data) if isinstance(data, list) else {k: len(v) for k, v in data.items()}

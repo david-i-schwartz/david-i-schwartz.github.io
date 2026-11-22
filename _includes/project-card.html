@@ -12,7 +12,7 @@
       <h3 class="card__title">{{ pc.title | escape }}</h3>
       {%- assign yrs = pc.years | append: "" -%}
       {%- assign yrs_len = yrs | size -%}
-      <p class="card__meta">{% if yrs_len > 0 %}{{ yrs | escape }} · {% endif %}{{ pc.status | default: "current" | capitalize | escape }}</p>
+      <p class="card__meta">{% if yrs_len > 0 %}{{ yrs | escape }} · {% endif %}{% if pc.status == "archived" %}Archived{% else %}Current{% endif %}</p>
       {%- assign sum_len = pc.summary | append: "" | size -%}
       {%- if sum_len > 0 %}<p class="card__sum">{{ pc.summary | escape }}</p>{% endif %}
     </div>

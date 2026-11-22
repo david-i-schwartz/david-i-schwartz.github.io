@@ -5,6 +5,10 @@ layout: default
 {%- assign hero = safe_img -%}
 {%- if page.area == "interests" -%}
   {%- assign back_url = "/interests/" -%}{%- assign back_label = "Making & Interests" -%}
+{%- elsif page.area == "teaching" -%}
+  {%- assign back_url = "/teaching/" -%}{%- assign back_label = "Teaching & Resources" -%}
+{%- elsif page.area == "leadership" -%}
+  {%- assign back_url = "/service/" -%}{%- assign back_label = "Service & Leadership" -%}
 {%- else -%}
   {%- assign back_url = "/projects/" -%}{%- assign back_label = "Projects" -%}
 {%- endif -%}
@@ -15,7 +19,8 @@ layout: default
     <p class="project__meta">
       {%- assign yrs_len = page.years | append: "" | size -%}
       {%- if yrs_len > 0 %}<span>{{ page.years | escape }}</span>{% endif %}
-      <span class="tag tag--{{ page.status | default: 'current' }}">{{ page.status | default: "current" | capitalize }}</span>
+      {%- if page.status == "archived" %}{% assign st = "archived" %}{% else %}{% assign st = "current" %}{% endif %}
+      <span class="tag tag--{{ st }}">{{ st | capitalize }}</span>
       {%- assign area_len = page.area | append: "" | size -%}
       {%- if area_len > 0 and page.area != "interests" %}<span class="tag">{{ page.area | capitalize | escape }}</span>{% endif %}
       {%- for t in page.tags %}<span class="tag tag--soft">{{ t | escape }}</span>{% endfor %}
@@ -66,7 +71,7 @@ layout: default
     {%- for ph in page.photos -%}
       {%- include safe-img.html path=ph -%}
       {%- if safe_img != "" %}
-    <li><a href="{{ safe_img | relative_url | escape }}"><img src="{{ safe_img | relative_url | escape }}" alt="" loading="lazy"></a></li>
+    <li><a href="{{ safe_img | relative_url | escape }}"><img src="{{ safe_img | relative_url | escape }}" alt="{{ page.title | escape }}: photo {{ forloop.index }}" loading="lazy"></a></li>
       {%- endif -%}
     {%- endfor %}
   </ul>

@@ -14,7 +14,7 @@ media:
     label: Photos
     input: photos
     output: /photos
-    extensions: [jpg, jpeg, png, gif, webp, svg]
+    extensions: [jpg, jpeg, png, gif, webp]
   - name: files
     label: Files (PDFs, downloads)
     input: files
