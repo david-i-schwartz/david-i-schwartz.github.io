@@ -10,8 +10,16 @@ layout: default
 {%- assign pdf_1 = pdf | slice: 0, 1 -%}
 <section class="wrap page cv">
   <header class="page__head">
+    {%- assign oid = s.orcid | append: "" | strip -%}
+    {%- assign oqr = s.orcid_qr | append: "" | strip -%}
+    {%- if oid != "" and oqr != "" %}
+    <img class="cv__qr" src="{{ oqr | relative_url | escape }}" alt="QR code for https://orcid.org/{{ oid | escape }}" width="96" height="96">
+    {%- endif %}
     <h1>Curriculum Vitae</h1>
     <p class="lede">{{ s.name | escape }} · {{ s.title_line | escape }}</p>
+    {%- if oid != "" %}
+    <p class="cv__orcid">{% include orcid-id.html id=oid %}</p>
+    {%- endif %}
     <p class="cv__actions">
       {%- if pdf_1 == "/" %}<a class="btn" href="{{ pdf | relative_url | escape }}">Download PDF</a>{% elsif safe_url != "" %}<a class="btn" href="{{ safe_url | escape }}">Download PDF</a>{% endif %}
       <button class="btn btn--ghost js-print" type="button" hidden>Print this page</button>

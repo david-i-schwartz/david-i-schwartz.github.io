@@ -245,6 +245,13 @@ content:
         type: file
         options:
           media: files
+      - { name: orcid, label: "ORCID iD (like 0000-0002-1675-9535; shown with the iD icon on the CV page)", type: string }
+      - name: orcid_qr
+        label: ORCID QR code (CV page on wider screens, and the printed CV)
+        type: image
+        options:
+          media: photos
+          path: photos/site
       - name: links
         label: Links (home page shows the first five; footer shows all)
         type: object

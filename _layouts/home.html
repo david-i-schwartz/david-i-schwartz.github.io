@@ -20,7 +20,7 @@ layout: default
       <ul class="chips">
         {%- for l in s.links limit: 5 -%}
           {%- include safe-url.html url=l.url -%}
-          {%- if safe_url != "" %}<li><a class="chip" href="{{ safe_url | escape }}">{{ l.label | escape }}</a></li>{% endif -%}
+          {%- if safe_url != "" %}<li><a class="chip" href="{{ safe_url | escape }}">{% if safe_url contains "orcid.org/" %}<img class="orcid-icon" src="https://orcid.org/sites/default/files/images/orcid_16x16.png" alt="" width="16" height="16">{% endif %}{{ l.label | escape }}</a></li>{% endif -%}
         {%- endfor %}
         <li><a class="chip chip--solid" href="{{ '/cv/' | relative_url }}">CV</a></li>
       </ul>

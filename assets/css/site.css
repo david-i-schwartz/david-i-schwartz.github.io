@@ -193,6 +193,14 @@ p { margin: 0 0 1em; }
 .btn:hover { background: var(--accent-dark); color: #fff; }
 .btn--ghost { background: transparent; color: var(--accent); margin-left: 8px; }
 .cv__actions { margin: 0.4rem 0 0; }
+/* ORCID iD as ORCID recommends showing it (green iD icon + full URL), and its QR code */
+.orcid-id { font-weight: 600; text-decoration: none; overflow-wrap: anywhere; }
+.orcid-id img, .orcid-icon { display: inline-block; width: 1em; height: 1em; vertical-align: -0.125em; margin-inline-end: 0.35em; }
+.cv__orcid { margin: 0 0 0.6rem; }
+.cv .page__head::after { content: ""; display: table; clear: both; }
+.cv__qr { display: none; }
+@media (min-width: 700px) { .cv__qr { display: block; float: right; width: 96px; height: 96px; margin: 0 0 0.75rem 1.25rem; } }
+@media print { .cv__qr { display: block; float: right; width: 0.85in; height: 0.85in; margin: 0 0 0.1in 0.2in; } }
 
 /* ---------- Blog ---------- */
 .posts { list-style: none; margin: 0; padding: 0; }
