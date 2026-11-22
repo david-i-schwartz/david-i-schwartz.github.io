@@ -11,7 +11,7 @@
       {%- for l in s.links -%}
         {%- include safe-url.html url=l.url -%}
         {%- if safe_url != "" %}
-      <li><a href="{{ safe_url | escape }}" rel="me">{{ l.label | escape }}</a></li>
+      <li><a href="{{ safe_url | escape }}" rel="me">{% if safe_url contains "orcid.org/" %}<img class="orcid-icon" src="https://orcid.org/sites/default/files/images/orcid_16x16.png" alt="" width="16" height="16">{% endif %}{{ l.label | escape }}</a></li>
         {%- endif -%}
       {%- endfor %}
     </ul>
