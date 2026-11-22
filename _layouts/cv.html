@@ -94,6 +94,7 @@ layout: default
     {%- if rows.size > 0 %}
   <h3>{{ inst }}</h3>
   <table class="tbl tbl--cv">
+    <thead><tr><th>Course</th><th>Title</th><th>Terms</th></tr></thead>
     <tbody>{% for r in rows %}<tr><td class="nowrap">{{ r.course | escape }}</td><td>{{ r.title | escape }}</td><td class="nowrap">{{ r.terms | escape }}</td></tr>{% endfor %}</tbody>
   </table>
     {%- endif -%}
@@ -101,6 +102,7 @@ layout: default
 
   <h2 id="theses">7. Graduate theses, capstones, and dissertations</h2>
   <table class="tbl tbl--cv">
+    <thead><tr><th>Years</th><th>Student</th><th>Title</th><th>Type and role</th></tr></thead>
     <tbody>
       {%- for th in cv.theses %}
       <tr><td class="nowrap">{{ th.year | default: th.years | escape }}</td><td>{{ th.student | escape }}</td><td>{{ th.title | escape }}</td><td>{{ th.type | escape }}, {{ th.role | escape }}</td></tr>
@@ -123,6 +125,6 @@ layout: default
   <h2 id="awards">9. Awards and honors</h2>
   {%- assign awards = cv.awards | sort: "year" | reverse -%}
   <ul class="list">
-    {%- for a in awards %}<li><span class="list__year">{{ a.year | escape }}</span> {{ a.title | escape }}{% assign nl = a.notes | append: "" | size %}{% if nl > 0 %} <span class="soft">· {{ a.notes | escape }}</span>{% endif %}</li>{% endfor %}
+    {%- for a in awards %}{% include safe-url.html url=a.link %}<li><span class="list__year">{{ a.year | escape }}</span> {{ a.title | escape }}{% assign nl = a.notes | append: "" | size %}{% if nl > 0 %} <span class="soft">· {{ a.notes | escape }}</span>{% endif %}{% if safe_url != "" %} <a class="award__link" href="{{ safe_url | escape }}">Link</a>{% endif %}</li>{% endfor %}
   </ul>
 </section>

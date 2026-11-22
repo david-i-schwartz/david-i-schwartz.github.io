@@ -84,7 +84,8 @@ layout: default
     <h2>Awards &amp; honors</h2>
     <ul class="list">
       {%- for a in awards limit: 6 %}
-      <li><span class="list__year">{{ a.year | escape }}</span> {{ a.title | escape }}</li>
+      {%- include safe-url.html url=a.link %}
+      <li><span class="list__year">{{ a.year | escape }}</span> {{ a.title | escape }}{% if safe_url != "" %} <a class="award__link" href="{{ safe_url | escape }}">Link</a>{% endif %}</li>
       {%- endfor %}
     </ul>
     <p><a class="more" href="{{ '/cv/#awards' | relative_url }}">All awards</a></p>
