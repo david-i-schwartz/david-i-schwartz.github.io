@@ -14,7 +14,7 @@ media:
     label: Photos
     input: photos
     output: /photos
-    extensions: [jpg, jpeg, png, gif, webp, svg]
+    extensions: [jpg, jpeg, png, gif, webp]
   - name: files
     label: Files (PDFs, downloads)
     input: files
@@ -521,3 +521,4 @@ content:
       - { name: title, label: Award, type: text }
       - { name: organization, label: Given by, type: string }
       - { name: notes, label: Notes, type: string }
+      - { name: link, label: "Link (https://…, optional)", type: string }

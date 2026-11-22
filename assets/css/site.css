@@ -9,11 +9,13 @@
   --line: #DED6C4;
   --ink: #1F1B16;
   --ink-soft: #5F5648;
-  --muted: #8A8070;
+  --muted: #72685A;        /* 5.2:1 on paper, 4.7:1 on panels (was #8A8070, 3.7:1) */
   --accent: #0E6B6B;      /* deep teal */
   --accent-dark: #0A4F4F;
   --accent-soft: #D9ECEA;
   --amber: #C7811A;
+  --on-accent: #FFFFFF;    /* text on teal buttons */
+  --on-amber: #1F1B16;     /* text on the amber skip link */
   --f-serif: 'Source Serif 4', Georgia, 'Times New Roman', serif;
   --f-sans: 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
   --radius: 10px;
@@ -30,11 +32,18 @@
     --accent-dark: #8BD8D4;
     --accent-soft: #163B3B;
     --amber: #E6A446;
+    --on-accent: #15171A;  /* dark text on the light teal used in dark mode (8.5:1; white was 2.1:1) */
   }
 }
 
 *, *::before, *::after { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+/* Jump links: land below the sticky header instead of under it */
+[id] { scroll-margin-top: 5rem; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+}
 body {
   margin: 0;
   background: var(--bg);
@@ -42,7 +51,13 @@ body {
   font-family: var(--f-sans);
   font-size: 1.0625rem;
   line-height: 1.6;
+  overflow-wrap: break-word;   /* long web addresses wrap instead of widening the page */
+  /* footer stays at the bottom of the window on short pages */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
+main { flex: 1 0 auto; }
 img { max-width: 100%; height: auto; display: block; }
 a { color: var(--accent); text-underline-offset: 3px; text-decoration-thickness: 1px; }
 a:hover { color: var(--accent-dark); }
@@ -54,7 +69,7 @@ h3 { font-size: 1.2rem; margin: 1.6rem 0 0.6rem; color: var(--ink-soft); }
 p { margin: 0 0 1em; }
 [hidden] { display: none !important; }
 .wrap { width: 100%; max-width: 1080px; margin: 0 auto; padding: 0 20px; }
-.skip { position: absolute; left: -9999px; top: 0; z-index: 30; background: var(--amber); color: #fff; padding: 10px 14px; }
+.skip { position: absolute; left: -9999px; top: 0; z-index: 30; background: var(--amber); color: var(--on-amber); padding: 10px 14px; }
 .skip:focus { left: 10px; }
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 .soft { color: var(--muted); }
@@ -92,8 +107,8 @@ p { margin: 0 0 1em; }
 .chips { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
 .chip { display: inline-block; padding: 6px 12px; border: 1px solid var(--line); border-radius: 999px; text-decoration: none; font-weight: 600; font-size: 0.95rem; color: var(--ink-soft); background: var(--panel); }
 .chip:hover { border-color: var(--accent); color: var(--accent); }
-.chip--solid { background: var(--accent); border-color: var(--accent); color: #fff; }
-.chip--solid:hover { background: var(--accent-dark); color: #fff; }
+.chip--solid { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+.chip--solid:hover { background: var(--accent-dark); color: var(--on-accent); }
 @media (min-width: 700px) {
   .hero__inner { grid-template-columns: 220px 1fr; }
   .hero__photo { width: 220px; height: 220px; }
@@ -173,24 +188,33 @@ p { margin: 0 0 1em; }
 /* Date-range lists (service): fixed date column, wrapped lines line up with the text */
 .list--dated li { display: grid; grid-template-columns: 7.6em minmax(0, 1fr); align-items: start; }
 .list--dated .list__year { min-width: 0; padding-right: 0.6em; }
+/* Year lists (news, awards): wrapped lines line up with the text, not under the year */
+.list--hang li { display: flow-root; padding-left: 4.6em; }
+.list--hang .list__year { float: left; min-width: 4.6em; margin-left: -4.6em; padding-right: 0.5em; box-sizing: border-box; }
 .bullets { margin: 0 0 1rem; padding-left: 1.2rem; }
 .bullets li { margin-bottom: 0.5rem; }
 .pubs { margin: 0 0 1.5rem; padding-left: 2.4em; }
 .pubs li { padding: 5px 0; border-bottom: 1px solid var(--line); }
 .pubs__year { font-weight: 600; color: var(--muted); margin-right: 6px; font-variant-numeric: tabular-nums; }
 .pubs__link { display: inline-block; min-width: 2.4em; margin-right: 6px; font-weight: 600; }
+.award__link { font-weight: 600; white-space: nowrap; }
 .tbl { border-collapse: collapse; width: 100%; margin: 0 0 1.4rem; font-size: 0.97rem; }
 .tbl th { text-align: left; font-weight: 600; color: var(--muted); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; }
 .tbl td, .tbl th { padding: 7px 10px 7px 0; border-bottom: 1px solid var(--line); vertical-align: top; }
 .tbl--narrow { max-width: 520px; }
+/* Phones: wide tables scroll sideways inside themselves instead of widening the page */
+@media (max-width: 640px) {
+  .tbl { display: block; overflow-x: auto; }
+  .tbl td.nowrap:last-child { white-space: normal; }  /* term lists wrap; course codes and years stay whole */
+}
 .dev { margin: 0 0 1.4rem; }
 .dev__row { padding: 8px 0; border-bottom: 1px solid var(--line); }
 .dev dt { font-weight: 600; }
 .dev dd { margin: 2px 0 0; color: var(--ink-soft); }
 .fold { margin: 0 0 1.6rem; border: 1px solid var(--line); border-radius: var(--radius); padding: 10px 14px; background: var(--panel); }
 .fold summary { font-weight: 600; cursor: pointer; }
-.btn { display: inline-block; padding: 9px 16px; border-radius: 8px; background: var(--accent); color: #fff; text-decoration: none; font-weight: 600; border: 1px solid var(--accent); cursor: pointer; font: 600 1rem var(--f-sans); }
-.btn:hover { background: var(--accent-dark); color: #fff; }
+.btn { display: inline-block; padding: 9px 16px; border-radius: 8px; background: var(--accent); color: var(--on-accent); text-decoration: none; font-weight: 600; border: 1px solid var(--accent); cursor: pointer; font: 600 1rem var(--f-sans); }
+.btn:hover { background: var(--accent-dark); color: var(--on-accent); }
 .btn--ghost { background: transparent; color: var(--accent); margin-left: 8px; }
 .cv__actions { margin: 0.4rem 0 0; }
 /* ORCID iD as ORCID recommends showing it (green iD icon + full URL), and its QR code */
@@ -235,9 +259,11 @@ p { margin: 0 0 1em; }
 @media print {
   .more-btn, .js-expand-all { display: none !important; }
   .top, .foot, .jump, .cv__actions, .skip, .crumb { display: none !important; }
-  body { background: #fff; color: #000; font-size: 10.5pt; }
+  body { background: #fff; color: #000; font-size: 10.5pt; display: block; min-height: 0; }
   .page { padding: 0; }
   a { color: inherit; text-decoration: none; }
-  h2 { page-break-after: avoid; }
-  .tbl, .pubs li, .list li { page-break-inside: avoid; }
+  h2, h3 { break-after: avoid; page-break-after: avoid; }
+  .tbl { display: table; }
+  /* keep single rows whole, but let long tables continue onto the next page (headers repeat) */
+  .tbl tr, .pubs li, .list li { break-inside: avoid; page-break-inside: avoid; }
 }

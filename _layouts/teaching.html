@@ -41,7 +41,7 @@ layout: default
     {%- if rows.size > 0 %}
   <h4>{{ inst }}</h4>
   <table class="tbl">
-    <thead><tr><th>Course</th><th>Title</th><th>Terms</th></tr></thead>
+    <thead><tr><th scope="col">Course</th><th scope="col">Title</th><th scope="col">Terms</th></tr></thead>
     <tbody data-preview="5">
       {%- for r in rows %}
       <tr><td>{{ r.course | escape }}</td><td>{{ r.title | escape }}</td><td>{{ r.terms | escape }}</td></tr>
@@ -67,7 +67,7 @@ layout: default
 
   <h2 id="theses">Graduate theses, capstones, and dissertations</h2>
   <table class="tbl">
-    <thead><tr><th>Years</th><th>Student</th><th>Title</th><th>Type</th><th>Role</th></tr></thead>
+    <thead><tr><th scope="col">Years</th><th scope="col">Student</th><th scope="col">Title</th><th scope="col">Type</th><th scope="col">Role</th></tr></thead>
     <tbody data-preview="5">
       {%- for th in theses %}
       <tr><td>{{ th.year | default: th.years | escape }}</td><td>{{ th.student | escape }}</td><td>{{ th.title | escape }}{% assign nl = th.notes | append: "" | size %}{% if nl > 0 %} <span class="soft">({{ th.notes | escape }})</span>{% endif %}</td><td>{{ th.type | escape }}</td><td>{{ th.role | escape }}</td></tr>

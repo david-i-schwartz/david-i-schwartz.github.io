@@ -1,0 +1,8 @@
+# Opens a pull request when a GitHub Action used by the workflows has a new
+# release, so the pinned commit SHAs don't go stale. Monthly to keep noise low.
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly

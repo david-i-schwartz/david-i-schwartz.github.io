@@ -1,5 +1,6 @@
 # Test-builds the site on every branch except main and on pull requests,
-# so a change can be checked before it goes live. Never publishes anything.
+# with the same build steps and permissions as the publish workflow, so a
+# change is checked before it goes live. Never publishes anything.
 name: Check site builds
 
 on:
@@ -9,13 +10,18 @@ on:
 
 permissions:
   contents: read
+  pages: read
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/jekyll-build-pages@v1
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
+      - uses: actions/jekyll-build-pages@44a6e6beabd48582f863aeeb6cb2151cc1716697 # v1.0.13
         with:
           source: ./
           destination: ./_site
+      - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
+        with:
+          retention-days: 1
