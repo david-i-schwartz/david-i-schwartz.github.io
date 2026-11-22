@@ -2,334 +2,450 @@
   number: 2
   year: '2022'
   title_or_citation: Schwartz, D. I. (2022). Introduction for What’s Wrong with this Resume? by Mark Buchignani.
+  url: https://books2read.com/u/bP7kxd
 - kind: popular_press
   number: 1
   year: '2019'
   title_or_citation: Schwartz, D. I. (2019). Beyond ‘Bandersnatch,’ the future of interactive TV is bright, The Conversation. See also www.fastcompany.com/90326433/what-history-teaches-us-about-the-future-of-interactive-tv.
-  url: www.fastcompany.com/90326433/what-history-teaches-us-about-the-future-of-interactive-tv
   outlet: The Conversation
+  url: https://theconversation.com/beyond-bandersnatch-the-future-of-interactive-tv-is-bright-111037
 - kind: news
-  number: 5
+  number: 66
   year: '2026'
   title_or_citation: RIT game design and development programs ranked among top five worldwide
   author: Scott Bureau
   outlet: RIT News
+  url: https://www.rit.edu/news/rit-game-design-and-development-programs-ranked-among-top-five-worldwide
 - kind: news
-  number: 4
+  number: 65
   year: '2025'
-  title_or_citation: Digital Twins Are Changing University Campus Operations, Abby Sourvine, Government Technology
+  title_or_citation: Digital Twins Are Changing University Campus Operations
   author: Abby Sourvine
   outlet: Government Technology
+  url: https://www.govtech.com/education/higher-ed/digital-twins-are-changing-university-campus-operations
 - kind: news
-  number: 3
+  number: 64
   year: '2025'
   title_or_citation: RIT named a top 5 university to study game design
   author: Scott Bureau
   outlet: RIT News
+  url: https://www.rit.edu/news/rit-named-top-5-university-study-game-design
 - kind: news
-  number: 2
+  number: 63
   year: '2025'
   title_or_citation: RIT ranked a top-10 university for game designers and developers
   author: Scott Bureau
   outlet: RIT News
+  url: https://www.rit.edu/news/rit-ranked-top-10-university-game-designers-and-developers
 - kind: news
-  number: 1
+  number: 62
   year: '2025'
   title_or_citation: NSF awards RIT more than $1 million to develop digital media forensics platform
   author: Scott Bureau
   outlet: RIT News
+  url: https://www.rit.edu/news/nsf-awards-rit-more-1-million-develop-digital-media-forensics-platform
 - kind: news
+  number: 61
   year: '2024'
-  title_or_citation: RIT game design and development programs ranked among top 10, Scott Bureau, RIT News
+  title_or_citation: RIT game design and development programs ranked among top 10
+  author: Scott Bureau
   outlet: RIT News
-  url: www.rit.edu/news/rit-game-design-and-development-programs-ranked-among-top-10
+  url: http://www.rit.edu/news/rit-game-design-and-development-programs-ranked-among-top-10
 - kind: news
+  number: 60
   year: '2024'
-  title_or_citation: RIT ranked among top game design schools in the United States, Scott Bureau, RIT News
+  title_or_citation: RIT ranked among top game design schools in the United States
+  author: Scott Bureau
   outlet: RIT News
-  url: www.rit.edu/news/rit-ranked-among-top-game-design-schools-united-states
+  url: http://www.rit.edu/news/rit-ranked-among-top-game-design-schools-united-states
 - kind: news
+  number: 59
   year: '2023'
-  title_or_citation: Game design initiative makes digital dreams come true, Patricia Waldron, Cornell University
+  title_or_citation: Game design initiative makes digital dreams come true
+  author: Patricia Waldron
   outlet: Cornell University
-  url: news.cornell.edu/stories/2023/05/game-design-initiative-makes-digital-dreams-come-true
+  url: https://news.cornell.edu/stories/2023/05/game-design-initiative-makes-digital-dreams-come-true
 - kind: news
+  number: 58
   year: '2023'
-  title_or_citation: RIT students building device to keep astronauts healthy in space, Michelle Cometa, RIT News
+  title_or_citation: RIT students building device to keep astronauts healthy in space
+  author: Michelle Cometa
   outlet: RIT News
-  url: www.rit.edu/news/rit-students-building-device-keep-astronauts-healthy-space
+  url: http://www.rit.edu/news/rit-students-building-device-keep-astronauts-healthy-space
 - kind: news
+  number: 57
   year: '2023'
-  title_or_citation: RIT game design and development programs jump in rankings, Scott Bureau, RIT News
+  title_or_citation: RIT game design and development programs jump in rankings
+  author: Scott Bureau
   outlet: RIT News
-  url: www.rit.edu/news/rit-game-design-and-development-programs-jump-rankings
+  url: http://www.rit.edu/news/rit-game-design-and-development-programs-jump-rankings
 - kind: news
+  number: 56
   year: '2023'
-  title_or_citation: RIT researchers to create serious video game for infrastructure resilience to cyberattacks, Scott Bureau, RIT News
+  title_or_citation: RIT researchers to create serious video game for infrastructure resilience to cyberattacks
+  author: Scott Bureau
   outlet: RIT News
-  url: www.rit.edu/news/rit-researchers-create-serious-video-game-infrastructure-resilience-cyberattacks
+  url: http://www.rit.edu/news/rit-researchers-create-serious-video-game-infrastructure-resilience-cyberattacks
 - kind: news
+  number: 55
   year: '2023'
-  title_or_citation: RIT named among top 5 game design schools in the country, Scott Bureau, RIT News
+  title_or_citation: RIT named among top 5 game design schools in the country
+  author: Scott Bureau
   outlet: RIT News
-  url: www.rit.edu/news/rit-named-among-top-5-game-design-schools-country
+  url: http://www.rit.edu/news/rit-named-among-top-5-game-design-schools-country
 - kind: news
+  number: 54
   year: '2022'
-  title_or_citation: RIT game design programs ranked among best in the world, Scott Bureau, RIT News
+  title_or_citation: RIT game design programs ranked among best in the world
+  author: Scott Bureau
   outlet: RIT News
-  url: www.rit.edu/news/rit-game-design-programs-ranked-among-best-world-0
+  url: http://www.rit.edu/news/rit-game-design-programs-ranked-among-best-world-0
 - kind: news
+  number: 53
   year: '2022'
-  title_or_citation: RIT’s game design programs ranked No. 5 nationally, Scott Bureau, RIT News
+  title_or_citation: RIT’s game design programs ranked No. 5 nationally
+  author: Scott Bureau
   outlet: RIT News
-  url: www.rit.edu/news/rits-game-design-programs-ranked-no-5-nationally
+  url: http://www.rit.edu/news/rits-game-design-programs-ranked-no-5-nationally
 - kind: news
+  number: 52
   year: '2022'
-  title_or_citation: Schwartz, Tomaszewski receive grant to prototype resilience game for critical infrastructure leaders, RIT News
+  title_or_citation: Schwartz, Tomaszewski receive grant to prototype resilience game for critical infrastructure leaders
   outlet: RIT News
-  url: www.rit.edu/news/schwartz-tomaszewski-receive-grant-prototype-resilience-game-critical-infrastructure-leaders
+  url: http://www.rit.edu/news/schwartz-tomaszewski-receive-grant-prototype-resilience-game-critical-infrastructure-leaders
 - kind: news
+  number: 51
   year: '2021'
-  title_or_citation: Schwartz co-edits ‘Gaming and Geospatial Information,’ RIT News
+  title_or_citation: Schwartz co-edits ‘Gaming and Geospatial Information’
   outlet: RIT News
-  url: www.rit.edu/news/schwartz-co-edits-gaming-and-geospatial-information
+  url: http://www.rit.edu/news/schwartz-co-edits-gaming-and-geospatial-information
 - kind: news
+  number: 50
   year: '2021'
-  title_or_citation: Schwartz named associate editor of journal, RIT News
+  title_or_citation: Schwartz named associate editor of journal
   outlet: RIT News
-  url: www.rit.edu/news/schwartz-named-associate-editor-journal
+  url: http://www.rit.edu/news/schwartz-named-associate-editor-journal
 - kind: news
+  number: 49
   year: '2021'
-  title_or_citation: Job preparedness key to RIT’s game design and development, receiving Princeton recognition, Dan Gross
-  url: www.rochesterfirst.com/news/digital-exclusives/job-preparedness-key-to-rits-game-design-and-development-receiving-princeton-recognition
+  title_or_citation: Job preparedness key to RIT’s game design and development, receiving Princeton recognition
+  author: Dan Gross
+  outlet: RochesterFirst
+  url: http://www.rochesterfirst.com/news/digital-exclusives/job-preparedness-key-to-rits-game-design-and-development-receiving-princeton-recognition
 - kind: news
+  number: 48
   year: '2021'
-  title_or_citation: RIT game design programs ranked among top in the world, Scott Bureau
-  url: www.rit.edu/news/rit-game-design-programs-ranked-among-top-world
+  title_or_citation: RIT game design programs ranked among top in the world
+  author: Scott Bureau
+  outlet: RIT News
+  url: http://www.rit.edu/news/rit-game-design-programs-ranked-among-top-world
 - kind: news
+  number: 47
   year: '2020'
-  title_or_citation: Video games help keep people of all ages connected during the pandemic,” Rochester, Dan Gross, Nextstar Inc.
-  outlet: Nextstar Inc.
-  url: www.rochesterfirst.com/news/digital-exclusives/video-games-help-keep-people-of-all-ages-connected-during-the-pandemic
+  title_or_citation: Video games help keep people of all ages connected during the pandemic
+  author: Dan Gross
+  outlet: RochesterFirst
+  url: http://www.rochesterfirst.com/news/digital-exclusives/video-games-help-keep-people-of-all-ages-connected-during-the-pandemic
 - kind: news
+  number: 46
   year: '2020'
-  title_or_citation: RIT researchers create serious games to teach disaster management and resilience skills, Scott Bureau, RIT News
+  title_or_citation: RIT researchers create serious games to teach disaster management and resilience skills
+  author: Scott Bureau
   outlet: RIT News
-  url: www.rit.edu/news/rit-researchers-create-serious-games-teach-disaster-management-and-resilience-skills
+  url: http://www.rit.edu/news/rit-researchers-create-serious-games-teach-disaster-management-and-resilience-skills
 - kind: news
+  number: 45
   year: '2020'
-  title_or_citation: RIT game design programs ranked among best in the world, Scott Bureau, RIT News
+  title_or_citation: RIT game design programs ranked among best in the world
+  author: Scott Bureau
   outlet: RIT News
-  url: www.rit.edu/news/rit-game-design-programs-ranked-among-best-world
+  url: http://www.rit.edu/news/rit-game-design-programs-ranked-among-best-world
 - kind: news
+  number: 44
   year: '2019'
-  title_or_citation: Animation Career Review names RIT among nation’s best colleges to study video game design, Scott Bureau, RIT News
+  title_or_citation: Animation Career Review names RIT among nation’s best colleges to study video game design
+  author: Scott Bureau
   outlet: RIT News
-  url: www.rit.edu/news/animation-career-review-names-rit-among-nations-best-colleges-study-video-game-design
+  url: http://www.rit.edu/news/animation-career-review-names-rit-among-nations-best-colleges-study-video-game-design
 - kind: news
+  number: 43
   year: '2019'
-  title_or_citation: RIT digital gaming hub seeks to make Rochester a video-game haven, Gino Fanelli, Rochester Business Journal
+  title_or_citation: RIT digital gaming hub seeks to make Rochester a video-game haven
+  author: Gino Fanelli
   outlet: Rochester Business Journal
-  url: rbj.net/2019/04/15/rit-digital-gaming-hub-seeks-to-make-rochester-a-video-game-haven
+  url: https://rbj.net/2019/04/15/rit-digital-gaming-hub-seeks-to-make-rochester-a-video-game-haven/
 - kind: news
+  number: 42
   year: '2019'
-  title_or_citation: RIT video game design programs again ranked among the best, Ellen Rosen, RIT News
+  title_or_citation: RIT video game design programs again ranked among the best
+  author: Ellen Rosen
   outlet: RIT News
-  url: www.rit.edu/news/rit-video-game-design-programs-again-ranked-among-best
+  url: http://www.rit.edu/news/rit-video-game-design-programs-again-ranked-among-best
 - kind: news
+  number: 41
   year: '2019'
-  title_or_citation: '‘Black Mirror: Bandersnatch’ could signal the future for AI directors, Danny Paez, Inverse'
+  title_or_citation: '‘Black Mirror: Bandersnatch’ could signal the future for AI directors'
+  author: Danny Paez
   outlet: Inverse
-  url: www.inverse.com/article/52470-black-mirror-bandersnatch-ai-directors
+  url: http://www.inverse.com/article/52470-black-mirror-bandersnatch-ai-directors
 - kind: news
+  number: 40
   year: '2018'
-  title_or_citation: RIT one of the nation’s top universities for NSF undergraduate research, Scott Bureau, RIT News
+  title_or_citation: RIT one of the nation’s top universities for NSF undergraduate research
+  author: Scott Bureau
   outlet: RIT News
-  url: www.rit.edu/news/rit-one-nations-top-universities-nsf-undergraduate-research
+  url: http://www.rit.edu/news/rit-one-nations-top-universities-nsf-undergraduate-research
 - kind: news
+  number: 39
   year: '2018'
-  title_or_citation: RIT ranked No. 1 game design school on East Coast, Scott Bureau, RIT News
+  title_or_citation: RIT ranked No. 1 game design school on East Coast
+  author: Scott Bureau
   outlet: RIT News
-  url: www.rit.edu/news/rit-ranked-no-1-game-design-school-east-coast-0
+  url: http://www.rit.edu/news/rit-ranked-no-1-game-design-school-east-coast-0
 - kind: news
+  number: 38
   year: '2018'
-  title_or_citation: Video game design programs among top in the nation, Luke Auburn, RIT News
+  title_or_citation: Video game design programs among top in the nation
+  author: Luke Auburn
   outlet: RIT News
-  url: www.rit.edu/news/video-game-design-programs-among-top-nation
+  url: http://www.rit.edu/news/video-game-design-programs-among-top-nation
 - kind: news
+  number: 37
   year: '2017'
-  title_or_citation: RIT ranked No. 1 game design school on East Coast, Scott Bureau, RIT News
+  title_or_citation: RIT ranked No. 1 game design school on East Coast
+  author: Scott Bureau
   outlet: RIT News
-  url: www.rit.edu/news/rit-ranked-no-1-game-design-school-east-coast
+  url: http://www.rit.edu/news/rit-ranked-no-1-game-design-school-east-coast
 - kind: news
+  number: 36
   year: '2017'
-  title_or_citation: RIT’s video game design programs jump in Princeton Review rankings, Scott Bureau, RIT News
+  title_or_citation: RIT’s video game design programs jump in Princeton Review rankings
+  author: Scott Bureau
   outlet: RIT News
-  url: www.rit.edu/news/video-game-design-programs-jump-rankings-0
+  url: http://www.rit.edu/news/video-game-design-programs-jump-rankings-0
 - kind: news
+  number: 35
   year: '2016'
-  title_or_citation: Esports becomes RIT’s newest intramural sport, Scott Bureau, RIT News
+  title_or_citation: Esports becomes RIT’s newest intramural sport
+  author: Scott Bureau
   outlet: RIT News
-  url: www.rit.edu/news/esports-becomes-rits-newest-intramural-sport
+  url: http://www.rit.edu/news/esports-becomes-rits-newest-intramural-sport
 - kind: news
+  number: 34
   year: '2016'
-  title_or_citation: RIT officially launches MAGIC Spell Studios, Vienna McGrain, RIT News
+  title_or_citation: RIT officially launches MAGIC Spell Studios
+  author: Vienna McGrain
   outlet: RIT News
-  url: www.rit.edu/news/rit-officially-launches-magic-spell-studios
+  url: http://www.rit.edu/news/rit-officially-launches-magic-spell-studios
 - kind: news
+  number: 33
   year: '2015'
-  title_or_citation: Video game design programs jump in rankings, Scott Bureau, RIT News
+  title_or_citation: Video game design programs jump in rankings
+  author: Scott Bureau
   outlet: RIT News
-  url: www.rit.edu/news/video-game-design-programs-jump-rankings
+  url: http://www.rit.edu/news/video-game-design-programs-jump-rankings
 - kind: news
+  number: 32
   year: '2015'
-  title_or_citation: RIT ranks among top video-game design schools, Scott Bureau, RIT News
+  title_or_citation: RIT ranks among top video-game design schools
+  author: Scott Bureau
   outlet: RIT News
-  url: www.rit.edu/news/rit-ranks-among-top-video-game-design-schools
+  url: http://www.rit.edu/news/rit-ranks-among-top-video-game-design-schools
 - kind: news
+  number: 31
   year: '2015'
-  title_or_citation: Schwartz looks to inspire interdisciplinary learning, Scott Bureau, RIT News
+  title_or_citation: Schwartz looks to inspire interdisciplinary learning
+  author: Scott Bureau
   outlet: RIT News
-  url: www.rit.edu/news/schwartz-lead-gccis-school
+  url: http://www.rit.edu/news/schwartz-lead-gccis-school
 - kind: news
+  number: 30
   year: '2014'
-  title_or_citation: “Homework Hotline (Game Design),” WPBS
+  title_or_citation: Homework Hotline (Game Design)
   outlet: WPBS
-  url: www.youtube.com/watch?v=n7IADtQTA1s
+  url: http://www.youtube.com/watch?v=n7IADtQTA1s
 - kind: news
+  number: 29
   year: '2014'
-  title_or_citation: '“Indie Spotlight - Galactose: Pastries in Space,” Michael Costanzo, The Crispy Noodle'
+  title_or_citation: 'Indie Spotlight – Galactose: Pastries in Space'
+  author: Michael Costanzo
   outlet: The Crispy Noodle
-  url: thecrispynoodle.com/?p=2761
+  url: http://thecrispynoodle.com/?p=2761
 - kind: news
+  number: 28
   year: '2013'
-  title_or_citation: Game firms create core of budding industry, Kerry Feltner, Rochester Business Journal
+  title_or_citation: Game firms create core of budding industry
+  author: Kerry Feltner
   outlet: Rochester Business Journal
-  url: rbj.net/2013/12/27/game-firms-create-core-of-budding-industry
+  url: https://rbj.net/2013/12/27/game-firms-create-core-of-budding-industry/
 - kind: news
+  number: 27
   year: '2012'
-  title_or_citation: 'Fantasy Friday: A Trip to Rochester Institute of Technology (link defunct).'
+  title_or_citation: 'Fantasy Friday: A Trip to Rochester Institute of Technology'
   link_status: defunct
 - kind: news
+  number: 26
   year: '2012'
-  title_or_citation: 'StoreWorld: A “Fashionable” Business Game (link defunct).'
+  title_or_citation: 'StoreWorld: A “Fashionable” Business Game'
   link_status: defunct
 - kind: news
+  number: 25
   year: '2012'
-  title_or_citation: Versace, your way! RIT students design fashionable business game, Marcia Morphy, RIT News
+  title_or_citation: Versace, your way! RIT students design fashionable business game
+  author: Marcia Morphy
   outlet: RIT News
-  url: www.rit.edu/news/versace-your-way-rit-students-design-fashionable-business-game
+  url: http://www.rit.edu/news/versace-your-way-rit-students-design-fashionable-business-game
 - kind: news
+  number: 24
   year: '2012'
-  title_or_citation: StoreWorld, RIT News
+  title_or_citation: StoreWorld
   outlet: RIT News
-  url: www.rit.edu/news/storeworld
+  url: https://www.rit.edu/news/storeworld
 - kind: news
+  number: 23
   year: '2011'
-  title_or_citation: 'RIT on TV: A fun online retail game requiring fashion sense (and cents), RIT News'
+  title_or_citation: 'RIT on TV: A fun online retail game requiring fashion sense (and cents)'
   outlet: RIT News
-  url: www.youtube.com/watch?v=SuPqaPLNaXs
+  url: http://www.youtube.com/watch?v=SuPqaPLNaXs
 - kind: news
+  number: 22
   year: '2011'
   title_or_citation: Videogame Mania at the Strong Museum of Play
-  url: www.museumofplay.org/content/video-game-mania-national-museum-play-november-5-6
+  outlet: The Strong National Museum of Play
+  url: http://www.museumofplay.org/content/video-game-mania-national-museum-play-november-5-6
 - kind: news
+  number: 21
   year: '2011'
-  title_or_citation: Global game creation results in ‘end of the world’ scenario, John Follaco, RIT News
+  title_or_citation: Global game creation results in ‘end of the world’ scenario
+  author: John Follaco
   outlet: RIT News
-  url: www.rit.edu/news/global-game-creation-results-end-world-scenario
+  url: http://www.rit.edu/news/global-game-creation-results-end-world-scenario
 - kind: news
+  number: 20
   year: '2011'
-  title_or_citation: Gamesauce Challenge Announces Global Game Jam Winners, Vlad Micu and Javier Sancho, Gamesauce
-  notes: (see archive.globalgamejam.org/2011/ultimate-celebration)
+  title_or_citation: Gamesauce Challenge Announces Global Game Jam Winners
+  author: Vlad Micu and Javier Sancho
   outlet: Gamesauce
-  url: www.gamesauce.biz/2011/02/02/gamesauce-challenge-announces-global-game-jam-winners
+  url: http://www.gamesauce.biz/2011/02/02/gamesauce-challenge-announces-global-game-jam-winners
+  notes: (see archive.globalgamejam.org/2011/ultimate-celebration)
 - kind: news
+  number: 19
   year: '2011'
-  title_or_citation: RIT Students Make Imagine Cup Finals, (link defunct).
+  title_or_citation: RIT Students Make Imagine Cup Finals
   link_status: defunct
 - kind: news
+  number: 18
   year: '2011'
-  title_or_citation: Microsoft Executives Visit RIT to Support Imagine Cup, Scott Bureau, RIT News
+  title_or_citation: Microsoft Executives Visit RIT to Support Imagine Cup
+  author: Scott Bureau
   outlet: RIT News
-  url: www.rit.edu/news/microsoft-executives-visit-rit-support-imagine-cup
+  url: http://www.rit.edu/news/microsoft-executives-visit-rit-support-imagine-cup
 - kind: news
+  number: 17
   year: '2011'
-  title_or_citation: Game designers to battle in virtual world face-off, Lauren Barber, Ithaca College News
+  title_or_citation: Game designers to battle in virtual world face-off
+  author: Lauren Barber
   outlet: Ithaca College News
-  url: theithacan.org/news/game-designers-to-battle-in-virtual-world-face-off
+  url: https://theithacan.org/news/game-designers-to-battle-in-virtual-world-face-off/
 - kind: news
+  number: 16
   year: '2011'
-  title_or_citation: RIT to Host a Global Game Jam Jan. 28–30, John Follaco, RIT News
+  title_or_citation: RIT to Host a Global Game Jam Jan. 28–30
+  author: John Follaco
   outlet: RIT News
-  url: www.rit.edu/news/rit-host-global-game-jam-jan-28-30
+  url: http://www.rit.edu/news/rit-host-global-game-jam-jan-28-30
 - kind: news
+  number: 15
   year: '2010'
-  title_or_citation: 'Imagine RIT Exhibit Highlight: Virtual Golf Experience, John Follaco, RIT News'
+  title_or_citation: 'Imagine RIT Exhibit Highlight: Virtual Golf Experience'
+  author: John Follaco
   outlet: RIT News
-  url: www.rit.edu/news/imagine-rit-exhibit-highlight-virtual-golf-experience
+  url: http://www.rit.edu/news/imagine-rit-exhibit-highlight-virtual-golf-experience
 - kind: news
+  number: 14
   year: '2010'
-  title_or_citation: Creating Virtual Worlds, Research at RIT, (link defunct).
+  title_or_citation: Creating Virtual Worlds
   outlet: Research at RIT
   link_status: defunct
 - kind: news
+  number: 13
   year: '2010'
-  title_or_citation: Imagine Eye Control of Computers, Virtual Golf, in a Greener World, (link defunct).
+  title_or_citation: Imagine Eye Control of Computers, Virtual Golf, in a Greener World
   link_status: defunct
 - kind: news
+  number: 12
   year: '2009'
-  title_or_citation: President Destler becomes a ‘banjo hero,’” Bob Finnerty, RIT News
+  title_or_citation: President Destler becomes a ‘banjo hero’
+  author: Bob Finnerty
   outlet: RIT News
-  url: www.rit.edu/news/president-destler-becomes-banjo-hero
+  url: http://www.rit.edu/news/president-destler-becomes-banjo-hero
 - kind: news
+  number: 11
   year: '2009'
-  title_or_citation: Homebrew banjo game-controller by RIT students, Cory Doctorow
-  url: boingboing.net/2009/03/26/homebrew-banjo-gamec.html
+  title_or_citation: Homebrew banjo game-controller by RIT students
+  author: Cory Doctorow
+  outlet: Boing Boing
+  url: https://boingboing.net/2009/03/26/homebrew-banjo-gamec.html
 - kind: news
+  number: 10
   year: '2009'
-  title_or_citation: Move over, Guitar Hero, it's Oh-No Banjo, Matt Hickey, CNET
+  title_or_citation: Move over, Guitar Hero, it's Oh-No Banjo
+  author: Matt Hickey
   outlet: CNET
-  url: www.cnet.com/news/move-over-guitar-hero-its-oh-no-banjo
+  url: http://www.cnet.com/news/move-over-guitar-hero-its-oh-no-banjo
 - kind: news
+  number: 9
   year: '2009'
-  title_or_citation: 'DIY: Banjo Hero, Gearfuse'
+  title_or_citation: 'DIY: Banjo Hero'
   outlet: Gearfuse
-  url: www.gearfuse.com/diy-banjo-hero
+  url: https://www.gearfuse.com/diy-banjo-hero
 - kind: news
+  number: 8
   year: '2009'
-  title_or_citation: Banjo Hero (formerly, Guitar Hero goes Banjo Hero at the Game Developers’ Conference), Caleb Kraft, Hackaday
+  title_or_citation: Banjo Hero (formerly, Guitar Hero goes Banjo Hero at the Game Developers’ Conference)
+  author: Caleb Kraft
   outlet: Hackaday
-  url: hackaday.com/2009/03/26/banjo-hero
+  url: https://hackaday.com/2009/03/26/banjo-hero
 - kind: news
+  number: 7
   year: '2009'
-  title_or_citation: Campus Spotlight, (link defunct).
+  title_or_citation: Campus Spotlight
   link_status: defunct
 - kind: news
+  number: 6
   year: '2009'
-  title_or_citation: ROAR Day (faculty contributor), (link defunct).
+  title_or_citation: ROAR Day (faculty contributor)
   link_status: defunct
 - kind: news
+  number: 5
   year: '2007'
-  title_or_citation: New Cornell University initiative offers game design minor, Michelle Pascucci, The Cornell Daily Sun
+  title_or_citation: New Cornell University initiative offers game design minor
+  author: Michelle Pascucci
   outlet: The Cornell Daily Sun
-  url: cornellsun.com/2007/03/09/new-initiative-offers-game-design-minor-and-courses
+  url: https://cornellsun.com/2007/03/09/new-initiative-offers-game-design-minor-and-courses/
 - kind: news
+  number: 4
   year: '2007'
-  title_or_citation: Students discover that computer games are serious fun, Bill Steele, Cornell Chronicle
+  title_or_citation: Students discover that computer games are serious fun
+  author: Bill Steele
   outlet: Cornell Chronicle
-  url: news.cornell.edu/stories/2007/02/students-discover-computer-games-are-serious-fun
+  url: https://news.cornell.edu/stories/2007/02/students-discover-computer-games-are-serious-fun
 - kind: news
+  number: 3
   year: '2006'
-  title_or_citation: Games 4 Girls, (link defunct).
+  title_or_citation: Games 4 Girls
   link_status: defunct
 - kind: news
+  number: 2
   year: '2006'
-  title_or_citation: 'Mobile Game Mosh: An Overnight Success, Reena Jana, Bloomberg'
+  title_or_citation: 'Mobile Game Mosh: An Overnight Success'
+  author: Reena Jana
   outlet: Bloomberg
-  url: www.bloomberg.com/news/articles/2006-03-16/mobile-game-mosh-an-overnight-success#xj4y7vzkg
+  url: http://www.bloomberg.com/news/articles/2006-03-16/mobile-game-mosh-an-overnight-success
 - kind: news
+  number: 1
   year: '2003'
-  title_or_citation: CU Computer Game Design Initiative shows games are not just for playing, Bill Steele, Cornell Chronicle
+  title_or_citation: CU Computer Game Design Initiative shows games are not just for playing
+  author: Bill Steele
   outlet: Cornell Chronicle
-  url: news.cornell.edu/stories/2003/12/game-design-initiative-will-use-gaming-motivation
+  url: https://news.cornell.edu/stories/2003/12/game-design-initiative-will-use-gaming-motivation/

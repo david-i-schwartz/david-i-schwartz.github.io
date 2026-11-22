@@ -1,0 +1,21 @@
+# Test-builds the site on every branch except main and on pull requests,
+# so a change can be checked before it goes live. Never publishes anything.
+name: Check site builds
+
+on:
+  push:
+    branches-ignore: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site

@@ -370,6 +370,7 @@ content:
           values:
             - { value: news, label: "News or press release" }
             - { value: popular_press, label: "Popular press (something I wrote)" }
+      - { name: number, label: "Number within its kind (highest = newest; blank = newest)", type: number }
       - { name: year, label: Year, type: string }
       - { name: title_or_citation, label: Headline or citation, type: string, required: true }
       - { name: outlet, label: Outlet, type: string }

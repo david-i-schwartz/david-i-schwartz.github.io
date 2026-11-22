@@ -7,7 +7,7 @@ layout: default
     {%- assign intro_len = page.intro | append: "" | size -%}
     {%- if intro_len > 0 %}<p class="lede">{{ page.intro | escape }}</p>{% endif %}
     <nav class="jump" aria-label="On this page">
-      <a href="#books">Books &amp; chapters</a><a href="#journals">Journals</a><a href="#games">Games &amp; simulations</a><a href="#conference">Conference papers</a><a href="#abstracts">Abstracts &amp; talks</a><a href="#invited">Invited</a><a href="#reports">Reports</a><a href="#press">Press</a>
+      <a href="#books">Books &amp; chapters</a><a href="#journals">Journals</a><a href="#games">Games &amp; simulations</a><a href="#conference">Conference papers</a><a href="#abstracts">Abstracts &amp; talks</a><a href="#invited">Invited</a><a href="#reports">Reports</a><a href="#press">Popular press</a><a href="#news">News</a>
     </nav>
   </header>
   <div class="prose">{{ content }}</div>
@@ -21,14 +21,6 @@ layout: default
   {% include pub-list.html type="invited_talk" label="Invited abstracts, talks, panels, posters, and workshops" id="invited" %}
   {% include pub-list.html type="sponsor_reviewed_report" label="Sponsor-reviewed articles and technical reports" id="reports" %}
 
-  {%- assign press = site.data.cv.press | sort: "year" | reverse -%}
-  {%- if press.size > 0 %}
-  <h2 id="press">Press and news <span class="count">{{ press.size }}</span></h2>
-  <ul class="list">
-    {%- for n in press -%}
-      {%- include safe-url.html url=n.url %}
-    <li><span class="list__year">{{ n.year | escape }}</span> {% if safe_url != "" %}<a href="{{ safe_url | escape }}">{{ n.title_or_citation | escape }}</a>{% else %}{{ n.title_or_citation | escape }}{% endif %}{% assign out_len = n.outlet | append: "" | size %}{% if out_len > 0 %} <span class="soft">· {{ n.outlet | escape }}</span>{% endif %}{% if n.link_status == "defunct" %} <span class="soft">(link defunct)</span>{% endif %}</li>
-    {%- endfor %}
-  </ul>
-  {%- endif %}
+  {% include press-list.html kind="popular_press" label="Popular press" id="press" %}
+  {% include press-list.html kind="news" label="News and press releases" id="news" %}
 </section>

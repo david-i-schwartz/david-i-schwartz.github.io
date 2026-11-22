@@ -83,14 +83,8 @@ layout: default
   {% include pub-list.html type="peer_reviewed_abstract_or_talk" label="5.6 Peer-reviewed abstracts, talks, panels, posters, and workshops" id="cv-abstracts" %}
   {% include pub-list.html type="invited_talk" label="5.7 Invited abstracts, talks, panels, posters, and workshops" id="cv-invited" %}
   {% include pub-list.html type="sponsor_reviewed_report" label="5.8 Sponsor-reviewed articles and technical reports" id="cv-reports" %}
-  {%- assign press = cv.press | sort: "year" | reverse -%}
-  <h2 id="cv-press">5.9 Popular press, news, and press releases <span class="count">{{ press.size }}</span></h2>
-  <ul class="list">
-    {%- for n in press -%}
-      {%- include safe-url.html url=n.url %}
-    <li><span class="list__year">{{ n.year | escape }}</span> {% if safe_url != "" %}<a href="{{ safe_url | escape }}">{{ n.title_or_citation | escape }}</a>{% else %}{{ n.title_or_citation | escape }}{% endif %}{% assign out_len = n.outlet | append: "" | size %}{% if out_len > 0 %} <span class="soft">· {{ n.outlet | escape }}</span>{% endif %}</li>
-    {%- endfor %}
-  </ul>
+  {% include press-list.html kind="popular_press" label="5.9 Popular press" id="cv-press" %}
+  {% include press-list.html kind="news" label="5.10 News and press releases" id="cv-news" %}
 
   <h2 id="teaching">6. Teaching and course development</h2>
   <p>Course descriptions, term-by-term history, and abbreviations are on the <a href="{{ '/teaching/' | relative_url }}">Teaching</a> page.</p>

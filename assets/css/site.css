@@ -175,7 +175,7 @@ p { margin: 0 0 1em; }
 .pubs { margin: 0 0 1.5rem; padding-left: 2.4em; }
 .pubs li { padding: 5px 0; border-bottom: 1px solid var(--line); }
 .pubs__year { font-weight: 600; color: var(--muted); margin-right: 6px; font-variant-numeric: tabular-nums; }
-.pubs__link { margin-left: 6px; font-weight: 600; }
+.pubs__link { display: inline-block; min-width: 2.4em; margin-right: 6px; font-weight: 600; }
 .tbl { border-collapse: collapse; width: 100%; margin: 0 0 1.4rem; font-size: 0.97rem; }
 .tbl th { text-align: left; font-weight: 600; color: var(--muted); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; }
 .tbl td, .tbl th { padding: 7px 10px 7px 0; border-bottom: 1px solid var(--line); vertical-align: top; }
