@@ -1,0 +1,12 @@
+# ORCID work type for each publications.yml type, used when an entry has no
+# orcid_type of its own (e.g. for the BibTeX/ORCID export). Values come from
+# ORCID's list of supported work types (API 3.0):
+# https://info.orcid.org/ufaqs/what-work-types-does-orcid-support/
+book_or_chapter: book-chapter
+journal: journal-article
+game_or_simulation: software
+creative_work: artistic-performance
+conference_paper: conference-paper
+peer_reviewed_abstract_or_talk: conference-presentation
+invited_talk: lecture-speech
+sponsor_reviewed_report: report

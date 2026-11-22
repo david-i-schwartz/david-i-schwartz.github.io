@@ -355,6 +355,28 @@ content:
       - { name: year, label: Year, type: string, required: true }
       - { name: citation, label: Full citation, type: text, required: true }
       - { name: link, label: "Link (https://…, optional)", type: string }
+      - { name: doi, label: "DOI (optional, like 10.1145/3544548.3580939; makes the Link if Link is blank)", type: string }
+      - { name: authors, label: "Authors (optional, like Schwartz, D. I.; Bayliss, J. D.)", type: string }
+      - { name: venue, label: "Venue: journal, conference or publisher (optional)", type: string }
+      - name: orcid_type
+        label: "ORCID work type (optional; blank uses the usual one for this type)"
+        type: select
+        options:
+          values:
+            - { value: book, label: "Book" }
+            - { value: book-chapter, label: "Book chapter" }
+            - { value: journal-article, label: "Journal article" }
+            - { value: conference-paper, label: "Conference paper" }
+            - { value: conference-presentation, label: "Conference presentation" }
+            - { value: conference-poster, label: "Conference poster" }
+            - { value: lecture-speech, label: "Lecture or speech" }
+            - { value: public-speech, label: "Public speech" }
+            - { value: report, label: "Report" }
+            - { value: magazine-article, label: "Magazine article" }
+            - { value: software, label: "Software (games, simulations)" }
+            - { value: artistic-performance, label: "Artistic performance" }
+            - { value: other, label: "Other" }
+      - { name: openalex_id, label: "OpenAlex ID (optional; filled in automatically)", type: string }
 
   - name: cv_press
     label: "CV · 5. Press & news"

@@ -2,6 +2,7 @@
   Prints one publication type as a heading + list, in the CV's
   [count] [year] [Link] [citation] layout. The count is each entry's own
   number from the CV (highest = newest); entries without a number go first.
+  Link is the entry's link, or https://doi.org/<doi> when it has only a DOI.
   include.type = type key, include.label = heading, include.id = anchor id
 {%- endcomment -%}
 {%- assign pubs = site.data.cv.publications | where: "type", include.type | sort: "number", "last" | reverse -%}
@@ -10,7 +11,10 @@
 <ol class="pubs" reversed>
   {%- for p in pubs %}
   {%- assign num_len = p.number | append: "" | size %}
-  {%- include safe-url.html url=p.link %}
+  {%- assign pub_url = p.link | append: "" | strip %}
+  {%- assign pub_doi = p.doi | append: "" | strip | remove_first: "https://doi.org/" | remove_first: "http://doi.org/" | remove_first: "https://dx.doi.org/" %}
+  {%- if pub_url == "" and pub_doi != "" %}{% assign pub_url = "https://doi.org/" | append: pub_doi %}{% endif %}
+  {%- include safe-url.html url=pub_url %}
   <li{% if num_len > 0 %} value="{{ p.number | append: "" | escape }}"{% endif %}><span class="pubs__year">{{ p.year | escape }}</span> <span class="pubs__link">{% if safe_url != "" %}<a href="{{ safe_url | escape }}">Link</a>{% endif %}</span> <span class="pubs__cite">{{ p.citation | escape }}</span></li>
   {%- endfor %}
 </ol>

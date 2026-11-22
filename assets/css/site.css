@@ -177,8 +177,8 @@ p { margin: 0 0 1em; }
 .list--tight li { padding: 4px 0; border-bottom: 0; }
 .list__year { display: inline-block; min-width: 4.6em; font-weight: 600; color: var(--muted); font-variant-numeric: tabular-nums; }
 /* Date-range lists (service): fixed date column, wrapped lines line up with the text */
-.list--dated li { padding-left: 7.6em; text-indent: -7.6em; }
-.list--dated .list__year { min-width: 7.6em; padding-right: 0.6em; box-sizing: border-box; text-indent: 0; }
+.list--dated li { display: grid; grid-template-columns: 7.6em minmax(0, 1fr); align-items: start; }
+.list--dated .list__year { min-width: 0; padding-right: 0.6em; }
 /* Year lists (news, awards): wrapped lines line up with the text, not under the year */
 .list--hang li { display: flow-root; padding-left: 4.6em; }
 .list--hang .list__year { float: left; min-width: 4.6em; margin-left: -4.6em; padding-right: 0.5em; box-sizing: border-box; }
