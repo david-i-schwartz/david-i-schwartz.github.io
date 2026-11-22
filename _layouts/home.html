@@ -73,7 +73,7 @@ layout: default
 <section class="wrap home__block home__two">
   <div>
     <h2>In the news</h2>
-    <ul class="list">
+    <ul class="list list--hang">
       {%- for n in news limit: 6 -%}
         {%- include safe-url.html url=n.url %}
       <li><span class="list__year">{{ n.year | escape }}</span> {% if safe_url != "" %}<a href="{{ safe_url | escape }}">{{ n.title_or_citation | escape }}</a>{% else %}{{ n.title_or_citation | escape }}{% endif %}{% assign out_len = n.outlet | append: "" | size %}{% if out_len > 0 %} <span class="soft">· {{ n.outlet | escape }}</span>{% endif %}</li>
@@ -82,7 +82,7 @@ layout: default
   </div>
   <div>
     <h2>Awards &amp; honors</h2>
-    <ul class="list">
+    <ul class="list list--hang">
       {%- for a in awards limit: 6 %}
       {%- include safe-url.html url=a.link %}
       <li><span class="list__year">{{ a.year | escape }}</span> {{ a.title | escape }}{% if safe_url != "" %} <a class="award__link" href="{{ safe_url | escape }}">Link</a>{% endif %}</li>

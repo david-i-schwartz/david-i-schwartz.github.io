@@ -124,7 +124,7 @@ layout: default
 
   <h2 id="awards">9. Awards and honors</h2>
   {%- assign awards = cv.awards | sort: "year" | reverse -%}
-  <ul class="list">
+  <ul class="list list--hang">
     {%- for a in awards %}{% include safe-url.html url=a.link %}<li><span class="list__year">{{ a.year | escape }}</span> {{ a.title | escape }}{% assign nl = a.notes | append: "" | size %}{% if nl > 0 %} <span class="soft">· {{ a.notes | escape }}</span>{% endif %}{% if safe_url != "" %} <a class="award__link" href="{{ safe_url | escape }}">Link</a>{% endif %}</li>{% endfor %}
   </ul>
 </section>

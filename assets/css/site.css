@@ -42,7 +42,13 @@ body {
   font-family: var(--f-sans);
   font-size: 1.0625rem;
   line-height: 1.6;
+  overflow-wrap: break-word;   /* long web addresses wrap instead of widening the page */
+  /* footer stays at the bottom of the window on short pages */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
+main { flex: 1 0 auto; }
 img { max-width: 100%; height: auto; display: block; }
 a { color: var(--accent); text-underline-offset: 3px; text-decoration-thickness: 1px; }
 a:hover { color: var(--accent-dark); }
@@ -173,6 +179,9 @@ p { margin: 0 0 1em; }
 /* Date-range lists (service): fixed date column, wrapped lines line up with the text */
 .list--dated li { padding-left: 7.6em; text-indent: -7.6em; }
 .list--dated .list__year { min-width: 7.6em; padding-right: 0.6em; box-sizing: border-box; text-indent: 0; }
+/* Year lists (news, awards): wrapped lines line up with the text, not under the year */
+.list--hang li { display: flow-root; padding-left: 4.6em; }
+.list--hang .list__year { float: left; min-width: 4.6em; margin-left: -4.6em; padding-right: 0.5em; box-sizing: border-box; }
 .bullets { margin: 0 0 1rem; padding-left: 1.2rem; }
 .bullets li { margin-bottom: 0.5rem; }
 .pubs { margin: 0 0 1.5rem; padding-left: 2.4em; }
@@ -184,6 +193,11 @@ p { margin: 0 0 1em; }
 .tbl th { text-align: left; font-weight: 600; color: var(--muted); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; }
 .tbl td, .tbl th { padding: 7px 10px 7px 0; border-bottom: 1px solid var(--line); vertical-align: top; }
 .tbl--narrow { max-width: 520px; }
+/* Phones: wide tables scroll sideways inside themselves instead of widening the page */
+@media (max-width: 640px) {
+  .tbl { display: block; overflow-x: auto; }
+  .tbl td.nowrap:last-child { white-space: normal; }  /* term lists wrap; course codes and years stay whole */
+}
 .dev { margin: 0 0 1.4rem; }
 .dev__row { padding: 8px 0; border-bottom: 1px solid var(--line); }
 .dev dt { font-weight: 600; }
@@ -220,9 +234,11 @@ p { margin: 0 0 1em; }
 /* ---------- Print (CV page) ---------- */
 @media print {
   .top, .foot, .jump, .cv__actions, .skip, .crumb { display: none !important; }
-  body { background: #fff; color: #000; font-size: 10.5pt; }
+  body { background: #fff; color: #000; font-size: 10.5pt; display: block; min-height: 0; }
   .page { padding: 0; }
   a { color: inherit; text-decoration: none; }
-  h2 { page-break-after: avoid; }
-  .tbl, .pubs li, .list li { page-break-inside: avoid; }
+  h2, h3 { break-after: avoid; page-break-after: avoid; }
+  .tbl { display: table; }
+  /* keep single rows whole, but let long tables continue onto the next page (headers repeat) */
+  .tbl tr, .pubs li, .list li { break-inside: avoid; page-break-inside: avoid; }
 }

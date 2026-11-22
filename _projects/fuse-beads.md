@@ -10,4 +10,4 @@ tags:
   - beads
 ---
 
-Patterns, finished pieces, and the pattern generator will live here. How-to videos go in the Videos section below as they are made.
+Patterns, finished pieces, and the pattern generator will live here, along with how-to videos as they are made.
