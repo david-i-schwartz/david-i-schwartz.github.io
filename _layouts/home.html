@@ -9,12 +9,22 @@ layout: default
 {%- assign awards = site.data.cv.awards | sort: "year" | reverse -%}
 
 <section class="hero">
-  <div class="wrap hero__inner">
+  <div class="wrap hero__inner{% if safe_img == "" %} hero__inner--nophoto{% endif %}">
     {%- if safe_img != "" %}
     <img class="hero__photo" src="{{ safe_img | relative_url | escape }}" alt="{{ s.name | escape }}" width="220" height="220">
     {%- endif %}
+    {%- if s.affiliations.size > 0 %}
+    <ul class="hero__aff">
+      {%- for a in s.affiliations %}
+        {%- include safe-url.html url=a.url -%}
+        {%- assign rl = a.role | append: "" | strip | size %}
+      <li>{% if rl > 0 %}<span class="hero__role">{{ a.role | strip | escape }},</span> {% endif %}{% if safe_url != "" %}<a href="{{ safe_url | escape }}">{{ a.name | escape }}</a>{% else %}{{ a.name | escape }}{% endif %}</li>
+      {%- endfor %}
+    </ul>
+    {%- else %}
+    <p class="hero__kicker hero__aff">{{ s.title_line | escape }}</p>
+    {%- endif %}
     <div class="hero__text">
-      <p class="hero__kicker">{{ s.title_line | escape }}</p>
       <h1>{{ s.name | escape }}</h1>
       <p class="lede">{{ s.tagline | escape }}</p>
       <ul class="chips">

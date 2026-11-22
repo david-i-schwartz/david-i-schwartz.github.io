@@ -228,7 +228,15 @@ content:
     fields:
       - { name: name, label: Full name as shown, type: string }
       - { name: short_name, label: Short name (top-left of every page), type: string }
-      - { name: title_line, label: Title line (job title and institution), type: string }
+      - { name: title_line, label: "Title line, one line (footer, CV page and search engines)", type: string }
+      - name: affiliations
+        label: Titles beside your photo (home page; each name links to its site)
+        type: object
+        list: true
+        fields:
+          - { name: role, label: "Role (optional, e.g. Professor)", type: string }
+          - { name: name, label: "School, unit or institution", type: string }
+          - { name: url, label: "Web address (https://…)", type: string }
       - { name: tagline, label: Tagline, type: string }
       - { name: pronouns, label: Pronouns, type: string }
       - name: photo
