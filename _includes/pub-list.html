@@ -8,14 +8,14 @@
 {%- assign pubs = site.data.cv.publications | where: "type", include.type | sort: "number", "last" | reverse -%}
 {%- if pubs.size > 0 %}
 <h2 id="{{ include.id }}">{{ include.label }} <span class="count">{{ pubs.size }}</span></h2>
-<ol class="pubs" reversed data-preview="5">
+<ol class="pubs" reversed role="list" data-preview="5">
   {%- for p in pubs %}
   {%- assign num_len = p.number | append: "" | size %}
   {%- assign pub_url = p.link | append: "" | strip %}
   {%- assign pub_doi = p.doi | append: "" | strip | remove_first: "https://doi.org/" | remove_first: "http://doi.org/" | remove_first: "https://dx.doi.org/" %}
   {%- if pub_url == "" and pub_doi != "" %}{% assign pub_url = "https://doi.org/" | append: pub_doi %}{% endif %}
   {%- include safe-url.html url=pub_url %}
-  <li{% if num_len > 0 %} value="{{ p.number | append: "" | escape }}"{% endif %}><span class="pubs__year">{{ p.year | escape }}</span> <span class="pubs__link">{% if safe_url != "" %}<a href="{{ safe_url | escape }}">Link</a>{% endif %}</span> <span class="pubs__cite">{{ p.citation | escape }}</span></li>
+  <li{% if num_len > 0 %} value="{{ p.number | append: "" | escape }}"{% endif %}><span class="pubs__num">{% if num_len > 0 %}{{ p.number | append: "" | escape }}.{% endif %} </span><span class="pubs__year">{{ p.year | escape }} </span><span class="pubs__link">{% if safe_url != "" %}<a href="{{ safe_url | escape }}">Link</a> {% endif %}</span><span class="pubs__cite">{{ p.citation | escape }}</span></li>
   {%- endfor %}
 </ol>
 {%- endif %}

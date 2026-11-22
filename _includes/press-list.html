@@ -7,7 +7,7 @@
 {%- assign items = site.data.cv.press | where: "kind", include.kind | sort: "number", "last" | reverse -%}
 {%- if items.size > 0 %}
 <h2 id="{{ include.id }}">{{ include.label }} <span class="count">{{ items.size }}</span></h2>
-<ol class="pubs" reversed data-preview="5">
+<ol class="pubs" reversed role="list" data-preview="5">
   {%- for n in items %}
   {%- assign num_len = n.number | append: "" | size %}
   {%- assign by = "" %}
@@ -17,7 +17,7 @@
   {%- elsif au_len > 0 %}{% assign by = n.author %}
   {%- elsif out_len > 0 %}{% assign by = n.outlet %}{% endif %}
   {%- include safe-url.html url=n.url %}
-  <li{% if num_len > 0 %} value="{{ n.number | append: "" | escape }}"{% endif %}><span class="pubs__year">{{ n.year | escape }}</span> <span class="pubs__link">{% if safe_url != "" %}<a href="{{ safe_url | escape }}">Link</a>{% endif %}</span> <span class="pubs__cite">{{ n.title_or_citation | escape }}{% if by != "" %} <span class="soft">· {{ by | escape }}</span>{% endif %}{% if n.link_status == "defunct" %} <span class="soft">(link defunct)</span>{% endif %}</span></li>
+  <li{% if num_len > 0 %} value="{{ n.number | append: "" | escape }}"{% endif %}><span class="pubs__num">{% if num_len > 0 %}{{ n.number | append: "" | escape }}.{% endif %} </span><span class="pubs__year">{{ n.year | escape }} </span><span class="pubs__link">{% if safe_url != "" %}<a href="{{ safe_url | escape }}">Link</a> {% endif %}</span><span class="pubs__cite">{{ n.title_or_citation | escape }}{% if by != "" %} <span class="soft">· {{ by | escape }}</span>{% endif %}{% if n.link_status == "defunct" %} <span class="soft">(link defunct)</span>{% endif %}</span></li>
   {%- endfor %}
 </ol>
 {%- endif %}
