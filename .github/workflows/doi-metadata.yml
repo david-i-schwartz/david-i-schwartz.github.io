@@ -6,9 +6,6 @@ name: Fetch DOI metadata
 
 on:
   workflow_dispatch:
-  push:
-    branches: [pubs-bibtex]
-    paths: ['_tools/doi_metadata.py', '.github/workflows/doi-metadata.yml']
 
 permissions:
   contents: write

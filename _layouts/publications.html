@@ -6,7 +6,7 @@ layout: default
     <h1>{{ page.title | escape }}</h1>
     {%- assign intro_len = page.intro | append: "" | size -%}
     {%- if intro_len > 0 %}<p class="lede">{{ page.intro | escape }}</p>{% endif %}
-    <p class="cv__actions"><button class="btn btn--ghost js-expand-all" type="button" hidden>Expand all</button></p>
+    <p class="cv__actions"><a class="btn btn--ghost" href="{{ '/publications.bib' | relative_url }}" download>Download BibTeX</a> <button class="btn btn--ghost js-expand-all" type="button" hidden>Expand all</button></p>
     <nav class="jump" aria-label="On this page">
       <a href="#books">Books &amp; chapters</a><a href="#journals">Journals</a><a href="#games">Games &amp; simulations</a><a href="#creative">Creative works</a><a href="#conference">Conference papers</a><a href="#abstracts">Abstracts &amp; talks</a><a href="#invited">Invited</a><a href="#reports">Reports</a><a href="#press">Popular press</a><a href="#news">News</a>
     </nav>
