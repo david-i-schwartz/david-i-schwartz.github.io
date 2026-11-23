@@ -24,6 +24,11 @@ jobs:
       pages: read     # configure-pages reads the Pages settings; it can't publish
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Make publications.bib from the publication data
+        continue-on-error: true   # never block a build over the BibTeX file
+        run: |
+          python3 -m pip install --quiet --break-system-packages pyyaml
+          python3 _tools/make_bib.py _data/cv/publications.yml _data/cv/orcid_types.yml publications.bib
       - uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
       - uses: actions/jekyll-build-pages@44a6e6beabd48582f863aeeb6cb2151cc1716697 # v1.0.13
         with:

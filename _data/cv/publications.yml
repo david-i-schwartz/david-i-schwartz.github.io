@@ -4,6 +4,9 @@
   citation: 'Schwartz, C., Pelletier, J., Schwartz, D.I., Wright, M., Hickerson, A. “Deepfakes in Narrative Warfare.” In Artificial Intelligence and International Security: Redefining arms races and contemporary warfare. Manchester University Press, ISBN: 978-1-5261-9616-3.'
   link: https://manchesteruniversitypress.co.uk/9781526196163/
   doi: 10.7765/9781526196170.00011
+  title: Deepfakes in narrative warfare
+  authors: Schwartz, C.; Pelletier, J. M.; Schwartz, D. I.; Wright, M.; Hickerson, A.
+  venue: Artificial Intelligence and international security
 - type: book_or_chapter
   number: 6
   year: '2017'
@@ -11,12 +14,18 @@
   link: https://www.sciencedirect.com/science/chapter/referencework/abs/pii/B9780124095489096238?via%3Dihub
   doi: 10.1016/b978-0-12-409548-9.09623-8
   openalex_id: W2607783374
+  title: GIS and Serious Games
+  authors: Tomaszewski, B.; Konovitz-Davern, A.; Schwartz, D.; Szarzynski, J.; Siedentopp, L.; Miller, A.; Hartz, J.
+  venue: Comprehensive Geographic Information Systems
 - type: book_or_chapter
   number: 5
   year: '2012'
   citation: 'Selinger, E.; Seager, T. P.; Spierre, S.; Schwartz, D. I. Using Sustainability Games to Elicit Moral Hypotheses From Scientists and Engineers. In Per Homann, Jespersen, Soren Riis, and Pernille Almlund (eds.), Rethinking Climate Change Research: Clean-Technology, Culture, and Communication, Ashgate, pp. 117-130.'
   link: https://asu.elsevierpure.com/en/publications/using-sustainability-games-to-elicit-moral-hypotheses-from-scient/
   openalex_id: W2586225759
+  title: Using Sustainability Games to Elicit Moral Hypotheses From Scientists and Engineers
+  authors: Selinger, E.; Seager, T. P.; Spierre, S.; Schwartz, D. I.
+  venue: 'Rethinking Climate Change Research: Clean-Technology, Culture, and Communication'
 - type: book_or_chapter
   number: 4
   year: '2011'
@@ -24,6 +33,9 @@
   link: https://www.igi-global.com/book/designing-games-ethics/46007
   doi: 10.4018/978-1-60960-120-1.ch008
   openalex_id: W2501620997
+  title: The Ethics of Reverse Engineering for Game Technology
+  authors: Schwartz, D. I.; Bayliss, J. D.
+  venue: Designing Games for Ethics
 - type: book_or_chapter
   number: 3
   year: '2011'
@@ -31,6 +43,9 @@
   link: https://www.igi-global.com/book/handbook-research-%20improving-learning-motivation/47397
   doi: 10.4018/978-1-60960-495-0.ch010
   openalex_id: W2478043819
+  title: Unifying Instructional and Game Design
+  authors: Schwartz, D. I.; Bayliss, J. D.
+  venue: Handbook of Research on Improving Learning and Motivation through Educational Games
 - type: book_or_chapter
   number: 2
   year: '2005'
@@ -38,12 +53,18 @@
   link: https://www.amazon.com/Introduction-UNIX-2nd-David-Schwartz/dp/0130613088
   openalex_id: W634468882
   orcid_type: book
+  title: Introduction to UNIX (2nd edition)
+  authors: Schwartz, D. I.
+  venue: Prentice Hall
 - type: book_or_chapter
   number: 1
   year: '2003'
   citation: 'Schwartz, D. I. Introduction to Maple, 2nd edition, Prentice Hall, 2003. Translations: Italian.'
   link: https://www.amazon.com/exec/obidos/ASIN/0130328448/maplesoftcom-20
   orcid_type: book
+  title: Introduction to Maple (2nd edition)
+  authors: Schwartz, D. I.
+  venue: Prentice Hall
 - type: journal
   number: 10
   year: '2026'
@@ -51,6 +72,9 @@
   link: https://doi.org/10.1016/j.ijdrr.2026.106269
   doi: 10.1016/j.ijdrr.2026.106269
   openalex_id: W7166685443
+  title: 'LLM-ResiGame: Multi-agent large language models for creating scenario-based resilience games in critical infrastructure decision-making practices'
+  authors: Zhang, H.; Wang, X.; Dengxiong, X.; Robertson, J.; Zhang, Y.; Schwartz, D.; Gao, S. Z.; Yuan, X.; Peng, C.
+  venue: International Journal of Disaster Risk Reduction
 - type: journal
   number: 9
   year: '2026'
@@ -58,11 +82,17 @@
   link: https://doi.org/10.17645/up.12351
   doi: 10.17645/up.12351
   openalex_id: W7140283829
+  title: How Can Games Transform Cities? Geogames as Tools for Research, Education, and Urban Praxis
+  authors: Andrade, B.; Poplin, A.; Brković Dodig, M.; Schwartz, D.
+  venue: Urban Planning
 - type: journal
   number: 8
   year: '2025'
   citation: 'Schwartz, C.; Bayliss, J. D.; Schwartz, D. I.; Abitbol, A. D.; Tomaszewski, B. Access Denied and Sector Down: Introducing Resilience Games for Critical Infrastructure, The Cyber Defense Review, VOL. 10, NO. 2, 159-180.'
   link: https://cyberdefensereview.army.mil/CDR-Content/Articles/Article-View/Article/4344302/access-denied-and-sector-down-introducing-resilience-games-for-critical-infrast/
+  title: 'Access Denied and Sector Down: Introducing Resilience Games for Critical Infrastructure'
+  authors: Schwartz, C.; Bayliss, J. D.; Schwartz, D. I.; Abitbol, A. D.; Tomaszewski, B.
+  venue: The Cyber Defense Review
 - type: journal
   number: 7
   year: '2025'
@@ -70,6 +100,9 @@
   link: https://journals.sagepub.com/doi/10.1177/23998083251405916
   doi: 10.1177/23998083251405916
   openalex_id: W4417311963
+  title: 'Bridging digital and physical threats: A systematic review of serious games and geogames in cybersecurity and disaster management'
+  authors: Yang, Z.; Raščan, E. O.; Poplin, A.; Schwartz, D. I.
+  venue: 'Environment and Planning B: Urban Analytics and City Science'
 - type: journal
   number: 6
   year: '2020'
@@ -77,16 +110,25 @@
   link: https://www.mdpi.com/2220-9964/9/6/405
   doi: 10.3390/ijgi9060405
   openalex_id: W3036221483
+  title: 'Supporting Disaster Resilience Spatial Thinking with Serious GeoGames: Project Lily Pad'
+  authors: Tomaszewski, B.; Walker, A.; Gawlik, E.; Lane, C.; Williams, S.; Orieta, D.; McDaniel, C.; Plummer, M.; Nair, A.; San Jose, N.; Terrell, N.; Pecsok, K.; Thomley, E.; Mahoney, E.; Haberlack, E.; Schwartz, D.
+  venue: ISPRS International Journal of Geo-Information
 - type: journal
   number: 5
   year: '2011'
   citation: Schwartz, D. I. Teaching Students to Make Alternative Game Controllers, Journal of Game Design and Development Education, A. K. Peters Ltd.
   link: https://web.archive.org/web/20110412044204/http:/www.rit.edu/gccis/gameeducationjournal/teaching-students-make-alternative-game-controllers
+  title: Teaching Students to Make Alternative Game Controllers
+  authors: Schwartz, D. I.
+  venue: Journal of Game Design and Development Education
 - type: journal
   number: 4
   year: '2004'
   citation: 'Fan, K-Y. D.; Schwartz, D. I. First Programming Course in Engineering: Balancing Tradition and Application. Computers in Education Journal, Vol. 13, No. 3 (July-September), 55-60.'
   link: https://peer.asee.org/first-programming-course-in-engineering-balancing-tradition-and-application
+  title: 'First Programming Course in Engineering: Balancing Tradition and Application'
+  authors: Fan, K.-Y. D.; Schwartz, D. I.
+  venue: Computers in Education Journal
 - type: journal
   number: 3
   year: '1995'
@@ -94,60 +136,95 @@
   link: https://www.cambridge.org/core/journals/ai-edam/article/abs/constraintbased-approach-for-qualitative-matrix-structural-analysis/A289CDD44BEF649E836772F4B54704BA
   doi: 10.1017/s0890060400002067
   openalex_id: W2017471916
+  title: A constraint-based approach for qualitative matrix structural analysis
+  authors: Schwartz, D. I.; Chen, S. S.
+  venue: Artificial Intelligence for Engineering Design, Analysis and Manufacturing
 - type: journal
   number: 2
   year: '1994'
   citation: Schwartz, D. I.; Chen, S. S. Towards a Unified Framework for Interval Based Qualitative Computational Matrix Structural Analysis, Computing Systems in Engineering, 5, 147–158.
   doi: 10.1016/0956-0521(94)90046-9
   openalex_id: W2061085565
+  title: Towards a unified framework for interval based qualitative computational matrix structural analysis
+  authors: Schwartz, D. I.; Chen, S. S.
+  venue: Computing Systems in Engineering
 - type: journal
   number: 1
   year: '1991'
   citation: 'Dagher, H.J.; Caccese, V.; Hebert, R.; Schwartz, D. I. Feasibility of CCA Treated Stressed Timber Bridge Decks, Forest Products Journal, 41 (10): 60–64.'
   link: https://agris.fao.org/search/en?query=Feasibility+of+CCA+Treated+Stressed+Timber+Bridge+Decks
+  title: Feasibility of CCA Treated Stressed Timber Bridge Decks
+  authors: Dagher, H. J.; Caccese, V.; Hebert, R.; Schwartz, D. I.
+  venue: Forest Products Journal
 - type: game_or_simulation
   number: 7
   year: '2025'
   citation: Access Denied, Schwartz, D. I. (with A. David Abitbol, Jessica Bayliss, Chris Schwartz, Brian Tomaszewski). RIT ESL Global Cybersecurity Institute and the Army Cyber Institute, ACI hosting TBA.
   link: https://github.com/profjdbayliss/RIT-Resilience-Game
+  title: Access Denied
+  authors: Schwartz, D. I.; Abitbol, A. D.; Bayliss, J. D.; Schwartz, C.; Tomaszewski, B.
+  venue: RIT ESL Global Cybersecurity Institute and the Army Cyber Institute
 - type: game_or_simulation
   number: 6
   year: '2025'
   citation: Sector Down, Schwartz, D. I. (with A. David Abitbol, Jessica Bayliss, Chris Schwartz, Brian Tomaszewski). RIT ESL Global Cybersecurity Institute and the Army Cyber Institute, ACI hosting TBA.
   link: https://github.com/profjdbayliss/RIT-Resilience-Game
+  title: Sector Down
+  authors: Schwartz, D. I.; Abitbol, A. D.; Bayliss, J. D.; Schwartz, C.; Tomaszewski, B.
+  venue: RIT ESL Global Cybersecurity Institute and the Army Cyber Institute
 - type: game_or_simulation
   number: 5
   year: '2025'
   citation: Jack Voltaic 4.0, Schwartz, D. I. (with A. David Abitbol, Jessica Bayliss, Chris Schwartz, Brian Tomaszewski). RIT ESL Global Cybersecurity Institute and the Army Cyber Institute, ACI hosting TBA.
   link: https://github.com/profjdbayliss/RIT-Resilience-Game
+  title: Jack Voltaic 4.0
+  authors: Schwartz, D. I.; Abitbol, A. D.; Bayliss, J. D.; Schwartz, C.; Tomaszewski, B.
+  venue: RIT ESL Global Cybersecurity Institute and the Army Cyber Institute
 - type: game_or_simulation
   number: 4
   year: '2025'
   citation: H4ckC0rps (Android edition), Schwartz, D. I. (with Chao Peng, Henry Orsagh, Alexa Amoriello, Justin Pelletier, Huadong Zhang). MAGIC Spell Studios (in collaboration with RIT ESL Global Cybersecurity Institute).
   link: https://play.google.com/store/apps/details?id=com.magicspellstudios.H4ckC0rps&pli=1
+  title: H4ckC0rps (Android edition)
+  authors: Schwartz, D. I.; Peng, C.; Orsagh, H.; Amoriello, A.; Pelletier, J.; Zhang, H.
+  venue: MAGIC Spell Studios
 - type: game_or_simulation
   number: 3
   year: '2017'
   citation: IPAR, Schwartz, D. I. (with Yin Pan and Sumita Mishra). IPAR, Rochester Institute of Technology, forensic-games.csec.rit.edu (now closed).
+  title: IPAR
+  authors: Schwartz, D. I.; Pan, Y.; Mishra, S.
+  venue: Rochester Institute of Technology
 - type: game_or_simulation
   number: 2
   year: '2012'
   citation: StoreWorld, Schwartz, D. I. (with Steve Gold, Ashok Rao, Jason Arena). Rochester Institute of Technology, apps.facebook.com/storeworldgame (no longer available).
+  title: StoreWorld
+  authors: Schwartz, D. I.; Gold, S.; Rao, A.; Arena, J.
+  venue: Rochester Institute of Technology
 - type: game_or_simulation
   number: 1
   year: '2011'
   citation: BioDrill (David I. Schwartz with Jessica Bayliss and Jesse O’Brien). We released the game to the sponsor.
   link: https://www.youtube.com/watch?v=sBDB7uxVuSg
+  title: BioDrill
+  authors: Schwartz, D. I.; Bayliss, J.; O’Brien, J.
 - type: creative_work
   number: 2
   year: '2026'
   citation: regex, Schwartz, D. I. (with Nate Patwardhan), performed drums and percussion.
   link: https://distrokid.com/hyperfollow/regex1/regex?utm_campaign=website&utm_medium=Email+&utm_source=SendGrid
+  title: regex
+  authors: Schwartz, D. I.; Patwardhan, N.
+  venue: Performed drums and percussion
 - type: creative_work
   number: 1
   year: '2017'
   citation: A Creepy Day (soundtrack) (with Delmar, C.; Delmar, D.; Nerd Therapy—R. David Fox, Sandra Katz, Paul Kurucz, David Schuh, David Paul Karuz), performed drums and percussion.
   link: https://vimeo.com/139657632
+  title: A Creepy Day (soundtrack)
+  authors: Schwartz, D. I.; Delmar, C.; Delmar, D.; Fox, R. D.; Katz, S.; Kurucz, P.; Schuh, D.; Karuz, D. P.
+  venue: Performed drums and percussion
 - type: conference_paper
   number: 36
   year: '2026'
@@ -155,6 +232,9 @@
   link: https://doi.org/10.1007/978-3-031-97663-6_13
   doi: 10.1007/978-3-031-97663-6_13
   openalex_id: W4412013532
+  title: 'Serious Play for a Safer World: An Analysis of Geogames at the Nexus of Cybersecurity, and Disaster Management'
+  authors: Yang, Z.; Raščan, E. O.; Poplin, A.; Schwartz, D. I.
+  venue: Computational Science and Its Applications – ICCSA 2025 Workshops (Lecture Notes in Computer Science 15899)
 - type: conference_paper
   number: 35
   year: '2025'
@@ -162,6 +242,9 @@
   link: https://dr.lib.iastate.edu/handle/20.500.12876/aw4N8yyr
   doi: 10.31274/geogames.25918
   openalex_id: W7167703986
+  title: 'Serious Geogames for Cybersecurity and Disaster Management: Overview of Applications and Their Implementations'
+  authors: Yang, Z.; Schwartz, D.; Raščan, E. O.; Poplin, A.
+  venue: 'Proceedings of the 2nd Geogames Symposium: Connecting Communities Through Games and Play'
 - type: conference_paper
   number: 34
   year: '2025'
@@ -169,18 +252,27 @@
   link: https://dl.acm.org/doi/10.1145/3706598.3713678
   doi: 10.1145/3706598.3713678
   openalex_id: W4409768146
+  title: 'Exploring Deaf And Hard of Hearing Peoples'' Perspectives On Tasks In Augmented Reality: Interacting With 3D Objects And Instructional Comprehension'
+  authors: Luna, S. M.; Xu, J.; Tigwell, G. W.; LaLone, N.; Saker, M.; Chamberlain, A.; Schwartz, D. I.; Papangelis, K.
+  venue: Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems
 - type: conference_paper
   number: 33
   year: '2025'
   citation: 'Peng, C.; Cao, L.; Schwartz, D.; Zhang, H. SIGGRAPH ’24: ACM SIGGRAPH 2024 Educator’s Forum, Article No.: 10, Pages 1 – 2.'
   link: https://dl.acm.org/doi/proceedings/10.1145/3641235
   doi: 10.1145/3641235.3664431
+  title: Integrating Independent Contributions in a Game Programming Assignment
+  authors: Peng, C.; Cao, L.; Schwartz, D.; Zhang, H.
+  venue: Special Interest Group on Computer Graphics and Interactive Techniques Conference Educator's Forum
 - type: conference_paper
   number: 32
   year: '2024'
   citation: 'Xu, J.; Papangelis, K.; Tigwell, G.; Lalone, N.; Zhou, P.; Saker, M.; Chamberlain, A.; Dunham, J.; Luna, S. M.; Schwartz, D. Spatial Computing: Defining the Vision for the Future, CHI EA ’24, May 11–16.'
   link: https://dl.acm.org/doi/10.1145/3613905.3643978
   doi: 10.1145/3613905.3643978
+  title: 'Spatial Computing: Defining the Vision for the Future'
+  authors: Xu, J.; Papangelis, K.; Tigwell, G. W.; Lalone, N.; Zhou, P.; Saker, M.; Chamberlain, A.; Dunham, J.; Luna, S. M.; Schwartz, D.
+  venue: Extended Abstracts of the CHI Conference on Human Factors in Computing Systems
 - type: conference_paper
   number: 31
   year: '2024'
@@ -189,6 +281,9 @@
   doi: 10.1145/3641509
   openalex_id: W4391485280
   orcid_type: journal-article
+  title: 'Pokémon GO as an Advertising Platform: The Case for Locative Advertising in Location-based Games'
+  authors: Dunham, J.; Xu, J.; Papangelis, K.; Lalone, N.; Saker, M.; Schwartz, D.
+  venue: 'Games: Research and Practice'
 - type: conference_paper
   number: 30
   year: '2023'
@@ -196,6 +291,9 @@
   link: https://dl.acm.org/doi/10.1145/3544548.3580939
   doi: 10.1145/3544548.3580939
   openalex_id: W4366549787
+  title: 'Building Positively Affective Location-Based Advertising: A Study of Pokémon GO Players'
+  authors: Dunham, J.; Papangelis, K.; Boulanger, C.; Lalone, N.; Nika, E. [.; Saker, M.; Schwartz, D.
+  venue: Proceedings of the 2023 CHI Conference on Human Factors in Computing Systems
 - type: conference_paper
   number: 29
   year: '2023'
@@ -204,6 +302,9 @@
   doi: 10.1007/s10055-023-00845-5
   openalex_id: W4385792956
   orcid_type: journal-article
+  title: An educational virtual reality game for learning historical events
+  authors: Zhang, H.; Cao, L.; Howell, G.; Schwartz, D.; Peng, C.
+  venue: Virtual Reality
 - type: conference_paper
   number: 28
   year: '2023'
@@ -211,6 +312,9 @@
   link: https://link.springer.com/chapter/10.1007/978-3-031-35634-6_44
   doi: 10.1007/978-3-031-35634-6_44
   openalex_id: W4383616648
+  title: Multi-user VR Experience for Creating and Trading Non-fungible Tokens
+  authors: Cao, L.; Shuminski, J.; Zhang, H.; Solanki, P.; Long, D.; Schwartz, D.; Mardini, I.; Peng, C.
+  venue: HCI International 2023 (Lecture Notes in Computer Science 14027)
 - type: conference_paper
   number: 27
   year: '2022'
@@ -218,6 +322,9 @@
   link: https://dl.acm.org/doi/10.1145/3491101.3516399
   doi: 10.1145/3491101.3516399
   openalex_id: W4225101029
+  title: 'Metaverse: The Vision for the Future'
+  authors: Xu, J.; Papangelis, K.; Dunham, J.; Goncalves, J.; LaLone, N. J.; Chamberlain, A.; Lykourentzou, I.; Vinella, F. L.; Schwartz, D. I.
+  venue: CHI Conference on Human Factors in Computing Systems Extended Abstracts
 - type: conference_paper
   number: 26
   year: '2022'
@@ -225,6 +332,9 @@
   link: https://dl.acm.org/doi/10.1145/3491101.3519663
   doi: 10.1145/3491101.3519663
   openalex_id: W4225089668
+  title: 'Advertising in Location-Based Games: An Exploration in Pokémon GO'
+  authors: Dunham, J.; Xu, J.; Papangelis, K.; Schwartz, D. I.
+  venue: CHI Conference on Human Factors in Computing Systems Extended Abstracts
 - type: conference_paper
   number: 25
   year: '2021'
@@ -232,6 +342,9 @@
   link: https://peer.asee.org/36308
   doi: 10.18260/1-2--36308
   openalex_id: W3174751176
+  title: Making Games to Teach Physics and Mechanics
+  authors: Schwartz, D.
+  venue: Middle Atlantic ASEE Section Spring 2021 Conference Proceedings
 - type: conference_paper
   number: 24
   year: '2020'
@@ -239,11 +352,17 @@
   link: https://ieeexplore.ieee.org/document/9347417/
   doi: 10.1109/vizsec51108.2020.00009
   openalex_id: W3128225583
+  title: Visualization for Spectators in Cybersecurity Competitions
+  authors: Peng, C.; Schwartz, D.; Johnson, D.; Stackpole, B.; Weeden, C.; Marcovecchio, J.; Richards, D.; Fogle, C.; Brown, C.; Walrond, V.
+  venue: 2020 IEEE Symposium on Visualization for Cyber Security (VizSec)
 - type: conference_paper
   number: 23
   year: '2017'
   citation: 'Tomaszewski, B; Schwartz, D. I. Critical Spatial Thinking and Serious Geogames: A Position, AGILE 2017 Workshop on Geogames and Geoplay.'
   link: https://ceur-ws.org/Vol-1952/Critical_SpatialThinking.pdf
+  title: 'Critical Spatial Thinking and Serious Geogames: A Position'
+  authors: Tomaszewski, B.; Schwartz, D. I.
+  venue: AGILE 2017 Workshop on Geogames and Geoplay
 - type: conference_paper
   number: 22
   year: '2017'
@@ -251,6 +370,9 @@
   link: https://dl.acm.org/doi/abs/10.1145/3017680.3017709
   doi: 10.1145/3017680.3017709
   openalex_id: W2605080781
+  title: Gamifying Course Modules for Entry Level Students
+  authors: Pan, Y.; Mishra, S.; Schwartz, D.
+  venue: Proceedings of the 2017 ACM SIGCSE Technical Symposium on Computer Science Education
 - type: conference_paper
   number: 21
   year: '2017'
@@ -258,12 +380,18 @@
   link: https://peer.asee.org/board-133-gamifying-cybersecurity-course-content-for-entry-level-students
   doi: 10.18260/1-2--27736
   openalex_id: W3081677249, W2790411031
+  title: Gamifying Cybersecurity Course Content for Entry Level Students
+  authors: Pan, Y.; Mishra, S.; Schwartz, D.
+  venue: Proceedings of the 2017 ASEE Annual Conference & Exposition
 - type: conference_paper
   number: 20
   year: '2016'
   citation: 'Tomaszewski, B.; Schwartz, D. I.; Szarzynski, J. Crisis Response Serious Spatial Thinking Games: Spatial Think Aloud Study Results. In A. Tapia, P. Antunes, V.A. Bañuls, K. Moore, & J. Porto (Eds.), ISCRAM 2016 Conference Proceedings – 13th International Conference on Information Systems for Crisis Response and Management. Rio de Janeiro, Brazil: Federal University of Rio de Janeiro.'
   link: http://www.iscram2016.nce.ufrj.br/
   openalex_id: W2465462854
+  title: 'Crisis Response Serious Spatial Thinking Games: Spatial Think Aloud Study Results'
+  authors: Tomaszewski, B.; Schwartz, D. I.; Szarzynski, J.
+  venue: 'ISCRAM 2016 Conference Proceedings: 13th International Conference on Information Systems for Crisis Response and Management'
 - type: conference_paper
   number: 19
   year: '2015'
@@ -271,6 +399,9 @@
   link: https://repository.rit.edu/cgi/viewcontent.cgi?article=1833&context=other
   doi: 10.1109/isecon.2015.7119899
   openalex_id: W1585859653
+  title: Gamified digital forensics course modules for undergraduates
+  authors: Pan, Y.; Schwartz, D.; Mishra, S.
+  venue: 2015 IEEE Integrated STEM Education Conference
 - type: conference_paper
   number: 18
   year: '2012'
@@ -278,6 +409,9 @@
   link: https://ieeexplore.ieee.org/document/6329843/
   doi: 10.1109/igic.2012.6329843
   openalex_id: W2021145730
+  title: 'Serious social games: Designing a business simulation game'
+  authors: Critelli, M.; Schwartz, D. I.; Gold, S.
+  venue: 2012 IEEE International Games Innovation Conference
 - type: conference_paper
   number: 17
   year: '2012'
@@ -285,6 +419,9 @@
   link: https://dl.acm.org/doi/10.1145/2380552.2380558
   doi: 10.1145/2380552.2380558
   openalex_id: W2130185221
+  title: Game-based forensics course for first year students
+  authors: Pan, Y.; Mishra, S.; Yuan, B.; Stackpole, B.; Schwartz, D.
+  venue: Proceedings of the 13th annual conference on Information technology education
 - type: conference_paper
   number: 16
   year: '2010'
@@ -292,6 +429,9 @@
   link: https://dl.acm.org/doi/10.1145/1920778.1920810
   doi: 10.1145/1920778.1920810
   openalex_id: W2025003859
+  title: '“Oh-No! Banjo”: A Case Study in Alternative Game Controllers'
+  authors: Ey, M.; Pietruch, J.; Schwartz, D. I.
+  venue: Proceedings of the International Academic Conference on the Future of Game Design and Technology
 - type: conference_paper
   number: 15
   year: '2010'
@@ -299,6 +439,9 @@
   link: https://ieeexplore.ieee.org/document/5507679
   doi: 10.1109/issst.2010.5507679
   openalex_id: W2007426719
+  title: 'Debunking the fallacy of the individual decision-maker: An experiential pedagogy for sustainability ethics'
+  authors: Seager, T. P.; Selinger, E.; Whiddon, D.; Schwartz, D.; Spierre, S.; Berardy, A.
+  venue: Proceedings of the 2010 IEEE International Symposium on Sustainable Systems and Technology
 - type: conference_paper
   number: 14
   year: '2009'
@@ -306,6 +449,9 @@
   link: https://dl.acm.org/doi/10.1145/1536513.1536526
   doi: 10.1145/1536513.1536526
   openalex_id: W2100940236
+  title: Instructional design as game design
+  authors: Bayliss, J. D.; Schwartz, D. I.
+  venue: Proceedings of the 4th International Conference on Foundations of Digital Games
 - type: conference_paper
   number: 13
   year: '2008'
@@ -313,10 +459,16 @@
   link: https://peer.asee.org/50369
   doi: 10.18260/1-2-1153-50369
   openalex_id: W4406726653, W4409065241, W4409109349
+  title: Motivating Engineering Mathematics Education with Game Analysis Metrics
+  authors: Schwartz, D. I.
+  venue: 2008 Spring ASEE Middle Atlantic Section Conference Proceedings
 - type: conference_paper
   number: 12
   year: '2007'
   citation: 'Schwartz, D. I.; Locke, K.; Ross, D. O.; Emeny, M. The Future of Wargame Design: A Componentized Approach, Proceedings of The Huntsville Simulation Conference (HSC 2007).'
+  title: 'The Future of Wargame Design: A Componentized Approach'
+  authors: Schwartz, D. I.; Locke, K.; Ross, D. O.; Emeny, M.
+  venue: Proceedings of the Huntsville Simulation Conference (HSC 2007)
 - type: conference_paper
   number: 11
   year: '2007'
@@ -324,17 +476,26 @@
   link: https://peer.asee.org/outreach-with-game-design-education
   doi: 10.18260/1-2--2604
   openalex_id: W2596833782
+  title: Outreach With Game Design Education
+  authors: Schwartz, D.; Norton, C.; Schwartz, S.
+  venue: Proceedings of the 2007 ASEE Annual Conference & Exposition
 - type: conference_paper
   number: 10
   year: '2007'
   citation: Schwartz, D. I.; Cosgrave, T.; Weidner, S. Designing Shape-shifting Collaborative Laboratory Spaces to Facilitate Game-Design Education. Proceedings of the 2nd Annual Microsoft Academic Days on Game Development in Computer Science Education, 95-99, Microsoft.
   link: https://stewart.sdsu.edu/3dgame-prog/MADGD-CSE-C/madgdcse2007.pdf
   openalex_id: W776664537
+  title: Designing Shape-shifting Collaborative Laboratory Spaces to Facilitate Game-Design Education
+  authors: Schwartz, D. I.; Cosgrave, T.; Weidner, S.
+  venue: Proceedings of the 2nd Annual Microsoft Academic Days on Game Development in Computer Science Education
 - type: conference_paper
   number: 9
   year: '2005'
   citation: Rajagopalan, M.; Schwartz, D. I. Game design and game-development education, Phi Kappa Phi Forum, Honor Society of Phi Kappa Phi.
   link: https://go.gale.com/ps/i.do?p=AONE&u=nysl_oweb&id=GALE%7CA135022702&v=2.1&it=r&sid=googleScholar&asid=dc84704a
+  title: Game Design and Game-Development Education
+  authors: Rajagopalan, M.; Schwartz, D. I.
+  venue: Phi Kappa Phi Forum
 - type: conference_paper
   number: 8
   year: '2005'
@@ -342,10 +503,16 @@
   link: https://dl.acm.org/doi/10.1145/1187358.1187402
   doi: 10.1145/1187358.1187402
   openalex_id: W2068567675
+  title: 'GameX: A Platform for Incremental Instruction in Computer Graphics and Game Design'
+  authors: Hoetzlein, R. C.; Schwartz, D. I.
+  venue: ACM SIGGRAPH 2005 Educators Program
 - type: conference_paper
   number: 7
   year: '2005'
   citation: Schwartz, D.I.; Rajagopalan, R.; Hoetzlein, R.; Ross, D. O. Developing a Virtual Engineering Curriculum Via Video Game Design. Proceedings of The American Society for Engineering Education St. Lawrence Section Conference, Binghamton University.
+  title: Developing a Virtual Engineering Curriculum Via Video Game Design
+  authors: Schwartz, D. I.; Rajagopalan, R.; Hoetzlein, R.; Ross, D. O.
+  venue: Proceedings of the American Society for Engineering Education St. Lawrence Section Conference
 - type: conference_paper
   number: 6
   year: '2005'
@@ -353,110 +520,176 @@
   link: https://dl.acm.org/doi/10.1145/1047344.1047439
   doi: 10.1145/1047344.1047439
   openalex_id: W2063894272, W4246030934
+  title: Supporting workflow in a course management system
+  authors: Botev, C.; Chao, H.; Chao, T.; Cheng, Y.; Doyle, R.; Grankin, S.; Guarino, J.; Guha, S.; Lee, P.-C.; Perry, D.; Re, C.; Rifkin, I.; Yuan, T.; Abdullah, D.; Carpenter, K.; Gries, D.; Kozen, D.; Myers, A.; Schwartz, D.; Shanmugasundaram, J.
+  venue: Proceedings of the 36th SIGCSE technical symposium on Computer science education
 - type: conference_paper
   number: 5
   year: '2003'
   citation: Hoetzlein, R; Schwartz, D. I. Computer Game Design as A Tool for Cooperative Interdisciplinary Education, Proceedings of The American Society for Engineering Education St. Lawrence Section Conference, Queens University.
+  title: Computer Game Design as a Tool for Cooperative Interdisciplinary Education
+  authors: Hoetzlein, R.; Schwartz, D. I.
+  venue: Proceedings of the American Society for Engineering Education St. Lawrence Section Conference
 - type: conference_paper
   number: 4
   year: '1996'
   citation: Schwartz, D. I.; Chen. S. S. Interval Methods for Qualitatively Uncertain Models in Structural Design, Information Representation and Delivery, In Civil And Structural Engineering Design Conference Proceedings of ITCSED `96, International Conference on Information Technology in Civil & Structural Design, Glasgow, Scotland (B. Kumar, editor), Civil-Comp Press, UK, 63–67.
+  title: Interval Methods for Qualitatively Uncertain Models in Structural Design
+  authors: Schwartz, D. I.; Chen, S. S.
+  venue: Proceedings of ITCSED '96, International Conference on Information Technology in Civil and Structural Design
 - type: conference_paper
   number: 3
   year: '1993'
   citation: Schwartz, D. I.; Chen, S. S. Order of Magnitude Reasoning for Qualitative Matrix Structural Analysis, Proceedings of The Fifth International Conference on Computing in Civil and Building Engineering, ASCE, 1267–1274.
   link: https://cedb.asce.org/CEDBsearch/record.jsp?dockey=0082249
   openalex_id: W2564022975
+  title: Order of Magnitude Reasoning for Qualitative Matrix Structural Analysis
+  authors: Schwartz, D. I.; Chen, S. S.
+  venue: Proceedings of the Fifth International Conference on Computing in Civil and Building Engineering
 - type: conference_paper
   number: 2
   year: '1992'
   citation: Schwartz, D. I.; Chen, S. S. Spatial and Temporal Aspects of Qualitative Structural Reasoning, Proceedings of the Eighth Annual Conference on Computing in Civil Engineering, ASCE, 277–284.
   link: https://cedb.asce.org/CEDBsearch/record.jsp?dockey=0076467
   openalex_id: W2743603369
+  title: Spatial and Temporal Aspects of Qualitative Structural Reasoning
+  authors: Schwartz, D. I.; Chen, S. S.
+  venue: Proceedings of the Eighth Annual Conference on Computing in Civil Engineering
 - type: conference_paper
   number: 1
   year: '1990'
   citation: Dagher, H. J.; Caccese, V.; Herbert, R.; Schwartz, D. I. Design of CCA-Treated Timber Decks, Proceedings of The Second NSF Workshop on Bridge Engineering Research in Progress, University of Nevada, Reno, 261–263.
+  title: Design of CCA-Treated Timber Decks
+  authors: Dagher, H. J.; Caccese, V.; Herbert, R.; Schwartz, D. I.
+  venue: Proceedings of the Second NSF Workshop on Bridge Engineering Research in Progress
 - type: peer_reviewed_abstract_or_talk
   number: 34
   year: '2026'
   citation: 'Katz, S.; Schwartz, D. I. Gamifying Disaster Chaplaincy: an interactive introduction; An Interactive Workshop on Designing Crisis Spiritual Care Mechanics, Disaster Gaming Conference 2026 (forthcoming October 8).'
   link: https://emdisastergaming.com/pages/em-disaster-gaming-conference-2026
+  title: 'Gamifying Disaster Chaplaincy: An Interactive Introduction; An Interactive Workshop on Designing Crisis Spiritual Care Mechanics'
+  authors: Katz, S.; Schwartz, D. I.
+  venue: Disaster Gaming Conference 2026
 - type: peer_reviewed_abstract_or_talk
   number: 33
   year: '2026'
   citation: Schwartz, D. Jack Voltaic Card Game Demonstration, Disaster Gaming Conference 2026 (forthcoming October 8).
   link: https://emdisastergaming.com/pages/em-disaster-gaming-conference-2026
+  title: Jack Voltaic Card Game Demonstration
+  authors: Schwartz, D. I.
+  venue: Disaster Gaming Conference 2026
 - type: peer_reviewed_abstract_or_talk
   number: 32
   year: '2026'
   citation: 'Schwartz, D. Proposal for a Critical Infrastructure Resilience Game Engine, Global Critical Infrastructure Workshop: Building Resilience in the Age of AI, MORS (forthcoming September 15).'
   link: https://www.mors.org/events/workshops/gci-2026
+  title: Proposal for a Critical Infrastructure Resilience Game Engine
+  authors: Schwartz, D. I.
+  venue: 'Global Critical Infrastructure Workshop: Building Resilience in the Age of AI (MORS)'
 - type: peer_reviewed_abstract_or_talk
   number: 31
   year: '2026'
   citation: Schwartz, D. Sector Down Demonstration (Game Night), Connections 2026.
   link: https://connections-wargaming.com/
+  title: Sector Down Demonstration (Game Night)
+  authors: Schwartz, D. I.
+  venue: Connections 2026
 - type: peer_reviewed_abstract_or_talk
   number: 30
   year: '2026'
   citation: Schwartz, D. I.; Katz, S. Where Chaplaincy Meets Wargaming, Connections 2026.
   link: https://docs.google.com/presentation/d/1D2dMI2nf2SobSMZcYlaN0Njr5X7spZld/edit
+  title: Where Chaplaincy Meets Wargaming
+  authors: Schwartz, D. I.; Katz, S.
+  venue: Connections 2026
 - type: peer_reviewed_abstract_or_talk
   number: 29
   year: '2026'
   citation: 'Schwartz, D. I. (organizer). Game Night: Building Community and a Culture of Disaster Resilience Through Play, Natural Hazards Workshop 2026.'
   link: https://hazards.colorado.edu/workshop/2026/session/game-night-building-community-and-a-culture-of-disaster-resilience-through-play
+  title: 'Game Night: Building Community and a Culture of Disaster Resilience Through Play'
+  authors: Schwartz, D. I.
+  venue: Natural Hazards Workshop 2026
 - type: peer_reviewed_abstract_or_talk
   number: 28
   year: '2026'
   citation: Katz, S.; Schwartz, D. I. Chaplain Game Jam, F3-02, APC Association of Professional Chaplains 2026 Conference.
   link: https://docs.google.com/presentation/d/1gKuYNzf8wrsoXxEMVUtaMlIz8TpuWF2q/edit?rtpof=true
+  title: Chaplain Game Jam
+  authors: Katz, S.; Schwartz, D. I.
+  venue: Association of Professional Chaplains (APC) 2026 Conference
 - type: peer_reviewed_abstract_or_talk
   number: 27
   year: '2026'
   citation: 'Schwartz, D. I.; Bayliss, J. D.; Schwartz, C.; Tomaszewski, B.; Crocker, J. Beyond the Tabletop: The Jack Voltaic 4.0: Technical Framework for Rapid Resilience Game Design, The 94th MORS Symposium.'
   link: https://docs.google.com/presentation/d/1tmnkvJFW6MzfnJ4egbGMfX08OxUPvqkW/edit?usp=drive_link&ouid=106659693919235830847&rtpof=true&sd=true
+  title: 'Beyond the Tabletop: The Jack Voltaic 4.0: Technical Framework for Rapid Resilience Game Design'
+  authors: Schwartz, D. I.; Bayliss, J. D.; Schwartz, C.; Tomaszewski, B.; Crocker, J.
+  venue: 94th MORS Symposium
 - type: peer_reviewed_abstract_or_talk
   number: 26
   year: '2025'
   citation: 'Schwartz, D. I.; Weeden, C.; Limikovskyi, Y.; Carrasco, F. Cybersecurity & Defense: Strategies for Critical Infrastructure, VDS+ 2025 (Valencia start-up conference,'
   link: https://vds.tech/event/cybersecurity-defense-strategies-for-critical-infrastructure/
+  title: 'Cybersecurity & Defense: Strategies for Critical Infrastructure'
+  authors: Schwartz, D. I.; Weeden, C.; Limikovskyi, Y.; Carrasco, F.
+  venue: VDS+ 2025, Valencia
 - type: peer_reviewed_abstract_or_talk
   number: 25
   year: '2025'
   citation: Schwartz, D. I.; Bayliss, J. D.; Schwartz, C.; Tomaszewski, B. Critical Infrastructure in Your Home Town, Rochester Security Summit 2025.
   link: https://docs.google.com/presentation/d/1HnMJKU9sQvvwjc4lgctcaoA54zgzlqPL/edit?slide=id.p1
+  title: Critical Infrastructure in Your Home Town
+  authors: Schwartz, D. I.; Bayliss, J. D.; Schwartz, C.; Tomaszewski, B.
+  venue: Rochester Security Summit 2025
 - type: peer_reviewed_abstract_or_talk
   number: 24
   year: '2025'
   citation: Schwartz, D. I.; Bayliss, J. D.; Schwartz, C.; Tomaszewski, B. (2025, October 1). Educating Critical Infrastructure Stakeholders through Games, Usability Associates Consortium Meeting, www.usabilityassociates.com.
   link: https://www.usabilityassociates.com/
+  title: Educating Critical Infrastructure Stakeholders through Games
+  authors: Schwartz, D. I.; Bayliss, J. D.; Schwartz, C.; Tomaszewski, B.
+  venue: Usability Associates Consortium Meeting
 - type: peer_reviewed_abstract_or_talk
   number: 23
   year: '2025'
   citation: Schwartz, D. I. Leveraging Game Technology for Engineering Design, Serious Play 2025.
   link: https://docs.google.com/presentation/d/1czQj8lWbKGcwx9BTaBfsClIjlUE68bPJ/edit?slide=id.p1
+  title: Leveraging Game Technology for Engineering Design
+  authors: Schwartz, D. I.
+  venue: Serious Play 2025
 - type: peer_reviewed_abstract_or_talk
   number: 22
   year: '2025'
   citation: Schwartz, D. I.; Bayliss, J. D.; Schwartz, C.; Tomaszewski, B. Tabletop Exercises in DefCon-33’s Biohacking Village.
   link: https://www.villageb.io/def-con-33
+  title: Tabletop Exercises
+  authors: Schwartz, D. I.; Bayliss, J. D.; Schwartz, C.; Tomaszewski, B.
+  venue: DEF CON 33 Biohacking Village
 - type: peer_reviewed_abstract_or_talk
   number: 21
   year: '2025'
   citation: 'Poplin, A.; de Sena, Í; Schlieder, C.; Göbel, S.; Schwartz, D.; Sousa, M. Geogames in Action: Insights from Experts on Play, Planning, and Participation (panel), Proceedings of the 2nd Geogames Symposium: Connecting Communities Through Games and Play, University College Dublin.'
   link: https://geogameslab.net/wp-content/uploads/2025/06/2025_2ggs_program_final.pdf
+  title: 'Geogames in Action: Insights from Experts on Play, Planning, and Participation (panel)'
+  authors: Poplin, A.; de Sena, Í.; Schlieder, C.; Göbel, S.; Schwartz, D.; Sousa, M.
+  venue: 'Proceedings of the 2nd Geogames Symposium: Connecting Communities Through Games and Play'
 - type: peer_reviewed_abstract_or_talk
   number: 20
   year: '2025'
   citation: Schwartz, D. I.; Katz, S. Chaplaincy Game Jam, NAJC Conference 2025.
   link: https://najc.member365.com/cmfiles/c43811a675b0f0c8/fileManager/public/files/NAJC_2025_Conference_Schedule_2025_05_08.pdf
+  title: Chaplaincy Game Jam
+  authors: Schwartz, D. I.; Katz, S.
+  venue: NAJC Conference 2025
 - type: peer_reviewed_abstract_or_talk
   number: 19
   year: '2024'
   citation: 'Schwartz, D. I.; Bayliss, J. D.; Guttieri, K.; Abitbol, A. D.; Peng, C.; Schwartz, C.; Tomaszewski, B. Getting Critical Infrastructure Stakeholders to the Table Through Resilience Games, Global Critical Infrastructure Workshop, 2024 Global Critical Infrastructure Workshop Tracks: Resilience MORS, October 22-24.'
   link: https://info.mors.org/Events/Workshops/Past-Workshops/Global-Critical-Infrastructure-Workshop
+  title: Getting Critical Infrastructure Stakeholders to the Table Through Resilience Games
+  authors: Schwartz, D. I.; Bayliss, J. D.; Guttieri, K.; Abitbol, A. D.; Peng, C.; Schwartz, C.; Tomaszewski, B.
+  venue: 2024 Global Critical Infrastructure Workshop (MORS)
 - type: peer_reviewed_abstract_or_talk
   number: 18
   year: '2024'
@@ -465,148 +698,252 @@
   doi: 10.1145/3641235.3664431
   openalex_id: W4400143304
   orcid_type: conference-paper
+  title: Integrating Independent Contributions in a Game Programming Assignment
+  authors: Peng, C.; Cao, L.; Schwartz, D.; Zhang, H.
+  venue: Special Interest Group on Computer Graphics and Interactive Techniques Conference Educator's Forum
 - type: peer_reviewed_abstract_or_talk
   number: 17
   year: '2024'
   citation: 'Schwartz, D. I. (et al). Listening Session: Playing With Disaster—Games to Reduce Risk, 49th Annual Natural Hazards, Research and Applications Workshop.'
   link: https://hazards.colorado.edu/workshop/2024/session/listening-session-playing-with-disaster%E2%80%94games-to-reduce-risk?row=7
+  title: 'Listening Session: Playing With Disaster—Games to Reduce Risk'
+  authors: Schwartz, D. I.; others
+  venue: 49th Annual Natural Hazards Research and Applications Workshop
 - type: peer_reviewed_abstract_or_talk
   number: 16
   year: '2023'
   citation: 'Schwartz, D. I.; Abitbol, D.; Nack, E. A.; Wilkinson, C. M.; Whitham, S. M.; Tomaszewski, B.; Bayliss, J. D.; Peng, C. Game Design for Critical Infrastructure Resilience: Game Engine Integration with Geospatial Technology, presentation, MORS 91st Symposium.'
   link: https://info.mors.org/Events/Symposium/Past-Symposiums/2023-91st-Symposium
+  title: 'Game Design for Critical Infrastructure Resilience: Game Engine Integration with Geospatial Technology'
+  authors: Schwartz, D. I.; Abitbol, D.; Nack, E. A.; Wilkinson, C. M.; Whitham, S. M.; Tomaszewski, B.; Bayliss, J. D.; Peng, C.
+  venue: MORS 91st Symposium
 - type: peer_reviewed_abstract_or_talk
   number: 15
   year: '2023'
   citation: 'Schwartz, D. I.; Tomaszewski, B.; Bayliss, J. D. Gaming that Saves Lives: Toward Resilience Games, poster, Great Lakes Security Day, RIT.'
   orcid_type: conference-poster
+  title: 'Gaming that Saves Lives: Toward Resilience Games'
+  authors: Schwartz, D. I.; Tomaszewski, B.; Bayliss, J. D.
+  venue: Great Lakes Security Day, RIT
 - type: peer_reviewed_abstract_or_talk
   number: 14
   year: '2023'
   citation: 'Schwartz, D. I. (Beyond) Serious Games, ACM Games: Research and Practice.'
+  title: (Beyond) Serious Games
+  authors: Schwartz, D. I.
+  venue: 'ACM Games: Research and Practice'
 - type: peer_reviewed_abstract_or_talk
   number: 13
   year: '2023'
   citation: DeBartolo, E. A. & Schwartz, D. I. Game Jam, 2023 KEEN National Conference.
   link: https://na.eventscloud.com/website/45812/agenda/
+  title: Game Jam
+  authors: DeBartolo, E. A.; Schwartz, D. I.
+  venue: 2023 KEEN National Conference
 - type: peer_reviewed_abstract_or_talk
   number: 12
   year: '2022'
   citation: 'DeBartolo, E. A. & Schwartz, D. I. Capstone Design: The Role Playing Adventure Game, Capstone Design Conference 2022 | results.'
   link: https://capstonedesigncommunity.org/sites/default/files/documents/Conference2022/Conference22%20Workshop%20Summary.pdf
+  title: 'Capstone Design: The Role Playing Adventure Game'
+  authors: DeBartolo, E. A.; Schwartz, D. I.
+  venue: Capstone Design Conference 2022
 - type: peer_reviewed_abstract_or_talk
   number: 11
   year: '2022'
   citation: 'Schwartz, D. I. (2022). ATLAS: a new open-source collection of game development examples with fully commented code.'
+  title: 'ATLAS: A New Open-Source Collection of Game Development Examples with Fully Commented Code'
+  authors: Schwartz, D. I.
 - type: peer_reviewed_abstract_or_talk
   number: 10
   year: '2021'
   citation: 'Schwartz, D. I.; Tomaszewski, B. (2021). When Virtual and Real Worlds Collide: Civil Engineering and Location-based Games. Middle Atlantic American Society for Engineering Education (ASEE) Conference 2021, Villanova, PA.'
   link: https://peer.asee.org/collections/middle-atlantic-asee-section-spring-2021-conference
+  title: 'When Virtual and Real Worlds Collide: Civil Engineering and Location-based Games'
+  authors: Schwartz, D. I.; Tomaszewski, B.
+  venue: Middle Atlantic ASEE Conference 2021
 - type: peer_reviewed_abstract_or_talk
   number: 9
   year: '2021'
   citation: 'Schwartz, D. I.; Tomaszewski, B. (2021). When Virtual and Real Worlds Collide: Civil Engineering and Location-based Games. Middle Atlantic American Society for Engineering Education (ASEE) Conference 2021, Villanova, PA.'
   link: https://peer.asee.org/collections/middle-atlantic-asee-section-spring-2021-conference
+  title: 'When Virtual and Real Worlds Collide: Civil Engineering and Location-based Games'
+  authors: Schwartz, D. I.; Tomaszewski, B.
+  venue: Middle Atlantic ASEE Conference 2021
 - type: peer_reviewed_abstract_or_talk
   number: 8
   year: '2016'
   citation: Pan, Y.; McGlinn, R.; Mishra, S.; Schwartz, D. I. (2016). Gamifying Cybersecurity Modules for Entry Level Students, CISSE, 21st Colloquium.
+  title: Gamifying Cybersecurity Modules for Entry Level Students
+  authors: Pan, Y.; McGlinn, R.; Mishra, S.; Schwartz, D. I.
+  venue: 21st CISSE Colloquium
 - type: peer_reviewed_abstract_or_talk
   number: 7
   year: '2015'
   citation: 'Pan, Y.; Mishra, S.; Schwartz, D. I.; McNett, A.; McCarthy, P. (2015). Gamified Digital Forensics Course Modules for Entry-Level Students: Presentation and Demonstration, the 24th Annual Conference on Instruction & Technology (CIT 2015), SUNY Geneseo, NY.'
+  title: 'Gamified Digital Forensics Course Modules for Entry-Level Students: Presentation and Demonstration'
+  authors: Pan, Y.; Mishra, S.; Schwartz, D. I.; McNett, A.; McCarthy, P.
+  venue: 24th Annual Conference on Instruction & Technology (CIT 2015)
 - type: peer_reviewed_abstract_or_talk
   number: 6
   year: '2014'
   citation: Tomaszewski, B.; Szarzynski, J.; Schwartz, D. I. (2014). Serious Games for Disaster Risk Reduction Spatial Thinking, GIScience 2014
+  title: Serious Games for Disaster Risk Reduction Spatial Thinking
+  authors: Tomaszewski, B.; Szarzynski, J.; Schwartz, D. I.
+  venue: GIScience 2014
 - type: peer_reviewed_abstract_or_talk
   number: 5
   year: '2007'
   citation: Schwartz, D. I.; Weidner, S.; Cosgrave, A. (2007). Fostering and Measuring Collaborative Computing and Learning in the Cornell Library Collaborative Learning Computer Laboratory, ACRL (Association of College & Research Libraries) 13th National Conference.
+  title: Fostering and Measuring Collaborative Computing and Learning in the Cornell Library Collaborative Learning Computer Laboratory
+  authors: Schwartz, D. I.; Weidner, S.; Cosgrave, A.
+  venue: ACRL 13th National Conference
 - type: peer_reviewed_abstract_or_talk
   number: 4
   year: '2006'
   citation: Schwartz, D. I.; Rajagopalan, M. (2006). Teaching Technical Communication with Computer Game Design, American Society for Engineering Education National Conference.
+  title: Teaching Technical Communication with Computer Game Design
+  authors: Schwartz, D. I.; Rajagopalan, M.
+  venue: ASEE National Conference
 - type: peer_reviewed_abstract_or_talk
   number: 3
   year: '2005'
   citation: Schwartz, D. I. (2005). Building Game Development Labs and Facilities in Academic Settings (moderator), FuturePlay Conference.
+  title: Building Game Development Labs and Facilities in Academic Settings (moderator)
+  authors: Schwartz, D. I.
+  venue: FuturePlay Conference
 - type: peer_reviewed_abstract_or_talk
   number: 2
   year: '2005'
   citation: 'Schwartz, D. I.; Cosgrave, A.; Bronson, G. (2005). Collaborative learning, multimedia development, flexibility: Developing and implementing the Cornell Library Collaborative Learning Computer Laboratory, LabMan 2005, the 6th Annual Lab Management Conference, Cornell University.'
+  title: 'Collaborative Learning, Multimedia Development, Flexibility: Developing and Implementing the Cornell Library Collaborative Learning Computer Laboratory'
+  authors: Schwartz, D. I.; Cosgrave, A.; Bronson, G.
+  venue: LabMan 2005, 6th Annual Lab Management Conference
 - type: peer_reviewed_abstract_or_talk
   number: 1
   year: '2001'
   citation: Schwartz, D. I. (2001). The Inexperienced Educator’s Guide To Managing A Large Hierarchical Staff in Emerging Technologies for Industry and Education, ASEE St. Lawrence Section Conference.
+  title: The Inexperienced Educator’s Guide to Managing a Large Hierarchical Staff in Emerging Technologies for Industry and Education
+  authors: Schwartz, D. I.
+  venue: ASEE St. Lawrence Section Conference
 - type: invited_talk
   number: 10
   year: '2016'
   citation: Schwartz, D. I.; Pan, Y. (2016). IPAR, NSF ATE Conference 2016, Washington, DC.
+  title: IPAR
+  authors: Schwartz, D. I.; Pan, Y.
+  venue: NSF ATE Conference 2016
 - type: invited_talk
   number: 9
   year: '2014'
   citation: Tomaszewski, B.; Szarzynski; J. Schwartz, D. I. (2014). Serious Games for Disaster Risk Reduction Spatial Thinking, GIScience 2014 (extended abstract).
+  title: Serious Games for Disaster Risk Reduction Spatial Thinking (extended abstract)
+  authors: Tomaszewski, B.; Szarzynski, J.; Schwartz, D. I.
+  venue: GIScience 2014
 - type: invited_talk
   number: 8
   year: '2012'
   citation: Schwartz, D. I. (2012). Marketing Your Games, Rochester Sci-Fi Convention.
+  title: Marketing Your Games
+  authors: Schwartz, D. I.
+  venue: Rochester Sci-Fi Convention
 - type: invited_talk
   number: 7
   year: '2011'
   citation: Schwartz, D. I. (2011). Breaking into the Game Industry, Videogame Mania, The Strong National Museum of Play.
+  title: Breaking into the Game Industry
+  authors: Schwartz, D. I.
+  venue: Videogame Mania, The Strong National Museum of Play
 - type: invited_talk
   number: 6
   year: '2011'
   citation: Schwartz, D. I. (2011). Breaking into the Game Industry, Rochester Sci-Fi Convention.
+  title: Breaking into the Game Industry
+  authors: Schwartz, D. I.
+  venue: Rochester Sci-Fi Convention
 - type: invited_talk
   number: 5
   year: '2009'
   citation: 'Schwartz, D. I. (2009). Beyond Motion Sensing: Alternative Game Interfaces, Dakota State University Symposium on Computer Game Design & Game Jam 2009.'
+  title: 'Beyond Motion Sensing: Alternative Game Interfaces'
+  authors: Schwartz, D. I.
+  venue: Dakota State University Symposium on Computer Game Design & Game Jam 2009
 - type: invited_talk
   number: 4
   year: '2009'
   citation: Schwartz, D. I. (2009). Course Development for Alternative Game Controllers, Education Summit, Game Developers Conference.
+  title: Course Development for Alternative Game Controllers
+  authors: Schwartz, D. I.
+  venue: Game Developers Conference Education Summit
 - type: invited_talk
   number: 3
   year: '2009'
   citation: 'Schwartz, D. I. (2009). RIT student games, Foundations of Digital Games: Demo Session, ACM.'
+  title: RIT Student Games
+  authors: Schwartz, D. I.
+  venue: 'Foundations of Digital Games 2009: Demo Session'
 - type: invited_talk
   number: 2
   year: '2008'
   citation: Sarnacki, A.; Schwartz, D. I.; Ross, D. O. (2008). Wargame Workshop, Info Challenges 2008 Conference and Exposition, Department of the Air Force, Air Force Materiel Command, AFRL-Rome Research Site.
+  title: Wargame Workshop
+  authors: Sarnacki, A.; Schwartz, D. I.; Ross, D. O.
+  venue: Info Challenges 2008 Conference and Exposition, AFRL-Rome Research Site
 - type: invited_talk
   number: 1
   year: '2008'
   citation: Schwartz, D. I. (2008). Wargame Engine Development and Research Concepts, Info Challenges 2008 Conference and Exposition, Department of the Air Force, Air Force Materiel Command, AFRL-Rome Research Site.
+  title: Wargame Engine Development and Research Concepts
+  authors: Schwartz, D. I.
+  venue: Info Challenges 2008 Conference and Exposition, AFRL-Rome Research Site
 - type: sponsor_reviewed_report
   number: 7
   year: '2026'
   citation: Schwartz, D. I. RIT Jack Voltaic Final Technical Report, Army Cyber Institute.
+  title: RIT Jack Voltaic Final Technical Report
+  authors: Schwartz, D. I.
+  venue: Army Cyber Institute
 - type: sponsor_reviewed_report
   number: 6
   year: '2009'
   citation: 'Schwartz, D. I.; Davis, S. Linguistic Geometry: Extension Grant final report, AFRL/RI, VFRP Technical Report.'
+  title: 'Linguistic Geometry: Extension Grant Final Report'
+  authors: Schwartz, D. I.; Davis, S.
+  venue: AFRL/RI
 - type: sponsor_reviewed_report
   number: 5
   year: '2008'
   citation: 'Schwartz, D. I. Wargame Research Directions: Summer Report, AFRL/RI, VFRP Technical Report.'
+  title: 'Wargame Research Directions: Summer Report'
+  authors: Schwartz, D. I.
+  venue: AFRL/RI
 - type: sponsor_reviewed_report
   number: 4
   year: '2008'
   citation: 'Schwartz, D. I. Wargame Engine Design: Extension Grant final report, AFRL/ IFSB, VFRP Technical Report.'
+  title: 'Wargame Engine Design: Extension Grant Final Report'
+  authors: Schwartz, D. I.
+  venue: AFRL/IFSB
 - type: sponsor_reviewed_report
   number: 3
   year: '2007'
   citation: Schwartz, D. I. Wargame Engine Design Summer Report, AFRL/IFSB, VFRP Technical Report.
+  title: Wargame Engine Design Summer Report
+  authors: Schwartz, D. I.
+  venue: AFRL/IFSB
 - type: sponsor_reviewed_report
   number: 2
   year: '2005'
   citation: Rajagopalan, M.; Schwartz, D. I. (2005). Game Design and Game-Development Education, Phi Kappa Phi Forum, Volume 85, Summer 2005.
   orcid_type: magazine-article
+  title: Game Design and Game-Development Education
+  authors: Rajagopalan, M.; Schwartz, D. I.
+  venue: Phi Kappa Phi Forum
 - type: sponsor_reviewed_report
   number: 1
   year: '2002'
   citation: Fan, K-Y.; Schwartz, D. I. Introductory Programming Using MATLAB, MATLAB News & Notes, October 2002.
   orcid_type: magazine-article
+  title: Introductory Programming Using MATLAB
+  authors: Fan, K.-Y.; Schwartz, D. I.
+  venue: MATLAB News & Notes
