@@ -18,6 +18,7 @@ tags:
   - making
   - beads
 links:
-  - label: https://david-i-schwartz.github.io/web-mobile-apps/fig/
+  - label: FIG (Fuse bead Image Generator)
+    url: https://david-i-schwartz.github.io/web-mobile-apps/fig/
 ---
 I discovered fuse beads in the fall of 2026. I'm not aware of others who have also put them into perforated steel sheets. I want to get some how-tos posted at some point.
