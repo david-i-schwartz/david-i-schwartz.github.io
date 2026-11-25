@@ -274,7 +274,10 @@ content:
     type: file
     path: _data/cv/positions.yml
     format: yaml
-    list: true
+    list:
+      collapsible:
+        collapsed: true
+        summary: "{years} · {title} · {organization}"
     fields:
       - name: group
         label: Group
@@ -292,7 +295,10 @@ content:
     type: file
     path: _data/cv/education.yml
     format: yaml
-    list: true
+    list:
+      collapsible:
+        collapsed: true
+        summary: "{year} · {degree} · {institution}"
     fields:
       - { name: year, label: Year, type: string }
       - { name: degree, label: Degree, type: string }
@@ -306,7 +312,10 @@ content:
     type: file
     path: _data/cv/administration.yml
     format: yaml
-    list: true
+    list:
+      collapsible:
+        collapsed: true
+        summary: "{role} · {years}"
     fields:
       - { name: role, label: Role, type: string }
       - { name: years, label: Years, type: string }
@@ -330,7 +339,10 @@ content:
       - name: grants
         label: Grants
         type: object
-        list: true
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{years} · {sponsor} · {title}"
         fields:
           - name: period
             label: Period
@@ -350,7 +362,10 @@ content:
     type: file
     path: _data/cv/publications.yml
     format: yaml
-    list: true
+    list:
+      collapsible:
+        collapsed: true
+        summary: "{year} · {citation}"
     fields:
       - name: type
         label: Type
@@ -399,7 +414,10 @@ content:
     type: file
     path: _data/cv/press.yml
     format: yaml
-    list: true
+    list:
+      collapsible:
+        collapsed: true
+        summary: "{year} · {title_or_citation}"
     fields:
       - name: kind
         label: Kind
@@ -434,7 +452,10 @@ content:
       - name: course_development
         label: Course development
         type: object
-        list: true
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{course} · {years}"
         fields:
           - name: institution
             label: Institution
@@ -447,7 +468,10 @@ content:
       - name: courses_taught
         label: Courses taught (by course)
         type: object
-        list: true
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{course} · {title}"
         fields:
           - name: institution
             label: Institution
@@ -460,7 +484,10 @@ content:
       - name: courses_by_term
         label: Courses taught (by term)
         type: object
-        list: true
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{term} · {courses}"
         fields:
           - name: institution
             label: Institution
@@ -475,7 +502,10 @@ content:
     type: file
     path: _data/cv/theses.yml
     format: yaml
-    list: true
+    list:
+      collapsible:
+        collapsed: true
+        summary: "{years} · {student} · {type}"
     fields:
       - { name: years, label: Academic years, type: string }
       - { name: year, label: Year finished (if known), type: string }
@@ -492,7 +522,10 @@ content:
     type: file
     path: _data/cv/service.yml
     format: yaml
-    list: true
+    list:
+      collapsible:
+        collapsed: true
+        summary: "{years} · {role} · {organization}"
     fields:
       - name: scope
         label: Where
@@ -524,7 +557,10 @@ content:
     type: file
     path: _data/cv/awards.yml
     format: yaml
-    list: true
+    list:
+      collapsible:
+        collapsed: true
+        summary: "{year} · {title}"
     fields:
       - { name: year, label: Year, type: string }
       - { name: title, label: Award, type: text }
