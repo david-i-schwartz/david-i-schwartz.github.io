@@ -1,10 +1,1 @@
-- period: "RIT post-tenure"
-  years: 2026
-  title: SAMPLE-GRANT-1 a new award
-  sponsor: Sample Foundation
-  role: PI
-  amount_k: '99'
-  notes: ''
-- period: "Cornell"
-  years: '2026'
-  title: SAMPLE-GRANT-2 notes-only fallback
+# nothing here

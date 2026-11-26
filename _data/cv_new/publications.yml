@@ -13,3 +13,7 @@
   year: '2026'
   citation: 'SAMPLE-PUB-4 conference paper with a bad link'
   link: javascript:alert(1)
+-
+- type: journal
+  year: ''
+  citation: 'SAMPLE-PUB-5 blank year'
