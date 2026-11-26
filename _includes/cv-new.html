@@ -5,21 +5,23 @@
   in _data/cv/.
 
   Sets:
-    new_pubs, new_press       newest year first; the templates split them by
-                              type or kind and print them above the numbered entries
+    new_pubs, new_press       the templates split them by type or kind and print
+                              them above the numbered entries
     all_service               new service rows, then the master rows
     all_grants                new grants, then the master grants
     all_theses                new students, then the master students
 
-  Within the three "all_" lists the new items come first, in reverse file
-  order (the last item in the Add file prints first), then the master rows in
-  their own order. A missing file, an empty file, or [] all just mean "nothing new".
+  New items always come first, in reverse file order (the last item in the Add
+  file prints first), then the master rows in their own order. They are not
+  sorted by year on purpose: a year that Pages CMS saves as a number in one
+  item and as text in another would make Jekyll's sort fail and stop the whole
+  build. A missing file, an empty file, or [] all just mean "nothing new".
   Use: {% include cv-new.html %}
 {%- endcomment -%}
 {%- assign cv_none = "" | split: "," -%}
 {%- assign cvn = site.data.cv_new -%}
-{%- assign new_pubs = cvn.publications | default: cv_none | compact | sort: "year", "last" | reverse -%}
-{%- assign new_press = cvn.press | default: cv_none | compact | sort: "year", "last" | reverse -%}
+{%- assign new_pubs = cvn.publications | default: cv_none | compact | reverse -%}
+{%- assign new_press = cvn.press | default: cv_none | compact | reverse -%}
 {%- assign new_service = cvn.service | default: cv_none | compact | reverse -%}
 {%- assign new_grants = cvn.grants | default: cv_none | compact | reverse -%}
 {%- assign new_theses = cvn.theses | default: cv_none | compact | reverse -%}
