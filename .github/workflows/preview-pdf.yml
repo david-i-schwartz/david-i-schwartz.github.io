@@ -1,0 +1,45 @@
+# TEMPORARY preview helper, only on the branch tmp-cv-pdf-preview. Never merge to main.
+# Builds the site like the publish workflow, makes the CV PDF, and adds it as a new
+# commit on the branch tmp-cv-pdf so it can be looked at without publishing anything.
+name: Preview CV PDF (temporary)
+
+on:
+  push:
+    branches: [tmp-cv-pdf-preview]
+
+permissions:
+  contents: write
+
+jobs:
+  pdf:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Make publications.bib from the publication data
+        continue-on-error: true
+        run: |
+          python3 -m pip install --quiet --break-system-packages pyyaml
+          python3 _tools/make_bib.py _data/cv/publications.yml _data/cv/orcid_types.yml publications.bib
+      - uses: actions/jekyll-build-pages@44a6e6beabd48582f863aeeb6cb2151cc1716697 # v1.0.13
+        with:
+          source: ./
+          destination: ./_site
+      - name: Make the CV PDF
+        run: |
+          sudo chown -R "$(id -u):$(id -g)" _site
+          mkdir -p /tmp/out
+          bash _tools/make_cv_pdf.sh _site 2>&1 | tee /tmp/out/build.log
+          cp _site/files/schwartz-cv.pdf /tmp/out/schwartz-cv.pdf
+          pdfinfo /tmp/out/schwartz-cv.pdf > /tmp/out/pdfinfo.txt || true
+          cp _site/cv/index.html /tmp/out/cv-page.html
+      - name: Add the PDF to branch tmp-cv-pdf
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@users.noreply.github.com"
+          git fetch origin tmp-cv-pdf:tmp-cv-pdf 2>/dev/null && git checkout -q tmp-cv-pdf || git checkout -q --orphan tmp-cv-pdf
+          git rm -rq --ignore-unmatch . 
+          git clean -fdxq
+          cp /tmp/out/* .
+          git add -A
+          git commit -q -m "CV PDF preview from ${GITHUB_SHA::7}"
+          git push origin tmp-cv-pdf
