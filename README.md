@@ -22,7 +22,7 @@ Everyday editing happens in a web form, not in files. Same setup as the Saints &
 | Add something that just happened: a paper or talk, a news item, a committee, a grant, a student | The matching **Add ·** form (**Publication, talk, or game**; **Press or news item**; **Service role**; **Grant**; **Graduate student**) | Add an item, Save. It shows on the site and the CV within a couple of minutes, above the numbered entries. There is no number box; Claude numbers it when it folds the item into the main CV lists. |
 | Add a paper, talk, or game with all its details | **CV · 5. Publications** | Add an item: type, year, paste the citation. It appears on the Publications page and the CV at once. |
 | Add a grant, course, student, committee, or award | The matching **CV · …** form | Add an item, Save. The CV page and the section pages rebuild from the same data. |
-| Update the downloadable CV | **Settings** | Upload the new PDF in the *CV as a PDF* box. The Download button points at whatever is there. |
+| Update the downloadable CV | Nothing to do | The PDF is rebuilt from the CV data every time the site publishes (`_tools/make_cv_pdf.sh`), so the Download button is always current. |
 | Change my photo, title line, tagline, or links | **Settings** | Leave a box blank and that thing just doesn't show. |
 | Change the bio on the home page | **Home page text** | Edit, Save. |
 | Change a section's intro line | **Section pages** | Open the page, edit *Intro line*. |
@@ -62,6 +62,6 @@ Tips:
 
 **What editors type is checked.** Text is escaped wherever a template prints it; links only become links when they start with `https://` or `http://` (`_includes/safe-url.html`); a video needs YouTube's 11-character ID (`_includes/video.html`); photos must be a path on this site or an https:// address (`_includes/safe-img.html`). Write-ups and the bio are Markdown on purpose and aren't escaped.
 
-**Printing the CV.** The CV page has a print stylesheet; "Print this page" in a browser gives a reasonable PDF. The uploaded PDF in Settings is still the canonical one for now.
+**The CV PDF.** On every publish, `_tools/make_cv_pdf.sh` has headless Chrome print the built `/cv/` page with its print stylesheet and saves the result at `/files/schwartz-cv.pdf`, the address the Download button uses. It checks the result (size and page count). If anything fails it keeps the copy committed in `files/` (the Word-made PDF from September 2026) and the publish still succeeds; the workflow log line starting "CV PDF:" says what happened. "Print this page" on the CV page gives the same layout.
 
 **Old site.** The previous Minimal Mistakes / academicpages site lives in the `legacy-2024` branch.
