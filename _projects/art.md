@@ -4,7 +4,7 @@ area: interests
 status: current
 years: 2017–2021
 order: 3
-summary: Coloring pages finished in bright, saturated palettes: mandalas, flowers, butterflies, and geometric patterns.
+summary: "Coloring pages finished in bright, saturated palettes: mandalas, flowers, butterflies, and geometric patterns."
 photo: /photos/projects/art/stained-glass-03.jpg
 photos:
   - /photos/projects/art/bees-and-flowers.jpg
