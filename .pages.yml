@@ -249,7 +249,7 @@ content:
       - { name: office, label: Office, type: string }
       - { name: phone, label: Phone, type: string }
       - name: cv_pdf
-        label: CV as a PDF (upload the newest one here; the Download button points at it)
+        label: "CV PDF fallback (no need to upload: the site rebuilds this PDF from your CV data on every save; this copy is only used if that fails)"
         type: file
         options:
           media: files
