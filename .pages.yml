@@ -268,6 +268,133 @@ content:
           - { name: label, label: "Link text", type: string }
           - { name: url, label: "Web address (https://…)", type: string }
 
+  # ---------------- Add new (quick forms) ----------------
+  # Short forms for things that just happened. Each saves to a small file in
+  # _data/cv_new/ (a list of new items, usually only a few long), so the Add
+  # button is always easy to reach. The site shows these above the numbered
+  # entries of the matching CV list. Claude folds them into the main lists
+  # (the "CV ·" forms below) later and clears them out. There is no number box.
+  - name: add_publication
+    label: "Add · Publication, talk, or game"
+    description: "Something new for the CV: pick the type, add the year, and paste the citation. It shows on the Publications page and the CV above the numbered entries. Save, then wait a minute or two."
+    type: file
+    path: _data/cv_new/publications.yml
+    format: yaml
+    list: true
+    fields:
+      - name: type
+        label: Type
+        type: select
+        required: true
+        options:
+          values:
+            - { value: book_or_chapter, label: "Book or chapter" }
+            - { value: journal, label: "Journal paper" }
+            - { value: game_or_simulation, label: "Shipped / published game or simulation" }
+            - { value: creative_work, label: "Other creative work" }
+            - { value: conference_paper, label: "Conference paper or extended abstract" }
+            - { value: peer_reviewed_abstract_or_talk, label: "Peer-reviewed abstract, talk, panel, poster, or workshop" }
+            - { value: invited_talk, label: "Invited abstract, talk, panel, poster, or workshop" }
+            - { value: sponsor_reviewed_report, label: "Sponsor-reviewed article or technical report" }
+      - { name: year, label: Year, type: string, required: true }
+      - { name: citation, label: Full citation, type: text, required: true }
+      - { name: link, label: "Link (https://…, optional)", type: string }
+      - { name: doi, label: "DOI (optional, like 10.1145/3544548.3580939; makes the Link if Link is blank)", type: string }
+
+  - name: add_press
+    label: "Add · Press or news item"
+    description: "A news story about you, or something you wrote for a general audience. It shows on the Publications page, the CV, and (for news) the home page."
+    type: file
+    path: _data/cv_new/press.yml
+    format: yaml
+    list: true
+    fields:
+      - name: kind
+        label: Kind
+        type: select
+        required: true
+        options:
+          values:
+            - { value: news, label: "News or press release" }
+            - { value: popular_press, label: "Popular press (something I wrote)" }
+      - { name: year, label: Year, type: string, required: true }
+      - { name: title_or_citation, label: Headline or citation, type: string, required: true }
+      - { name: outlet, label: Outlet, type: string }
+      - { name: author, label: Author (for news written about you), type: string }
+      - { name: url, label: "Link (https://…)", type: string }
+
+  - name: add_service
+    label: "Add · Service role"
+    description: "A committee, review, community, or leadership role. It shows on the Service page and the CV, at the top of the group you pick."
+    type: file
+    path: _data/cv_new/service.yml
+    format: yaml
+    list: true
+    fields:
+      - name: scope
+        label: Where
+        type: select
+        required: true
+        options:
+          values:
+            - "RIT – Leadership Summary"
+            - "RIT – Institute"
+            - "RIT – College"
+            - "RIT – Unit"
+            - "RIT – Student Organizations"
+            - "RIT – Hosted Colloquia"
+            - "Regional and Local Community"
+            - "Field – Professional Organizations"
+            - "Field – Professional Reviews"
+            - "Field – External Organizations, Conferences, and Events"
+            - "Cornell – Leadership"
+            - "Cornell – Student Organizations"
+            - "Cornell – Computing Committees"
+            - "Cornell – Admissions"
+      - { name: years, label: "Years (for example 2026–present)", type: string }
+      - { name: role, label: Role, type: string }
+      - { name: organization, label: Committee / organization, type: string }
+      - { name: notes, label: Notes, type: string }
+
+  - name: add_grant
+    label: "Add · Grant"
+    description: "A new award. It shows in the funding tables on the CV. The Summary table (totals) in CV · 4. Funding is not recalculated; update it separately."
+    type: file
+    path: _data/cv_new/grants.yml
+    format: yaml
+    list: true
+    fields:
+      - name: period
+        label: Period
+        type: select
+        required: true
+        default: "RIT post-tenure"
+        options:
+          values: ["RIT post-tenure", "RIT pre-tenure", "Cornell"]
+      - { name: years, label: "Years (for example 2026 or 2026–2028)", type: string }
+      - { name: title, label: Project, type: string, required: true }
+      - { name: sponsor, label: Sponsor, type: string }
+      - { name: role, label: Role (PI, Co-PI, KP), type: string }
+      - { name: amount_k, label: "Amount ($K)", type: string }
+      - { name: notes, label: Notes, type: string }
+
+  - name: add_student
+    label: "Add · Graduate student"
+    description: "A new thesis, capstone, or dissertation you advise or serve on. It shows on the Teaching page and the CV, at the top of the list."
+    type: file
+    path: _data/cv_new/theses.yml
+    format: yaml
+    list: true
+    fields:
+      - { name: years, label: "Academic years (for example 2026–present)", type: string }
+      - { name: year, label: Year finished (if known), type: string }
+      - { name: student, label: Student, type: string, required: true }
+      - { name: title, label: Title, type: string }
+      - { name: type, label: Type (Ph.D. dissertation, MS thesis, capstone…), type: string }
+      - { name: role, label: Your role, type: string }
+      - { name: institution, label: Institution, type: string }
+      - { name: notes, label: Notes, type: string }
+
   # ---------------- CV data ----------------
   - name: cv_positions
     label: "CV · 1. Career history"

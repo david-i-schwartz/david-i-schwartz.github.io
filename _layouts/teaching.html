@@ -3,7 +3,8 @@ layout: default
 ---
 {%- assign t = site.data.cv.teaching -%}
 {%- assign institutions = "Rochester Institute of Technology|Cornell University|State University of New York at Buffalo" | split: "|" -%}
-{%- assign theses = site.data.cv.theses -%}
+{%- include cv-new.html -%}
+{%- assign theses = all_theses -%}
 {%- assign teach_videos = site.data.howtos | where: "topic", "teaching" | sort: "date" | reverse -%}
 {%- assign teach_projects = site.projects | where: "area", "teaching" | where: "status", "current" | sort: "order" -%}
 <section class="wrap page">

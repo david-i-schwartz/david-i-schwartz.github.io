@@ -1,0 +1,4 @@
+# New items added through the "Add ·" forms in Pages CMS. The site shows them
+# above the numbered entries of the matching CV list. Claude folds them into
+# the main list in _data/cv/ later. An empty list is correct: [] means nothing new.
+[]

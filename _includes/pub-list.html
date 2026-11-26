@@ -3,9 +3,14 @@
   [count] [year] [Link] [citation] layout. The count is each entry's own
   number from the CV (highest = newest); entries without a number go first.
   Link is the entry's link, or https://doi.org/<doi> when it has only a DOI.
+  Items added through the "Add · Publication" form (_data/cv_new/publications.yml)
+  have no number yet and print first, newest year first (see cv-new.html).
   include.type = type key, include.label = heading, include.id = anchor id
 {%- endcomment -%}
-{%- assign pubs = site.data.cv.publications | where: "type", include.type | sort: "number", "last" | reverse -%}
+{%- include cv-new.html -%}
+{%- assign pubs_new = new_pubs | where: "type", include.type -%}
+{%- assign pubs_old = site.data.cv.publications | where: "type", include.type | sort: "number", "last" | reverse -%}
+{%- assign pubs = pubs_new | concat: pubs_old -%}
 {%- if pubs.size > 0 %}
 <h2 id="{{ include.id }}">{{ include.label }} <span class="count">{{ pubs.size }}</span></h2>
 <ol class="pubs" reversed role="list" data-preview="5">

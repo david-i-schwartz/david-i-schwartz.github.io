@@ -3,6 +3,7 @@ layout: default
 ---
 {%- assign s = site.data.settings -%}
 {%- assign cv = site.data.cv -%}
+{%- include cv-new.html -%}
 {%- assign groups = "Faculty|Administration|Government|Industry" | split: "|" -%}
 {%- assign periods = "RIT post-tenure|RIT pre-tenure|Cornell" | split: "|" -%}
 {%- include safe-url.html url=s.cv_pdf -%}
@@ -70,7 +71,7 @@ layout: default
   </table>
   <p class="soft">{{ cv.funding.legend | escape }}</p>
   {%- for per in periods -%}
-    {%- assign rows = cv.funding.grants | where: "period", per -%}
+    {%- assign rows = all_grants | where: "period", per -%}
     {%- if rows.size > 0 %}
   <h3>{{ per | capitalize | replace: "Rit", "RIT" }}</h3>
   <table class="tbl tbl--cv">
@@ -115,7 +116,7 @@ layout: default
   <table class="tbl tbl--cv">
     <thead><tr><th scope="col">Years</th><th scope="col">Student</th><th scope="col">Title</th><th scope="col">Type and role</th></tr></thead>
     <tbody data-preview="5">
-      {%- for th in cv.theses %}
+      {%- for th in all_theses %}
       <tr><td class="nowrap">{{ th.year | default: th.years | escape }}</td><td>{{ th.student | escape }}</td><td>{{ th.title | escape }}</td><td>{{ th.type | escape }}, {{ th.role | escape }}</td></tr>
       {%- endfor %}
     </tbody>
@@ -124,7 +125,7 @@ layout: default
   <h2 id="service">8. Service and administration</h2>
   {%- assign scopes = "RIT – Leadership Summary|RIT – Institute|RIT – College|RIT – Unit|RIT – Student Organizations|RIT – Hosted Colloquia|Regional and Local Community|Field – Professional Organizations|Field – Professional Reviews|Field – External Organizations, Conferences, and Events|Cornell – Leadership|Cornell – Student Organizations|Cornell – Computing Committees|Cornell – Admissions" | split: "|" -%}
   {%- for sc in scopes -%}
-    {%- assign rows = cv.service | where: "scope", sc -%}
+    {%- assign rows = all_service | where: "scope", sc -%}
     {%- if rows.size > 0 %}
   <h3>{{ sc | replace: " – ", ": " }}</h3>
   <ul class="list list--tight list--dated" data-preview="5">

@@ -2,9 +2,13 @@
   Prints one kind of press item as a heading + list, in the CV's
   [count] [year] [Link] [title] [author, outlet] layout.
   include.kind = news | popular_press, include.label = heading, include.id = anchor id
-  Entries without a number (new ones added in Pages CMS) go first.
+  Entries without a number (new ones added in Pages CMS) go first, including
+  everything from the "Add · Press or news item" form (_data/cv_new/press.yml).
 {%- endcomment -%}
-{%- assign items = site.data.cv.press | where: "kind", include.kind | sort: "number", "last" | reverse -%}
+{%- include cv-new.html -%}
+{%- assign items_new = new_press | where: "kind", include.kind -%}
+{%- assign items_old = site.data.cv.press | where: "kind", include.kind | sort: "number", "last" | reverse -%}
+{%- assign items = items_new | concat: items_old -%}
 {%- if items.size > 0 %}
 <h2 id="{{ include.id }}">{{ include.label }} <span class="count">{{ items.size }}</span></h2>
 <ol class="pubs" reversed role="list" data-preview="5">
