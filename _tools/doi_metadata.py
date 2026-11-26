@@ -3,12 +3,16 @@
 
 Usage: python3 _tools/doi_metadata.py _data/cv/publications.yml OUT.json
 
+Also looks up DOIs in _data/cv_new/publications.yml (items from the Add form),
+if that file exists next to the folder holding publications.yml.
+
 Writes one record per DOI: title, authors ("Family, G. I.; ..."), venue,
 year, volume, issue, pages, publisher and Crossref type. It never edits
 publications.yml; a person (or Claude) reviews the JSON and merges it.
 Runs in GitHub Actions, which can reach api.crossref.org.
 """
 import json, sys, time, urllib.parse, urllib.request
+from pathlib import Path
 import yaml
 
 UA = "david-i-schwartz.github.io publications tools (mailto:David.I.Schwartz@rit.edu)"
@@ -30,7 +34,10 @@ def fetch(doi):
         return json.load(r)["message"]
 
 def main(src, out):
-    pubs = yaml.safe_load(open(src, encoding="utf-8"))
+    pubs = yaml.safe_load(open(src, encoding="utf-8")) or []
+    new_path = Path(src).resolve().parent.parent / "cv_new" / "publications.yml"
+    if new_path.exists():
+        pubs += [p for p in (yaml.safe_load(open(new_path, encoding="utf-8")) or []) if isinstance(p, dict)]
     dois = sorted({str(p["doi"]).strip().lower() for p in pubs if p.get("doi")})
     result = {}
     for doi in dois:

@@ -5,7 +5,10 @@ layout: default
 {%- include safe-img.html path=s.photo -%}
 {%- assign work_now = site.projects | where_exp: "p", "p.area != 'interests'" | where: "status", "current" | sort: "order" -%}
 {%- assign fun_now = site.projects | where: "area", "interests" | where: "status", "current" | sort: "order" -%}
-{%- assign news = site.data.cv.press | where: "kind", "news" | sort: "number", "last" | reverse -%}
+{%- include cv-new.html -%}
+{%- assign news_new = new_press | where: "kind", "news" -%}
+{%- assign news_old = site.data.cv.press | where: "kind", "news" | sort: "number", "last" | reverse -%}
+{%- assign news = news_new | concat: news_old -%}
 {%- assign awards = site.data.cv.awards | sort: "year" | reverse -%}
 
 <section class="hero">

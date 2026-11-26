@@ -1,0 +1,28 @@
+{%- comment -%}
+  Reads the "Add new" lists (_data/cv_new/*.yml, filled in through the "Add ·"
+  forms in Pages CMS) and hands them to the templates, so a new item shows on
+  the site the moment it is saved, without touching the numbered master lists
+  in _data/cv/.
+
+  Sets:
+    new_pubs, new_press       newest year first; the templates split them by
+                              type or kind and print them above the numbered entries
+    all_service               new service rows, then the master rows
+    all_grants                new grants, then the master grants
+    all_theses                new students, then the master students
+
+  Within the three "all_" lists the new items come first, in reverse file
+  order (the last item in the Add file prints first), then the master rows in
+  their own order. A missing file, an empty file, or [] all just mean "nothing new".
+  Use: {% include cv-new.html %}
+{%- endcomment -%}
+{%- assign cv_none = "" | split: "," -%}
+{%- assign cvn = site.data.cv_new -%}
+{%- assign new_pubs = cvn.publications | default: cv_none | compact | sort: "year", "last" | reverse -%}
+{%- assign new_press = cvn.press | default: cv_none | compact | sort: "year", "last" | reverse -%}
+{%- assign new_service = cvn.service | default: cv_none | compact | reverse -%}
+{%- assign new_grants = cvn.grants | default: cv_none | compact | reverse -%}
+{%- assign new_theses = cvn.theses | default: cv_none | compact | reverse -%}
+{%- assign all_service = new_service | concat: site.data.cv.service -%}
+{%- assign all_grants = new_grants | concat: site.data.cv.funding.grants -%}
+{%- assign all_theses = new_theses | concat: site.data.cv.theses -%}

@@ -19,7 +19,8 @@ Everyday editing happens in a web form, not in files. Same setup as the Saints &
 | Add a project, course, role, or hobby | **Projects & Interests** | Add an entry. Title, *Where it shows*, and *Status* are the ones that matter; everything else is optional. The write-up box takes normal typing (bold, links, and pictures via the toolbar). |
 | Archive a project | **Projects & Interests** | Open it, set *Status* to Archived, Save. It moves to the Archived list on its own. |
 | Add a how-to video | **How-to videos** | Add an item: title, YouTube link (Share, then Copy), pick Teaching or Interests. Or add it inside a project's *Videos* list so it shows on that project's page. |
-| Add a paper, talk, or game | **CV · 5. Publications** | Add an item: type, year, paste the citation. It appears on the Publications page and the CV at once. |
+| Add something that just happened: a paper or talk, a news item, a committee, a grant, a student | The matching **Add ·** form (**Publication, talk, or game**; **Press or news item**; **Service role**; **Grant**; **Graduate student**) | Add an item, Save. It shows on the site and the CV within a couple of minutes, above the numbered entries. There is no number box; Claude numbers it when it folds the item into the main CV lists. |
+| Add a paper, talk, or game with all its details | **CV · 5. Publications** | Add an item: type, year, paste the citation. It appears on the Publications page and the CV at once. |
 | Add a grant, course, student, committee, or award | The matching **CV · …** form | Add an item, Save. The CV page and the section pages rebuild from the same data. |
 | Update the downloadable CV | Nothing to do | The PDF is rebuilt from the CV data every time the site publishes (`_tools/make_cv_pdf.sh`), so the Download button is always current. |
 | Change my photo, title line, tagline, or links | **Settings** | Leave a box blank and that thing just doesn't show. |
@@ -43,6 +44,7 @@ Tips:
 | Blog posts | `_posts/YYYY-MM-DD-title.md`; RSS at `/feed.xml` (jekyll-feed) |
 | Projects, courses, roles, hobbies | `_projects/*.md`. `area` picks the page (research → Projects, teaching → Teaching, leadership → Service, interests → Making & Interests); `status` is current or archived. |
 | CV data | `_data/cv/*.yml` — positions, education, administration, funding, publications, press, teaching, theses, service, awards. The CV page, Publications, Teaching, and Service pages all read from here. |
+| New CV items (the **Add ·** forms) | `_data/cv_new/*.yml` — publications, press, service, grants, theses. Short lists of what was added since the last fold-in. `_includes/cv-new.html` merges them with the lists above, and `_tools/make_bib.py` and `_tools/doi_metadata.py` read them too. |
 | How-to videos | `_data/howtos.yml` |
 | Name, photo, links, CV PDF | `_data/settings.yml` |
 | Section pages (intro lines) | `pages/*.md`; each page's `layout` picks its template |
@@ -55,6 +57,8 @@ Tips:
 **One-time setup.**
 1. Repo **Settings → Pages**: Source **GitHub Actions**.
 2. Sign in at app.pagescms.org with GitHub and add this repo (it already has the Pages CMS app from the band site; just pick the repo).
+
+**The Add forms.** The long CV lists (Publications 100+, Press, Service, Grants, Students) are awkward to add to, because the new-item button sits at the bottom. So each has a short **Add ·** form that saves to its own small file in `_data/cv_new/`. The templates print those items first (newest year first for publications and press; for service, grants and students, the last item in the Add file first), above the numbered entries, and the counts include them. Nothing is lost if a file is empty or missing. When there are a few, ask Claude to fold them in: it moves each item into the matching list in `_data/cv/` (assigning its number and the export fields), empties the Add file, and opens a pull request. Until then, anything that reads the CV data has to read both folders (the site build, the BibTeX file and the CV PDF already do).
 
 **What editors type is checked.** Text is escaped wherever a template prints it; links only become links when they start with `https://` or `http://` (`_includes/safe-url.html`); a video needs YouTube's 11-character ID (`_includes/video.html`); photos must be a path on this site or an https:// address (`_includes/safe-img.html`). Write-ups and the bio are Markdown on purpose and aren't escaped.
 

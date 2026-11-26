@@ -2,7 +2,8 @@
 layout: default
 ---
 {%- assign admin = site.data.cv.administration -%}
-{%- assign svc = site.data.cv.service -%}
+{%- include cv-new.html -%}
+{%- assign svc = all_service -%}
 {%- assign lead_projects = site.projects | where: "area", "leadership" | sort: "order" -%}
 {%- assign scopes = "RIT – Institute|RIT – College|RIT – Unit|RIT – Student Organizations|RIT – Hosted Colloquia|Regional and Local Community|Field – Professional Organizations|Field – Professional Reviews|Field – External Organizations, Conferences, and Events|Cornell – Leadership|Cornell – Student Organizations|Cornell – Computing Committees|Cornell – Admissions" | split: "|" -%}
 <section class="wrap page">
