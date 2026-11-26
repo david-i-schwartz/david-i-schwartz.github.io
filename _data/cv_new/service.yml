@@ -1,4 +1,11 @@
-# New items added through the "Add ·" forms in Pages CMS. The site shows them
-# above the numbered entries of the matching CV list. Claude folds them into
-# the main list in _data/cv/ later. An empty list is correct: [] means nothing new.
-[]
+- scope: "RIT – Unit"
+  years: '2026–present'
+  role: SAMPLE-SVC-1 Chair
+  organization: Sample Committee
+  notes: ''
+- scope: "RIT – Unit"
+  years: 2026
+  role: SAMPLE-SVC-2 Member
+  organization: Another Committee
+- scope: "Cornell – Admissions"
+  role: SAMPLE-SVC-3 Reader

@@ -1,4 +1,15 @@
-# New items added through the "Add ·" forms in Pages CMS. The site shows them
-# above the numbered entries of the matching CV list. Claude folds them into
-# the main list in _data/cv/ later. An empty list is correct: [] means nothing new.
-[]
+- type: journal
+  year: '2026'
+  citation: 'SAMPLE-PUB-1 Schwartz, D. I.; Test, A. A sample journal paper with <b>tags</b> & "quotes". Journal of Tests.'
+  doi: 10.1000/sample1
+- type: journal
+  year: 2027
+  citation: 'SAMPLE-PUB-2 unquoted integer year, sorts against a string year'
+  link: https://example.org/sample2
+- type: invited_talk
+  year: '2026'
+  citation: 'SAMPLE-PUB-3 Schwartz, D. I. A sample invited talk. Somewhere, December 2026.'
+- type: conference_paper
+  year: '2026'
+  citation: 'SAMPLE-PUB-4 conference paper with a bad link'
+  link: javascript:alert(1)

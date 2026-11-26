@@ -32,6 +32,10 @@ jobs:
           cp _site/files/schwartz-cv.pdf /tmp/out/schwartz-cv.pdf
           pdfinfo /tmp/out/schwartz-cv.pdf > /tmp/out/pdfinfo.txt || true
           cp _site/cv/index.html /tmp/out/cv-page.html
+          for pg in publications service teaching; do cp _site/$pg/index.html /tmp/out/$pg-page.html; done
+          cp _site/index.html /tmp/out/home-page.html
+          cp publications.bib /tmp/out/publications.bib
+          cp _site/publications.bib /tmp/out/publications-site.bib || true
       - name: Add the PDF to branch tmp-cv-pdf
         run: |
           git config user.name "github-actions"
